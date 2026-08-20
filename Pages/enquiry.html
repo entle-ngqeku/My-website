@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amina's Fast Food | Enquiry & Order</title>
+
+</head>
+
+<body>
+
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="service.html">Servies</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main class="container">
+    <h2>Place an Enquiry / Order</h2>
+
+    <form onsubmit="submitOrder(event)">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name"
+              placeholder="Enter your name" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone"
+              placeholder="Enter your phone number" required>
+
+        <label for="order">Select Meal</label>
+        <select id="order" name="order" required>
+            <option value="">--Select a meal --</option>
+            <option>Chicken Burger</option>
+            <option>Beef Burger</option>
+            <option>Cheese Burger</option>
+            <option>Small Chips</option>
+            <option>Meduim Chips</option>
+            <option>Large Chips</option>
+            <option>Burger & Chips</option>
+            <option>Amagwinya</option>
+        </select>
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity"
+               name="quantity" min="1" value="1" required>
+
+        <label for="delivery">Collection or Delivery</label>
+        <select id="delivery" name="delivery" required>
+            <option value="">-- Select option --</option>
+            <option>Collection</option>
+            <option>Delivery</option>
+        </select>
+
+        <label for="message">Additional Information</label>
+        <textarea id="message" name="message"
+                  placeholder="Enter any Additional information">
+
+        <button type="submit">SUBMIT ORDER</button>
+
+    </form>
+
+ </main>
+
+ <footer>
+    <p>& copy ; 2026 Amina's Fast Food. All Rights Reserved</p>
+ </footer>
