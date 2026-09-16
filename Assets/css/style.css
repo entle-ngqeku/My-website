@@ -1,91 +1,125 @@
+/* ==============================
+   BASIC PAGE RESET
+   ============================== */
+
+/* The universal selector applies these settings to every HTML element. */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* Includes padding and borders in an element's total size. */
+  margin: 0; /* Removes default browser margins. */
+  padding: 0; /* Removes default browser padding. */
 }
 
+/* Enables smooth scrolling when users move between page sections. */
 html {
   scroll-behavior: smooth;
 }
 
+/* Main styling for the whole webpage. */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fff8f0;
-  color: #222;
-  line-height: 1.7;
+  font-family: Arial, Helvetica, sans-serif; /* Sets the main font. */
+  background: #fff8f0; /* Sets the page background colour. */
+  color: #222; /* Sets the default text colour. */
+  line-height: 1.7; /* Adds comfortable spacing between lines. */
 }
 
+/* ==============================
+   HEADER AND LOGO
+   ============================== */
+
+/* Styles the main website header. */
 .site-header {
-  background: linear-gradient(135deg, #8b0000, #e85d04);
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
+  background: linear-gradient(135deg, #8b0000, #e85d04); /* Creates a colour gradient. */
+  color: white; /* Makes header text white. */
+  text-align: center; /* Centres the header content. */
+  padding: 30px 20px; /* Adds space inside the header. */
 }
 
+/* Styles the business logo/name. */
 .logo {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: clamp(1.6rem, 4vw, 2.4rem); /* Changes font size according to screen size. */
+  font-weight: 700; /* Makes the logo bold. */
+  letter-spacing: 1px; /* Adds space between letters. */
 }
 
+/* Styles the business tagline. */
 .tagline {
-  margin-top: 5px;
-  font-weight: bold;
-  color: #ffe0b2;
+  margin-top: 5px; /* Adds a small gap above the tagline. */
+  font-weight: bold; /* Makes the tagline bold. */
+  color: #ffe0b2; /* Sets the tagline colour. */
 }
 
+/* ==============================
+   NAVIGATION
+   ============================== */
+
+/* Creates a flexible navigation bar. */
 .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-  background: #222;
-  padding: 12px 15px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  display: flex; /* Places navigation items in a flexible row. */
+  justify-content: center; /* Centres the navigation links. */
+  align-items: center; /* Vertically aligns the links. */
+  flex-wrap: wrap; /* Allows links to move to another line when needed. */
+  gap: 6px; /* Adds space between links. */
+  background: #222; /* Sets the navigation background. */
+  padding: 12px 15px; /* Adds internal spacing. */
+  position: sticky; /* Keeps the navigation visible while scrolling. */
+  top: 0; /* Places the sticky navigation at the top. */
+  z-index: 10; /* Keeps the navigation above other page content. */
 }
 
+/* Styles links inside the navigation bar. */
 .navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.2s ease;
+  color: white; /* Makes navigation text white. */
+  text-decoration: none; /* Removes the default underline. */
+  padding: 10px 16px; /* Creates clickable space around each link. */
+  border-radius: 6px; /* Rounds the link corners. */
+  font-weight: bold; /* Makes navigation text bold. */
+  transition: 0.2s ease; /* Makes hover changes smoother. */
 }
 
+/* Changes the navigation background when a link is hovered or active. */
 .navbar a:hover,
 .navbar a.active {
   background: #e85d04;
 }
 
+/* ==============================
+   HOMEPAGE HERO
+   ============================== */
+
+/* Creates the large homepage hero area. */
 .hero {
-  background: linear-gradient(#0009, #0009), url('../images/junk-food-concept-unhealthy-food-background-fast-food-sugar-burger-sweets-chips-chocolate-donuts-soda-junk-food-concept-137097176.webp') center/cover;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
+  background: linear-gradient(#0009, #0009), url('../images/junk-food-concept-unhealthy-food-background-fast-food-sugar-burger-sweets-chips-chocolate-donuts-soda-junk-food-concept-137097176.webp') center/cover; /* Adds a dark overlay and background image. */
+  min-height: 500px; /* Gives the hero a large minimum height. */
+  display: flex; /* Enables flexible positioning. */
+  align-items: center; /* Centres content vertically. */
+  justify-content: center; /* Centres content horizontally. */
+  color: white; /* Makes hero text white. */
+  text-align: center; /* Centres hero text. */
+  padding: 50px 20px; /* Adds space around hero content. */
 }
 
+/* Controls the width of content inside the hero. */
 .hero-content {
   max-width: 850px;
 }
 
+/* Styles the main hero heading. */
 .hero h1 {
-  font-size: clamp(2.3rem, 6vw, 4.8rem);
-  line-height: 1.1;
-  margin: 15px 0;
+  font-size: clamp(2.3rem, 6vw, 4.8rem); /* Responsive heading size. */
+  line-height: 1.1; /* Controls heading line spacing. */
+  margin: 15px 0; /* Adds space above and below the heading. */
 }
 
+/* Styles paragraphs inside the hero. */
 .hero p {
   font-size: 1.1rem;
 }
 
+/* ==============================
+   GENERAL PAGE ELEMENTS
+   ============================== */
+
+/* Small uppercase section labels. */
 .eyebrow {
   color: #e85d04;
   font-size: 0.85rem;
@@ -94,16 +128,19 @@ body {
   text-transform: uppercase;
 }
 
+/* Changes the eyebrow colour when it is inside the hero. */
 .hero .eyebrow {
   color: #ffd166;
 }
 
+/* Banner used at the top of internal pages. */
 .page-banner {
   padding: 65px 20px;
   background: #ffe0b2;
   text-align: center;
 }
 
+/* Styles headings inside the page banner. */
 .page-banner h1 {
   color: #8b0000;
   font-size: clamp(2rem, 5vw, 3.4rem);
@@ -111,12 +148,14 @@ body {
   margin: 8px 0 12px;
 }
 
+/* Main content wrapper used throughout the website. */
 .container {
-  width: min(1100px, 100%);
-  margin: 0 auto;
-  padding: 55px 20px;
+  width: min(1100px, 100%); /* Limits content width on large screens. */
+  margin: 0 auto; /* Centres the container. */
+  padding: 55px 20px; /* Adds space inside the container. */
 }
 
+/* Gives different content sections consistent vertical spacing. */
 .content-section,
 .menu-intro,
 .order-section,
@@ -125,10 +164,12 @@ body {
   padding-bottom: 50px;
 }
 
+/* Adds spacing below introduction boxes. */
 .intro {
   margin-bottom: 25px;
 }
 
+/* Styles main section headings. */
 .container h2,
 .cta h2 {
   color: #8b0000;
@@ -137,51 +178,63 @@ body {
   line-height: 1.25;
 }
 
+/* Styles smaller headings. */
 .container h3 {
   color: #8b0000;
 }
 
+/* ==============================
+   CARDS AND CONTENT BOXES
+   ============================== */
+
+/* Gives cards and boxes a common appearance. */
 .box,
 .card,
 .contact-box,
 .menu-section,
 .order-form {
-  background: white;
-  padding: 28px;
-  border-radius: 10px;
-  box-shadow: 0 3px 14px #0001;
-  margin-bottom: 24px;
+  background: white; /* Sets a white content background. */
+  padding: 28px; /* Adds space inside each box. */
+  border-radius: 10px; /* Rounds the corners. */
+  box-shadow: 0 3px 14px #0001; /* Adds a soft shadow. */
+  margin-bottom: 24px; /* Adds space between boxes. */
 }
 
+/* Creates two equal columns. */
 .two-column,
 .highlights {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 25px;
+  display: grid; /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Creates two flexible columns. */
+  gap: 25px; /* Adds space between columns. */
 }
 
+/* Creates responsive grids for cards and menu sections. */
 .cards,
 .contact-grid,
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Automatically adjusts the number of columns. */
   gap: 22px;
 }
 
+/* Removes extra bottom spacing where grid layout controls the spacing. */
 .card,
 .contact-box {
   margin-bottom: 0;
 }
 
+/* Styles icons used in content cards. */
 .card-icon {
   font-size: 2.4rem;
   margin-bottom: 5px;
 }
 
+/* Adds spacing around card headings. */
 .card h3 {
   margin: 8px 0;
 }
 
+/* Styles ordered and unordered information lists. */
 .info-list {
   padding-left: 22px;
 }
@@ -191,6 +244,11 @@ body {
   margin-bottom: 8px;
 }
 
+/* ==============================
+   BUTTONS
+   ============================== */
+
+/* Groups buttons horizontally and allows wrapping. */
 .button-group {
   display: flex;
   justify-content: center;
@@ -199,6 +257,7 @@ body {
   margin-top: 25px;
 }
 
+/* Main button styling. */
 .btn {
   display: inline-block;
   background: #e85d04;
@@ -212,43 +271,60 @@ body {
   transition: 0.2s ease;
 }
 
+/* Changes the button when the mouse is over it. */
 .btn:hover {
   background: #8b0000;
   transform: translateY(-1px);
 }
 
+/* Alternative dark-red button style. */
 .btn-red {
   background: #8b0000;
 }
 
+/* ==============================
+   CALL TO ACTION
+   ============================== */
+
+/* Styles the final action section on pages. */
 .cta {
   text-align: center;
   background: #ffe0b2;
   padding: 20px 0;
 }
 
+/* Controls spacing inside CTA containers. */
 .cta .container {
   padding-top: 45px;
   padding-bottom: 45px;
 }
 
+/* ==============================
+   MENU
+   ============================== */
+
+/* Adds space above the menu grid. */
 .menu-grid {
   margin-top: 25px;
 }
 
+/* Removes extra bottom margin from menu cards. */
 .menu-section {
   margin-bottom: 0;
 }
 
+/* Menu category heading spacing. */
 .menu-section h2 {
   margin-bottom: 12px;
 }
 
+/* Adds spacing below supporting notes. */
 .section-note,
 .form-note {
   margin-bottom: 12px;
 }
 
+/* Places the meal name and price on opposite sides. */
 .menu-row {
   display: flex;
   justify-content: space-between;
@@ -258,60 +334,81 @@ body {
   padding: 14px 0;
 }
 
+/* Removes the final divider from a menu category. */
 .menu-row:last-child {
   border-bottom: 0;
 }
 
+/* Styles menu prices. */
 .menu-row strong:last-child {
   color: #e85d04;
   white-space: nowrap;
 }
 
+/* Styles the short description under each menu item. */
 .menu-row small {
   display: block;
   color: #666;
   font-size: 0.9rem;
 }
 
+/* Gives combo deals a highlighted border. */
 .special {
   border: 3px solid #e85d04;
 }
 
+/* Adds spacing before service details. */
 .service-details {
   margin-top: 28px;
 }
 
+/* ==============================
+   CONTACT PAGE
+   ============================== */
+
+/* Adds space around the contact cards. */
 .contact-grid {
   margin: 25px 0;
 }
 
+/* Adjusts contact card headings. */
 .contact-box h2 {
   font-size: 1.5rem;
 }
 
+/* Adds spacing before contact buttons. */
 .contact-box .btn {
   margin-top: 12px;
 }
 
+/* ==============================
+   ORDER FORM
+   ============================== */
+
+/* Limits the order form width and centres it. */
 .order-form {
   max-width: 760px;
   margin: 30px auto 0;
 }
 
+/* Centres the order form heading. */
 .order-form h2 {
   text-align: center;
 }
 
+/* Adds spacing between form fields. */
 .form-group {
   margin-top: 17px;
 }
 
+/* Styles form labels. */
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 7px;
 }
 
+/* Gives inputs, select boxes and textareas a consistent appearance. */
 input,
 select,
 textarea {
@@ -323,6 +420,7 @@ textarea {
   font: inherit;
 }
 
+/* Highlights the form field currently being used. */
 input:focus,
 select:focus,
 textarea:focus {
@@ -330,20 +428,28 @@ textarea:focus {
   border-color: #e85d04;
 }
 
+/* Sets the minimum size of the message box. */
 textarea {
   min-height: 140px;
   resize: vertical;
 }
 
+/* Adds space above the form submit button. */
 .order-form button {
   margin-top: 22px;
 }
 
+/* Styles the message shown after the form is submitted. */
 .form-result {
   margin-top: 18px;
   font-weight: bold;
 }
 
+/* ==============================
+   FOOTER
+   ============================== */
+
+/* Styles the website footer. */
 footer {
   background: #222;
   color: white;
@@ -351,25 +457,35 @@ footer {
   padding: 28px 15px;
 }
 
+/* Adds spacing and a lighter colour to the second footer paragraph. */
 footer p + p {
   margin-top: 5px;
   color: #ddd;
 }
 
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+/* These rules apply when the screen is 700px wide or smaller. */
 @media (max-width: 700px) {
+  /* Sticky navigation is changed to normal positioning on small screens. */
   .navbar {
     position: static;
   }
 
+  /* Two-column sections become one column on smaller screens. */
   .two-column,
   .highlights {
     grid-template-columns: 1fr;
   }
 
+  /* Makes the homepage hero slightly shorter on mobile. */
   .hero {
     min-height: 420px;
   }
 
+  /* Reduces internal spacing on mobile cards. */
   .box,
   .card,
   .contact-box,
@@ -379,17 +495,21 @@ footer p + p {
   }
 }
 
+/* These rules apply to very small screens. */
 @media (max-width: 480px) {
+  /* Navigation links use the full available width. */
   .navbar a {
     width: 100%;
     text-align: center;
   }
 
+  /* Reduces container side spacing on very small screens. */
   .container {
     padding-left: 15px;
     padding-right: 15px;
   }
 
+  /* Reduces the gap between menu names and prices. */
   .menu-row {
     gap: 10px;
   }
