@@ -1,144 +1,239 @@
 <!DOCTYPE html>
-<!-- HTML5 document declaration. -->
+<!-- DOCTYPE declares HTML5. -->
 <html lang="en">
-<!-- lang attribute identifies English as the page language. -->
+<!-- html is the root element; lang="en" identifies English. -->
 <head>
-  <!-- Character encoding. -->
+<!-- head stores metadata and external resources. -->
   <meta charset="UTF-8">
-  <!-- Makes the page responsive. -->
+  <!-- meta charset sets UTF-8 character encoding. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Page description. -->
+  <!-- viewport makes the page responsive. -->
   <meta name="description" content="Send an enquiry or order request to Amina's Fast Food.">
-  <!-- Browser tab title. -->
+  <!-- description provides a short search-engine description. -->
   <title>Enquiry &amp; Order | Amina's Fast Food</title>
-  <!-- Links this page to the shared external CSS stylesheet. -->
+  <!-- title sets the browser tab title. -->
   <link rel="stylesheet" href="../Assets/css/style.css">
+  <!-- link connects this page to the shared external CSS file. -->
 </head>
+<!-- Closing head ends the metadata area. -->
 <body>
-  <!-- Header displays the business identity. -->
+<!-- body contains all visible page content. -->
   <header class="site-header">
+  <!-- header creates the website header; site-header connects it to CSS. -->
     <div class="logo">🔥 AMINA'S FAST FOOD</div>
+    <!-- div groups the business name and logo class styles it. -->
     <p class="tagline">Fresh. Fast. Affordable.</p>
+    <!-- p displays the business tagline. -->
   </header>
+  <!-- Closing header ends the header. -->
 
-  <!-- Navigation menu. -->
   <nav class="navbar">
+  <!-- nav contains the main navigation links. -->
     <a href="../index.html">Home</a>
+    <!-- a creates a hyperlink; href gives its destination. -->
     <a href="about.html">About</a>
+    <!-- a links to the About page. -->
     <a href="services.html">Services &amp; Menu</a>
+    <!-- a links to the Services and Menu page; &amp; displays an ampersand. -->
     <a class="active" href="enquiry.html">Enquiry / Order</a>
+    <!-- active identifies the current page for CSS styling. -->
     <a href="contact.html">Contact</a>
+    <!-- a links to the Contact page. -->
   </nav>
+  <!-- Closing nav ends the navigation menu. -->
 
   <main>
-    <!-- Page heading/banner. -->
+  <!-- main contains the main content of the webpage. -->
     <section class="page-banner page-header">
+    <!-- section creates the page banner and its CSS classes style it. -->
       <p class="eyebrow">ORDER WITH US</p>
+      <!-- p displays the small section label. -->
       <h1>PLACE AN ENQUIRY / ORDER</h1>
+      <!-- h1 creates the main page heading. -->
       <p>Complete the form below with your meal and contact details.</p>
+      <!-- p displays supporting instructions. -->
     </section>
+    <!-- Closing section ends the banner. -->
 
     <section class="container order-section">
-      <!-- Introductory information before the form. -->
+    <!-- section contains the order content and uses CSS container spacing. -->
       <div class="box intro">
+      <!-- div groups introductory information and uses box and intro styles. -->
         <p class="eyebrow">BEFORE YOU SUBMIT</p>
+        <!-- p displays the section label. -->
         <h2>Tell Us What You Need</h2>
+        <!-- h2 creates the introduction heading. -->
         <p>Use this form to send an enquiry or provide the details of the meal you would like. Make sure your name and phone number are correct so that the business can contact you about your request.</p>
+        <!-- p explains how the form should be used. -->
         <p>After submitting the form, contact Amina's Fast Food on WhatsApp to confirm your order and discuss the final details.</p>
+        <!-- p explains the next step after submission. -->
       </div>
+      <!-- Closing div ends the introduction box. -->
 
-      <!-- Two information boxes arranged using CSS Grid. -->
       <div class="two-column">
+      <!-- div creates two responsive information columns. -->
         <div class="box">
+        <!-- div creates the order-process box. -->
           <p class="eyebrow">ORDER PROCESS</p>
+          <!-- p displays the process label. -->
           <h2>Simple Steps</h2>
+          <!-- h2 creates the process heading. -->
           <ol class="info-list">
+          <!-- ol creates an ordered list; info-list applies CSS spacing. -->
             <li>Choose a meal from the menu.</li>
+            <!-- li creates ordered list item 1. -->
             <li>Enter your full name and phone number.</li>
+            <!-- li creates ordered list item 2. -->
             <li>Select the meal and quantity.</li>
+            <!-- li creates ordered list item 3. -->
             <li>Choose collection or delivery.</li>
+            <!-- li creates ordered list item 4. -->
             <li>Add any useful information in the message box.</li>
+            <!-- li creates ordered list item 5. -->
             <li>Submit the enquiry and confirm the order on WhatsApp.</li>
+            <!-- li creates ordered list item 6. -->
           </ol>
+          <!-- Closing ol ends the ordered list. -->
         </div>
+        <!-- Closing div ends the order-process box. -->
         <div class="box">
+        <!-- div creates the contact-help box. -->
           <p class="eyebrow">CONTACT</p>
+          <!-- p displays the contact label. -->
           <h2>Need Help First?</h2>
+          <!-- h2 creates the contact-help heading. -->
           <p>If you have questions about the menu or your order, you can contact us before submitting the form.</p>
+          <!-- p explains when to contact the business. -->
           <p><strong>Phone:</strong> 072 784 8640</p>
+          <!-- strong makes Phone bold inside the paragraph. -->
           <p><strong>Hours:</strong> Monday - Sunday, 10:00 - 20:00</p>
-          <!-- target opens WhatsApp in a new browser tab. -->
+          <!-- strong makes Hours bold inside the paragraph. -->
           <a href="https://wa.me/27727848640" class="btn" target="_blank" rel="noopener">OPEN WHATSAPP</a>
+          <!-- a creates a WhatsApp button; target opens a new tab and rel improves security. -->
         </div>
+        <!-- Closing div ends the contact-help box. -->
       </div>
+      <!-- Closing div ends the two-column layout. -->
 
-      <!-- Form collects customer order/enquiry information. -->
       <form class="order-form" onsubmit="event.preventDefault(); document.getElementById('result').textContent='Thank you! Your enquiry has been recorded on this page. Please contact us on WhatsApp to confirm your order.';">
+      <!-- form collects customer information; onsubmit runs JavaScript and prevents the demo page from refreshing. -->
         <h2>Order / Enquiry Form</h2>
+        <!-- h2 creates the form heading. -->
         <p class="form-note">Fields marked as required must be completed.</p>
+        <!-- p gives the user information about required fields. -->
 
-        <!-- Each form-group keeps a label and input together for styling. -->
         <div class="form-group">
+        <!-- div groups the name label and input for CSS styling. -->
           <label for="name">Full Name *</label>
+          <!-- label describes the name input; for connects it to id="name". -->
           <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name" required>
+          <!-- input creates a text field; required prevents empty submission. -->
         </div>
+        <!-- Closing div ends the name field group. -->
 
         <div class="form-group">
+        <!-- div groups the phone label and input. -->
           <label for="phone">Phone Number *</label>
+          <!-- label describes the phone input. -->
           <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel" required>
+          <!-- input type="tel" creates a phone-number field; autocomplete helps fill contact information. -->
         </div>
+        <!-- Closing div ends the phone field group. -->
 
         <div class="form-group">
+        <!-- div groups the meal label and select menu. -->
           <label for="order">Select Meal *</label>
+          <!-- label describes the meal selection. -->
           <select id="order" name="order" required>
+          <!-- select creates a dropdown menu; required means a meal must be selected. -->
             <option value="">-- Select a meal --</option>
+            <!-- option creates the default dropdown choice. -->
             <option>Classic Burger</option>
+            <!-- option creates a Classic Burger choice. -->
             <option>Cheese Burger</option>
+            <!-- option creates a Cheese Burger choice. -->
             <option>Double Burger</option>
+            <!-- option creates a Double Burger choice. -->
             <option>Small Chips</option>
+            <!-- option creates a Small Chips choice. -->
             <option>Medium Chips</option>
+            <!-- option creates a Medium Chips choice. -->
             <option>Large Chips</option>
+            <!-- option creates a Large Chips choice. -->
             <option>Basic Kota</option>
+            <!-- option creates a Basic Kota choice. -->
             <option>Cheese Kota</option>
+            <!-- option creates a Cheese Kota choice. -->
             <option>Special Kota</option>
+            <!-- option creates a Special Kota choice. -->
             <option>Plain Fat Cake</option>
+            <!-- option creates a Plain Fat Cake choice. -->
             <option>Filled Fat Cake</option>
+            <!-- option creates a Filled Fat Cake choice. -->
             <option>Burger Combo</option>
+            <!-- option creates a Burger Combo choice. -->
             <option>Kota Combo</option>
+            <!-- option creates a Kota Combo choice. -->
           </select>
+          <!-- Closing select ends the meal dropdown. -->
         </div>
+        <!-- Closing div ends the meal field group. -->
 
         <div class="form-group">
+        <!-- div groups the quantity label and input. -->
           <label for="quantity">Quantity *</label>
+          <!-- label describes the quantity input. -->
           <input id="quantity" name="quantity" type="number" min="1" value="1" required>
+          <!-- number input accepts a quantity; min prevents values below 1. -->
         </div>
+        <!-- Closing div ends the quantity field group. -->
 
         <div class="form-group">
+        <!-- div groups the collection/delivery label and select. -->
           <label for="delivery">Collection or Delivery *</label>
+          <!-- label describes the delivery choice. -->
           <select id="delivery" name="delivery" required>
+          <!-- select creates the collection or delivery dropdown. -->
             <option value="">-- Select option --</option>
+            <!-- option creates the default dropdown choice. -->
             <option>Collection</option>
+            <!-- option creates the Collection choice. -->
             <option>Delivery</option>
+            <!-- option creates the Delivery choice. -->
           </select>
+          <!-- Closing select ends the delivery dropdown. -->
         </div>
+        <!-- Closing div ends the delivery field group. -->
 
         <div class="form-group">
+        <!-- div groups the additional-information label and textarea. -->
           <label for="message">Additional Information</label>
+          <!-- label describes the message area. -->
           <textarea id="message" name="message" placeholder="Add any additional information about your enquiry or order"></textarea>
+          <!-- textarea creates a multi-line text box for extra information. -->
         </div>
+        <!-- Closing div ends the message field group. -->
 
-        <!-- Button submits the form and triggers the simple page message. -->
         <button class="btn btn-red" type="submit">SUBMIT ENQUIRY</button>
-        <!-- aria-live allows assistive technology to announce the result message. -->
+        <!-- button creates the form submission button; type="submit" submits the form. -->
         <p id="result" class="form-result" aria-live="polite"></p>
+        <!-- p displays the JavaScript result; aria-live helps assistive technology announce changes. -->
       </form>
+      <!-- Closing form ends the order/enquiry form. -->
     </section>
+    <!-- Closing section ends the order content. -->
   </main>
+  <!-- Closing main ends the primary content. -->
 
-  <!-- Footer information. -->
   <footer>
+  <!-- footer contains the bottom-of-page information. -->
     <p>&copy; 2026 Amina's Fast Food. All Rights Reserved.</p>
+    <!-- p displays copyright text and &copy; displays the copyright symbol. -->
     <p>KwaZakele, Port Elizabeth, Eastern Cape | 072 784 8640</p>
+    <!-- p displays the location and phone number. -->
   </footer>
+  <!-- Closing footer ends the footer. -->
 </body>
+<!-- Closing body ends visible webpage content. -->
 </html>
+<!-- Closing html ends the complete HTML document. -->
