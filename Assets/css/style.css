@@ -1,0 +1,30 @@
+*{
+    margins: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:aliceblue;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* 2. header/ navigation bar */
+. logo-header {
+    background: linear-gradient(135deg,#111581, #1f1f1f );
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    border: #070807;
+    color: #
+
+
+}
+a
