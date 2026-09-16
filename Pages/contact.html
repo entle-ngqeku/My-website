@@ -1,125 +1,206 @@
 <!DOCTYPE html>
-<!-- HTML5 document declaration. -->
+<!-- DOCTYPE declares that the document uses HTML5. -->
 <html lang="en">
-<!-- lang attribute identifies English as the page language. -->
+<!-- html is the root element; lang="en" identifies English. -->
 <head>
-  <!-- Character encoding. -->
+<!-- head contains metadata and external resources. -->
   <meta charset="UTF-8">
-  <!-- Responsive viewport settings. -->
+  <!-- meta charset sets UTF-8 character encoding. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Page description. -->
+  <!-- viewport makes the page responsive. -->
   <meta name="description" content="Contact Amina's Fast Food in KwaZakele, Port Elizabeth, Eastern Cape.">
-  <!-- Browser tab title. -->
+  <!-- description gives search engines a short description of this page. -->
   <title>Contact | Amina's Fast Food</title>
-  <!-- Connects this page to the external stylesheet. -->
+  <!-- title sets the browser tab title. -->
   <link rel="stylesheet" href="../Assets/css/style.css">
+  <!-- link connects the page to the shared CSS stylesheet. -->
 </head>
+<!-- Closing head ends the metadata section. -->
 <body>
-  <!-- Website header. -->
+<!-- body contains the visible webpage content. -->
   <header class="site-header">
+  <!-- header creates the top website section; site-header connects to CSS. -->
     <div class="logo">🔥 AMINA'S FAST FOOD</div>
+    <!-- div groups the business name; logo identifies its CSS styling. -->
     <p class="tagline">Fresh. Fast. Affordable.</p>
+    <!-- p displays the business tagline. -->
   </header>
+  <!-- Closing header ends the website header. -->
 
-  <!-- Navigation menu. -->
   <nav class="navbar">
+  <!-- nav contains the website navigation links. -->
     <a href="../index.html">Home</a>
+    <!-- a creates a hyperlink and href gives the destination. -->
     <a href="about.html">About</a>
+    <!-- a links to the About page. -->
     <a href="services.html">Services &amp; Menu</a>
+    <!-- a links to the Services and Menu page; &amp; displays an ampersand. -->
     <a href="enquiry.html">Enquiry / Order</a>
+    <!-- a links to the Enquiry and Order page. -->
     <a class="active" href="contact.html">Contact</a>
+    <!-- active identifies Contact as the current page. -->
   </nav>
+  <!-- Closing nav ends the navigation menu. -->
 
   <main>
-    <!-- Contact page banner. -->
+  <!-- main contains the primary content of the page. -->
     <section class="page-banner page-header">
+    <!-- section creates the contact page banner; classes connect to CSS. -->
       <p class="eyebrow">GET IN TOUCH</p>
+      <!-- p displays the small banner label. -->
       <h1>CONTACT US</h1>
+      <!-- h1 creates the main heading. -->
       <p>Have a question about our menu or an order? We are here to help.</p>
+      <!-- p provides supporting text. -->
     </section>
+    <!-- Closing section ends the banner. -->
 
     <section class="container contact-section">
-      <!-- Introduction to customer support. -->
+    <!-- section contains contact information and uses container/contact-section CSS. -->
       <div class="box intro">
+      <!-- div creates the introduction box. -->
         <p class="eyebrow">CUSTOMER SUPPORT</p>
+        <!-- p displays the customer support label. -->
         <h2>We Would Love to Hear From You</h2>
+        <!-- h2 creates the support heading. -->
         <p>Whether you want to ask about a meal, send an enquiry or confirm an order, you can use the contact details below. For order-related questions, please include enough information for us to understand what you need.</p>
+        <!-- p explains how customers can contact the business. -->
       </div>
+      <!-- Closing div ends the introduction box. -->
 
-      <!-- Contact cards use CSS Grid for a responsive layout. -->
       <div class="contact-grid">
+      <!-- div creates a responsive grid for contact cards. -->
         <div class="contact-box">
+        <!-- div creates the location contact card. -->
           <div class="card-icon">📍</div>
+          <!-- div displays the location icon. -->
           <h2>Location</h2>
+          <!-- h2 creates the Location heading. -->
           <p>KwaZakele, Port Elizabeth, Eastern Cape</p>
+          <!-- p displays the business location. -->
           <p>Our local location makes it convenient for customers in the surrounding community to access our food and services.</p>
+          <!-- p explains the purpose of the location information. -->
         </div>
+        <!-- Closing div ends the location card. -->
 
         <div class="contact-box">
+        <!-- div creates the phone contact card. -->
           <div class="card-icon">📞</div>
+          <!-- div displays the phone icon. -->
           <h2>Phone</h2>
+          <!-- h2 creates the Phone heading. -->
           <p>072 784 8640</p>
+          <!-- p displays the phone number. -->
           <p>Use our phone number for enquiries and customer support during trading hours.</p>
-          <!-- tel: creates a clickable phone link on supported devices. -->
+          <!-- p explains how the phone number can be used. -->
           <a href="tel:0727848640" class="btn">CALL US</a>
+          <!-- a creates a clickable telephone link; tel: allows supported devices to call. -->
         </div>
+        <!-- Closing div ends the phone card. -->
 
         <div class="contact-box">
+        <!-- div creates the WhatsApp contact card. -->
           <div class="card-icon">💬</div>
+          <!-- div displays the WhatsApp icon. -->
           <h2>WhatsApp</h2>
+          <!-- h2 creates the WhatsApp heading. -->
           <p>WhatsApp is available for enquiries and order confirmation.</p>
-          <!-- target="_blank" opens the external WhatsApp page in a new tab. -->
+          <!-- p explains the WhatsApp purpose. -->
           <a class="btn" href="https://wa.me/27727848640" target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+          <!-- a creates the WhatsApp button; target opens a new tab and rel adds security. -->
         </div>
+        <!-- Closing div ends the WhatsApp card. -->
 
         <div class="contact-box">
+        <!-- div creates the trading-hours card. -->
           <div class="card-icon">🕙</div>
+          <!-- div displays the clock icon. -->
           <h2>Trading Hours</h2>
+          <!-- h2 creates the trading-hours heading. -->
           <p><strong>Monday - Sunday</strong></p>
+          <!-- strong makes the days bold inside the paragraph. -->
           <p>10:00 - 20:00</p>
+          <!-- p displays the trading time. -->
           <p>These hours are intended to help customers know when to contact the business.</p>
+          <!-- p explains the purpose of the hours. -->
         </div>
+        <!-- Closing div ends the trading-hours card. -->
       </div>
+      <!-- Closing div ends the contact grid. -->
 
-      <!-- Additional ordering and directions information. -->
       <div class="two-column">
+      <!-- div creates two responsive columns for additional information. -->
         <div class="box">
+        <!-- div creates the order-information box. -->
           <p class="eyebrow">ORDER INFORMATION</p>
+          <!-- p displays the order-information label. -->
           <h2>Before You Contact Us</h2>
+          <!-- h2 creates the order-information heading. -->
           <ul class="info-list">
+          <!-- ul creates an unordered list; info-list applies CSS spacing. -->
             <li>Check the menu for the meal and price you want.</li>
+            <!-- li creates one unordered list item. -->
             <li>Have your preferred quantity ready.</li>
+            <!-- li creates another list item. -->
             <li>Keep your phone number available for order communication.</li>
+            <!-- li creates another list item. -->
             <li>Use the enquiry page if you want to submit a structured order request.</li>
+            <!-- li creates another list item. -->
             <li>Use WhatsApp when you need to confirm an order directly.</li>
+            <!-- li creates the final list item. -->
           </ul>
+          <!-- Closing ul ends the unordered list. -->
         </div>
+        <!-- Closing div ends the order-information box. -->
         <div class="box">
+        <!-- div creates the directions box. -->
           <p class="eyebrow">DIRECTIONS</p>
+          <!-- p displays the directions label. -->
           <h2>Find Our Location</h2>
+          <!-- h2 creates the directions heading. -->
           <p>Amina's Fast Food is located in KwaZakele, Port Elizabeth, Eastern Cape. For directions, use the map link below and follow the latest route information provided by the map service.</p>
+          <!-- p explains how to use the map. -->
           <a href="https://maps.app.goo.gl/87ueBcJ7dyUReF9H9" class="btn" target="_blank" rel="noopener">OPEN MAP</a>
+          <!-- a creates the map button; target opens it in a new tab and rel adds security. -->
         </div>
+        <!-- Closing div ends the directions box. -->
       </div>
+      <!-- Closing div ends the two-column layout. -->
     </section>
+    <!-- Closing section ends the contact content. -->
 
-    <!-- Call-to-action section. -->
     <section class="cta">
+    <!-- section creates the call-to-action area. -->
       <div class="container">
+      <!-- div controls the CTA width and spacing. -->
         <h2>NEED TO PLACE AN ORDER?</h2>
+        <!-- h2 creates the CTA heading. -->
         <p>Visit our menu first, then use the enquiry page to send your order details.</p>
+        <!-- p gives instructions to visitors. -->
         <div class="button-group">
+        <!-- div groups the CTA buttons. -->
           <a href="services.html" class="btn btn-red">VIEW MENU</a>
+          <!-- a creates a styled link to the menu page. -->
           <a href="enquiry.html" class="btn">SEND ENQUIRY</a>
+          <!-- a creates a styled link to the enquiry page. -->
         </div>
+        <!-- Closing div ends the CTA button group. -->
       </div>
+      <!-- Closing div ends the CTA container. -->
     </section>
+    <!-- Closing section ends the CTA area. -->
   </main>
+  <!-- Closing main ends the primary content. -->
 
-  <!-- Footer information. -->
   <footer>
+  <!-- footer contains information displayed at the bottom of the page. -->
     <p>&copy; 2026 Amina's Fast Food. All Rights Reserved.</p>
+    <!-- p displays copyright text; &copy; displays the copyright symbol. -->
     <p>KwaZakele, Port Elizabeth, Eastern Cape | 072 784 8640</p>
+    <!-- p displays the location and phone number. -->
   </footer>
+  <!-- Closing footer ends the footer. -->
 </body>
+<!-- Closing body ends the visible webpage. -->
 </html>
+<!-- Closing html ends the complete HTML document. -->
