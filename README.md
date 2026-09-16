@@ -4,15 +4,7 @@
 
 Amina's Fast Food is a responsive website for a local fast-food business based in KwaZakele, Port Elizabeth, Eastern Cape.
 
-The website gives customers a simple way to:
-
-- Learn about the business
-- View the food menu and prices
-- Submit an enquiry or order request
-- Contact the business
-- Open WhatsApp for order confirmation
-- Find the business location
-- View trading hours
+The website gives customers a simple way to learn about the business, view the menu and prices, submit an enquiry, contact the business and find its location.
 
 ---
 
@@ -20,23 +12,22 @@ The website gives customers a simple way to:
 
 ### Increase Sales
 
-- Display the menu and prices online
-- Provide an enquiry/order page
-- Provide WhatsApp ordering support
-- Promote combo deals
+- Display the menu and prices online.
+- Provide an enquiry/order page.
+- Provide WhatsApp ordering support.
+- Promote combo deals.
 
 ### Improve Customer Convenience
 
-- Display contact details
-- Display trading hours
-- Provide location information
-- Provide a mobile-friendly website
+- Display contact details and trading hours.
+- Provide location information.
+- Provide a responsive mobile-friendly website.
 
 ### Build Community Connection
 
-- Share the history of Amina's Fast Food
-- Highlight the business's connection with the local community
-- Communicate the business mission and values
+- Share the history of Amina's Fast Food.
+- Explain the business mission, vision and values.
+- Highlight the connection with the local community.
 
 ---
 
@@ -44,10 +35,10 @@ The website gives customers a simple way to:
 
 The website is intended for:
 
-- Students looking for affordable meals
-- Working families looking for convenient food
-- Local community members
-- Customers who support local businesses
+- Students looking for affordable meals.
+- Working families looking for convenient food.
+- Local community members.
+- Customers who support local businesses.
 
 ---
 
@@ -55,18 +46,47 @@ The website is intended for:
 
 | File | Purpose |
 |---|---|
-| `index.html` | Homepage and introduction |
+| `index.html` | Homepage, introduction and calls to action |
 | `Pages/about.html` | Business story, mission, vision and values |
 | `Pages/services.html` | Menu, food categories and combo deals |
 | `Pages/enquiry.html` | Customer enquiry and order form |
 | `Pages/contact.html` | Contact details, hours and location |
-| `Assets/css/style.css` | Website styling and responsive design |
+| `Assets/css/style.css` | Shared styling, typography and responsive design |
+| `WIREFRAMES.md` | Wireframes for the planned page layouts |
+
+---
+
+## 🗺️ Sitemap
+
+```text
+Home
+│
+├── About
+│   ├── Our Story
+│   ├── Mission
+│   ├── Vision
+│   └── Values
+│
+├── Services & Menu
+│   ├── Burgers
+│   ├── Chips
+│   ├── Kota
+│   ├── Fat Cakes
+│   └── Combo Deals
+│
+├── Enquiry / Order
+│   └── Order Form
+│
+└── Contact
+    ├── Location
+    ├── Phone
+    ├── WhatsApp
+    └── Trading Hours
+```
 
 ---
 
 ## 🍔 Menu
-
-The website menu contains the following categories:
 
 ### Burgers
 
@@ -102,7 +122,7 @@ The website menu contains the following categories:
 
 ## 📲 Ordering System
 
-The `enquiry.html` page provides a simple front-end order/enquiry form.
+The `enquiry.html` page provides a front-end order/enquiry form.
 
 Customers can enter:
 
@@ -113,26 +133,15 @@ Customers can enter:
 - Collection or delivery
 - Additional information
 
-After submitting the form, the page displays a confirmation message. Customers can then use WhatsApp to confirm the order details.
+The page displays a confirmation message after the form is submitted. Customers can then use WhatsApp to confirm the order details.
 
-**Important:** The current form is a front-end demonstration. It does not store orders in a database or send the form information to a server.
-
----
-
-## 📞 Contact Information
-
-**Location:** KwaZakele, Port Elizabeth, Eastern Cape  
-**Phone:** 072 784 8640  
-**WhatsApp:** 072 784 8640  
-**Trading Hours:** Monday - Sunday, 10:00 - 20:00
-
-The Contact page also includes links for calling, WhatsApp and opening the map location.
+**Important:** The current form is a front-end demonstration. It does not store orders in a database or send form information to a server.
 
 ---
 
-## 🎨 Website Design
+## 🎨 Design Aesthetics and Typography
 
-The website uses a bold fast-food style with a simple layout that is easy to navigate.
+The website uses a clear fast-food visual style with strong contrast and consistent spacing.
 
 ### Main Colours
 
@@ -142,35 +151,45 @@ The website uses a bold fast-food style with a simple layout that is easy to nav
 | Dark red | Branding and headings |
 | Orange | Buttons and highlights |
 | Light orange | Page banners and CTA sections |
-| White | Content cards and backgrounds |
+| White | Content cards and form areas |
 
 ### Typography
 
-The website currently uses Arial, Helvetica and sans-serif fonts through CSS.
+The website uses a readable Arial/Helvetica sans-serif font stack. Responsive `clamp()` sizes are used for important headings so text remains readable on different screen sizes. Paragraph width is also controlled to avoid very long lines.
 
 ---
 
 ## 📱 Responsive Design
 
-The website is designed to work on:
+The website is designed for:
 
 - 📱 Mobile phones
 - 📲 Tablets
 - 💻 Laptops
 - 🖥️ Desktop computers
 
-CSS media queries are used to change the layout for smaller screens. Navigation links become easier to use on mobile devices and two-column sections change to a single-column layout.
+CSS media queries change the layout for smaller screens. Navigation links stack on very small screens, while two-column sections change to one column.
 
 ---
 
-## 🛠️ Technologies Used
+## 🧱 Semantic HTML and Content Elements
 
-- **HTML5** — Creates the structure of the website
-- **CSS3** — Controls styling and responsive layout
-- **JavaScript** — Provides the enquiry form confirmation message
-- **WhatsApp** — Provides direct customer communication
-- **Google Maps** — Provides the location link
-- **GitHub** — Stores and manages the project files
+The website makes use of HTML5 semantic and content elements, including:
+
+- `<header>` for the website header.
+- `<nav>` for navigation.
+- `<main>` for primary page content.
+- `<section>` for major content sections.
+- `<article>` for independent content cards.
+- `<footer>` for footer information.
+- `<h1>`, `<h2>` and `<h3>` for heading structure.
+- `<p>` for paragraphs.
+- `<ul>`, `<ol>` and `<li>` for lists.
+- `<strong>` and `<small>` for important and supporting menu information.
+- `<form>`, `<fieldset>`, `<legend>`, `<label>`, `<input>`, `<select>` and `<textarea>` for the enquiry form.
+- `<a>` for internal and external links.
+
+The HTML files also contain student-friendly comments explaining important syntax.
 
 ---
 
@@ -185,7 +204,7 @@ My-website/
 │   ├── css/
 │   │   └── style.css
 │   │
-│   └── images/
+│   └── junk-food-concept-unhealthy-food-background-fast-food-sugar-burger-sweets-chips-chocolate-donuts-soda-junk-food-concept-137097176.webp
 │
 ├── Pages/
 │   ├── about.html
@@ -193,88 +212,119 @@ My-website/
 │   ├── enquiry.html
 │   └── contact.html
 │
+├── WIREFRAMES.md
+│
 └── README.md
 ```
 
 ### File Descriptions
 
-- `index.html` — Main homepage
-- `about.html` — Information about the business
-- `services.html` — Food menu and services
-- `enquiry.html` — Order/enquiry form
-- `contact.html` — Contact and location information
-- `style.css` — Shared CSS stylesheet
-- `images/` — Folder for website images
-- `README.md` — Project documentation
+- `index.html` — Main homepage.
+- `about.html` — Business information, mission, vision and values.
+- `services.html` — Food menu and services.
+- `enquiry.html` — Customer order/enquiry form.
+- `contact.html` — Contact and location information.
+- `style.css` — Shared CSS stylesheet.
+- `WIREFRAMES.md` — Website wireframes.
+- `README.md` — Project documentation.
 
 ---
 
 ## ⭐ Main Features
 
-- Responsive navigation bar
-- Homepage hero section
-- About Us page
-- Menu page
-- Burgers, chips, kota and fat cakes
-- Combo deals
-- Enquiry/order form
-- Form confirmation message
-- Clickable phone number
-- WhatsApp ordering link
-- Google Maps location link
-- Trading hours
-- Responsive mobile layout
-- Student-friendly HTML and CSS comments
+- Responsive navigation bar.
+- Homepage hero section with food background image.
+- About Us page.
+- Menu and services page.
+- Burgers, chips, kota and fat cakes.
+- Combo deals.
+- Enquiry/order form.
+- Form confirmation message.
+- Clickable phone number.
+- WhatsApp ordering link.
+- Map location link.
+- Trading hours.
+- Responsive mobile layout.
+- Semantic HTML5 structure.
+- Student-friendly HTML and CSS comments.
+- Wireframes documenting the page layouts.
 
 ---
 
-## 🚀 How to Run the Website
+## 📞 Contact Information
 
-### 1. Clone the Repository
+**Location:** KwaZakele, Port Elizabeth, Eastern Cape  
+**Phone:** 072 784 8640  
+**WhatsApp:** 072 784 8640  
+**Trading Hours:** Monday - Sunday, 10:00 - 20:00
 
-Open a terminal and run:
+---
 
-```bash
-git clone https://github.com/entle-ngqeku/My-website.git
-```
+## 💻 Technologies Used
 
-### 2. Open the Project
-
-Open the cloned `My-website` folder in Visual Studio Code.
-
-### 3. Check the Project Structure
-
-Make sure the HTML, CSS and image folders are in the correct locations.
-
-### 4. Run the Website
-
-Open `index.html` in a web browser.
-
-For easier development, use the **Live Server** extension in Visual Studio Code.
+- **HTML5** — Website structure and semantic elements.
+- **CSS3** — Styling, layout, typography and responsive design.
+- **JavaScript** — Enquiry form confirmation message.
+- **WhatsApp** — Direct customer communication.
+- **Google Maps** — Location link.
+- **GitHub** — Version control and project hosting.
 
 ---
 
 ## 🧪 Testing Checklist
 
-Before submitting or publishing the website, check:
+Before submission, check each item:
 
-- [ ] Homepage loads correctly
-- [ ] Navigation links work
-- [ ] About page opens correctly
-- [ ] Services/Menu page opens correctly
-- [ ] Enquiry page opens correctly
-- [ ] Contact page opens correctly
-- [ ] CSS loads on every page
-- [ ] Order form displays the confirmation message
-- [ ] Phone link works
-- [ ] WhatsApp link works
-- [ ] Map link works
-- [ ] Trading hours are correct
-- [ ] Menu prices are correct
-- [ ] Images load correctly
-- [ ] Website works on mobile
-- [ ] Website works on desktop
-- [ ] No broken links are present
+- [ ] Homepage loads correctly.
+- [ ] Hero background image loads correctly.
+- [ ] All navigation links work from every page.
+- [ ] About page opens correctly.
+- [ ] Services/Menu page opens correctly.
+- [ ] Enquiry page opens correctly.
+- [ ] Contact page opens correctly.
+- [ ] CSS loads on every page.
+- [ ] Form validation works.
+- [ ] Form confirmation message appears.
+- [ ] Phone link works.
+- [ ] WhatsApp link works.
+- [ ] Map link works.
+- [ ] Trading hours are correct.
+- [ ] Menu prices are correct.
+- [ ] Website works on mobile.
+- [ ] Website works on desktop.
+- [ ] No broken internal links are present.
+
+---
+
+## 📅 Development Timeline
+
+| Semester Week | Development Activity | POE Evidence |
+|---|---|---|
+| Week 1 | Research, business analysis and project goals | Research notes and analysis |
+| Week 2 | Proposal, objectives and requirements | POE Part 1 proposal |
+| Week 3 | Sitemap, wireframes and design planning | Sitemap and `WIREFRAMES.md` |
+| Week 4 | HTML page development | Initial website pages |
+| Week 5 | CSS styling and responsive layout | Updated CSS and screenshots |
+| Week 6 | Forms, links and website functionality | Enquiry and contact features |
+| Week 7 | Testing, navigation checks and corrections | Testing checklist and fixes |
+| Week 8 | Final review, documentation and submission | Final website and README |
+
+**POE deadline:** The exact submission date must be copied from the official module POE brief/calendar so that the timeline matches the lecturer's required deadline. No deadline date was supplied in the marking rubric used for this README.
+
+---
+
+## 💰 Budget
+
+The website is developed using HTML, CSS and JavaScript and is stored on GitHub during development.
+
+Possible future costs include:
+
+- Domain registration.
+- Web hosting.
+- Website maintenance.
+- Optional analytics or marketing services.
+
+Current hosting references include xneelo and Afrihost pricing pages. Prices can change, so the provider websites should be checked before making a final budget decision.
 
 ---
 
@@ -282,18 +332,18 @@ Before submitting or publishing the website, check:
 
 Possible future improvements include:
 
-- Online payment
-- Database for storing orders
-- Automatic order notifications
-- Customer reviews
-- Feedback management
-- Daily specials management
-- Online menu management
-- Social media integration
-- Website analytics
-- Careers page
-- Job application system
-- Additional business branches
+- Online payment.
+- Database for storing orders.
+- Automatic order notifications.
+- Customer reviews.
+- Feedback management.
+- Daily specials management.
+- Online menu management.
+- Social media integration.
+- Website analytics.
+- Careers page.
+- Job application system.
+- Additional business branches.
 
 ---
 
@@ -301,28 +351,25 @@ Possible future improvements include:
 
 The website can be evaluated using measures such as:
 
-- Number of website visitors
-- Number of online enquiries
-- Number of WhatsApp enquiries
-- Number of completed orders
-- Menu page visits
-- Enquiry page visits
-- Contact page visits
-- Feedback submissions
-- Mobile traffic
-- Time spent on the website
+- Number of website visitors.
+- Number of online enquiries.
+- Number of WhatsApp enquiries.
+- Number of completed orders.
+- Menu page visits.
+- Enquiry page visits.
+- Contact page visits.
+- Mobile traffic.
+- Time spent on the website.
 
 ---
 
-## 📅 Development Timeline
+## 📚 References
 
-| Stage | Timeline |
-|---|---|
-| Research and Planning | Week 1–2 |
-| Design | Week 3–4 |
-| Development | Week 5–6 |
-| Testing and Review | Week 7 |
-| Launch and Handover | Week 8 |
+1. Amina Fast Food Kitchen. Facebook Menu and Branding. Accessed August 2026.
+2. xneelo. **Web Hosting.** https://xneelo.co.za/web-hosting/ Accessed September 2026.
+3. Afrihost. **Hosting and Domains.** https://www.afrihost.com/ Accessed September 2026.
+4. Google Analytics. **Analytics Overview.** https://marketingplatform.google.com/about/analytics/ Accessed September 2026.
+5. GitHub. **GitHub Documentation / Repository Platform.** https://github.com/ Accessed September 2026.
 
 ---
 
@@ -332,15 +379,6 @@ The website can be evaluated using measures such as:
 **Student:** Entle Ngqeku  
 **Module:** WEDE5020  
 **Year:** 2026
-
----
-
-## 📚 References
-
-1. Amina Fast Food Kitchen. Facebook Menu and Branding. Accessed August 2026.
-2. Xneelo. Web Hosting and Domain Pricing South Africa. Accessed August 2026.
-3. Google Analytics. Accessed August 2026.
-4. Afrihost. Web Hosting Plans and Pricing. Accessed August 2026.
 
 ---
 
