@@ -1,18 +1,27 @@
 <!DOCTYPE html>
+<!-- HTML5 document declaration. -->
 <html lang="en">
+<!-- lang attribute identifies English as the page language. -->
 <head>
+  <!-- Character encoding. -->
   <meta charset="UTF-8">
+  <!-- Makes the page responsive. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Page description. -->
   <meta name="description" content="Send an enquiry or order request to Amina's Fast Food.">
+  <!-- Browser tab title. -->
   <title>Enquiry &amp; Order | Amina's Fast Food</title>
+  <!-- Links this page to the shared external CSS stylesheet. -->
   <link rel="stylesheet" href="../Assets/css/style.css">
 </head>
 <body>
+  <!-- Header displays the business identity. -->
   <header class="site-header">
     <div class="logo">🔥 AMINA'S FAST FOOD</div>
     <p class="tagline">Fresh. Fast. Affordable.</p>
   </header>
 
+  <!-- Navigation menu. -->
   <nav class="navbar">
     <a href="../index.html">Home</a>
     <a href="about.html">About</a>
@@ -22,6 +31,7 @@
   </nav>
 
   <main>
+    <!-- Page heading/banner. -->
     <section class="page-banner page-header">
       <p class="eyebrow">ORDER WITH US</p>
       <h1>PLACE AN ENQUIRY / ORDER</h1>
@@ -29,6 +39,7 @@
     </section>
 
     <section class="container order-section">
+      <!-- Introductory information before the form. -->
       <div class="box intro">
         <p class="eyebrow">BEFORE YOU SUBMIT</p>
         <h2>Tell Us What You Need</h2>
@@ -36,6 +47,7 @@
         <p>After submitting the form, contact Amina's Fast Food on WhatsApp to confirm your order and discuss the final details.</p>
       </div>
 
+      <!-- Two information boxes arranged using CSS Grid. -->
       <div class="two-column">
         <div class="box">
           <p class="eyebrow">ORDER PROCESS</p>
@@ -55,14 +67,17 @@
           <p>If you have questions about the menu or your order, you can contact us before submitting the form.</p>
           <p><strong>Phone:</strong> 072 784 8640</p>
           <p><strong>Hours:</strong> Monday - Sunday, 10:00 - 20:00</p>
+          <!-- target opens WhatsApp in a new browser tab. -->
           <a href="https://wa.me/27727848640" class="btn" target="_blank" rel="noopener">OPEN WHATSAPP</a>
         </div>
       </div>
 
+      <!-- Form collects customer order/enquiry information. -->
       <form class="order-form" onsubmit="event.preventDefault(); document.getElementById('result').textContent='Thank you! Your enquiry has been recorded on this page. Please contact us on WhatsApp to confirm your order.';">
         <h2>Order / Enquiry Form</h2>
         <p class="form-note">Fields marked as required must be completed.</p>
 
+        <!-- Each form-group keeps a label and input together for styling. -->
         <div class="form-group">
           <label for="name">Full Name *</label>
           <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name" required>
@@ -112,12 +127,15 @@
           <textarea id="message" name="message" placeholder="Add any additional information about your enquiry or order"></textarea>
         </div>
 
+        <!-- Button submits the form and triggers the simple page message. -->
         <button class="btn btn-red" type="submit">SUBMIT ENQUIRY</button>
+        <!-- aria-live allows assistive technology to announce the result message. -->
         <p id="result" class="form-result" aria-live="polite"></p>
       </form>
     </section>
   </main>
 
+  <!-- Footer information. -->
   <footer>
     <p>&copy; 2026 Amina's Fast Food. All Rights Reserved.</p>
     <p>KwaZakele, Port Elizabeth, Eastern Cape | 072 784 8640</p>
