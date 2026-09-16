@@ -1,129 +1,218 @@
 <!DOCTYPE html>
-<!-- HTML5 document declaration. -->
+<!-- DOCTYPE declares that the document uses HTML5. -->
 <html lang="en">
-<!-- lang="en" identifies English as the page language. -->
+<!-- html is the root element; lang="en" sets English as the page language. -->
 <head>
-  <!-- Character encoding for the webpage. -->
+<!-- head contains metadata and links used by the browser. -->
   <meta charset="UTF-8">
-  <!-- Makes the page responsive on different screen sizes. -->
+  <!-- meta charset sets UTF-8 character encoding. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Description of the page for search engines. -->
+  <!-- viewport makes the page responsive on different screen sizes. -->
   <meta name="description" content="Learn about Amina's Fast Food, our story, mission, vision and values.">
-  <!-- Browser tab title. -->
+  <!-- description gives search engines a short description of the page. -->
   <title>About Us | Amina's Fast Food</title>
-  <!-- External CSS file used to style this page. ../ moves from Pages to the main folder. -->
+  <!-- title sets the text shown on the browser tab. -->
   <link rel="stylesheet" href="../Assets/css/style.css">
+  <!-- link connects this page to the external CSS file; ../ goes up from Pages to the main folder. -->
 </head>
+<!-- Closing head ends the metadata area. -->
 <body>
-  <!-- Website header. -->
+<!-- body contains the visible webpage content. -->
   <header class="site-header">
+  <!-- header creates the top website section and site-header connects it to CSS. -->
     <div class="logo">🔥 AMINA'S FAST FOOD</div>
+    <!-- div groups the business name; logo is the CSS class. -->
     <p class="tagline">Fresh. Fast. Affordable.</p>
+    <!-- p creates a paragraph and tagline applies the slogan styling. -->
   </header>
+  <!-- Closing header ends the website header. -->
 
-  <!-- Main navigation menu. -->
   <nav class="navbar">
+  <!-- nav contains the main website navigation links. -->
     <a href="../index.html">Home</a>
+    <!-- a creates a hyperlink; href gives the destination. -->
     <a class="active" href="about.html">About</a>
+    <!-- class="active" shows that About is the current page. -->
     <a href="services.html">Services &amp; Menu</a>
+    <!-- This link opens the Services and Menu page; &amp; displays &. -->
     <a href="enquiry.html">Enquiry / Order</a>
+    <!-- This link opens the enquiry/order page. -->
     <a href="contact.html">Contact</a>
+    <!-- This link opens the contact page. -->
   </nav>
+  <!-- Closing nav ends the navigation menu. -->
 
   <main>
-    <!-- Page banner introduces the About page. -->
+  <!-- main identifies the primary content of this webpage. -->
     <section class="page-banner page-header">
+    <!-- section creates a content area; the two classes control banner styling. -->
       <p class="eyebrow">GET TO KNOW US</p>
+      <!-- p displays a small section label. -->
       <h1>ABOUT AMINA'S FAST FOOD</h1>
+      <!-- h1 is the main heading of the page. -->
       <p>Learn more about our story, our values and the people we serve.</p>
+      <!-- p displays supporting text below the main heading. -->
     </section>
+    <!-- Closing section ends the page banner. -->
 
-    <!-- Business story section. -->
     <section class="container content-section">
+    <!-- This section uses container for width and content-section for spacing. -->
       <div class="box intro">
+      <!-- div groups the story; box and intro provide CSS styling. -->
         <p class="eyebrow">OUR STORY</p>
+        <!-- p displays the story label. -->
         <h2>From a Small Takeaway to a Local Food Business</h2>
+        <!-- h2 creates a section heading below the page h1. -->
         <p>Amina's Fast Food was founded in 2021 in Port Elizabeth by Amina Langa, with support from Nouthando Xayimpi. The business started as a small family takeaway stall with a simple idea: provide tasty food that customers can enjoy without spending too much.</p>
+        <!-- p contains the first paragraph of the business story. -->
         <p>From the beginning, the focus has been on fresh meals, friendly service and affordable choices. Burgers, chips, kota meals, fat cakes and combo deals give customers a range of familiar fast-food options for different occasions.</p>
+        <!-- p contains the second story paragraph. -->
         <p>As the business grows, Amina's Fast Food aims to remain connected to the local community while improving the customer experience and maintaining the values that shaped the business from the start.</p>
+        <!-- p contains the third story paragraph. -->
       </div>
+      <!-- Closing div ends the story box. -->
 
-      <!-- Two-column layout controlled by CSS. -->
       <div class="two-column">
+      <!-- div creates a two-column layout controlled by CSS Grid. -->
         <div class="box">
+        <!-- div creates the mission content box. -->
           <p class="eyebrow">OUR MISSION</p>
+          <!-- p displays the mission label. -->
           <h2>What We Aim to Do</h2>
+          <!-- h2 creates the mission heading. -->
           <p>Our mission is to provide delicious, affordable and convenient meals while creating a welcoming experience for every customer. We aim to serve customers with care, maintain consistent service and make everyday meals accessible to the surrounding community.</p>
+          <!-- p explains the business mission. -->
         </div>
+        <!-- Closing div ends the mission box. -->
         <div class="box">
+        <!-- div creates the vision content box. -->
           <p class="eyebrow">OUR VISION</p>
+          <!-- p displays the vision label. -->
           <h2>Where We Are Going</h2>
+          <!-- h2 creates the vision heading. -->
           <p>Our vision is to grow into a recognised local fast-food brand in Port Elizabeth, known for affordable meals, reliable service, friendly customer care and positive involvement in the community.</p>
+          <!-- p explains the business vision. -->
         </div>
+        <!-- Closing div ends the vision box. -->
       </div>
+      <!-- Closing div ends the two-column layout. -->
 
-      <!-- Values are displayed as individual article cards. -->
       <div class="box">
+      <!-- div creates the values section box. -->
         <p class="eyebrow">OUR VALUES</p>
+        <!-- p displays the values label. -->
         <h2>What Matters to Us</h2>
+        <!-- h2 creates the values heading. -->
         <div class="cards">
+        <!-- div creates a responsive grid for the value cards. -->
           <article class="card">
+          <!-- article creates the Quality card. -->
             <div class="card-icon">⭐</div>
+            <!-- div displays the card icon. -->
             <h3>Quality</h3>
+            <!-- h3 creates the card heading. -->
             <p>We care about the meals we serve and aim to give customers food they can enjoy.</p>
+            <!-- p describes the Quality value. -->
           </article>
+          <!-- Closing article ends the Quality card. -->
           <article class="card">
+          <!-- article creates the Customer Service card. -->
             <div class="card-icon">🤝</div>
+            <!-- div displays the service icon. -->
             <h3>Customer Service</h3>
+            <!-- h3 creates the service heading. -->
             <p>We believe customers should be treated with respect, friendliness and patience.</p>
+            <!-- p describes the Customer Service value. -->
           </article>
+          <!-- Closing article ends the Customer Service card. -->
           <article class="card">
+          <!-- article creates the Affordability card. -->
             <div class="card-icon">💰</div>
+            <!-- div displays the affordability icon. -->
             <h3>Affordability</h3>
+            <!-- h3 creates the affordability heading. -->
             <p>Our menu provides different meal choices so customers can find options that suit their budget.</p>
+            <!-- p describes the Affordability value. -->
           </article>
+          <!-- Closing article ends the Affordability card. -->
           <article class="card">
+          <!-- article creates the Community card. -->
             <div class="card-icon">🏘️</div>
+            <!-- div displays the community icon. -->
             <h3>Community</h3>
+            <!-- h3 creates the community heading. -->
             <p>We value our local customers and want the business to contribute positively to the surrounding community.</p>
+            <!-- p describes the Community value. -->
           </article>
+          <!-- Closing article ends the Community card. -->
         </div>
+        <!-- Closing div ends the cards grid. -->
       </div>
+      <!-- Closing div ends the values box. -->
 
-      <!-- Community and future information. -->
       <div class="highlights">
+      <!-- div creates another two-column grid for community and future information. -->
         <div class="box">
+        <!-- div creates the community information box. -->
           <p class="eyebrow">OUR COMMUNITY</p>
+          <!-- p displays the community label. -->
           <h2>Serving Local Customers</h2>
+          <!-- h2 creates the community heading. -->
           <p>Amina's Fast Food is based in KwaZakele, Port Elizabeth, Eastern Cape. The business is built around serving local customers who want convenient meals at accessible prices.</p>
+          <!-- p explains the local community served. -->
           <p>We believe a local food business is also a place where people can connect, enjoy a meal and support businesses within their community.</p>
+          <!-- p explains the community connection. -->
         </div>
+        <!-- Closing div ends the community box. -->
         <div class="box">
+        <!-- div creates the future information box. -->
           <p class="eyebrow">OUR FUTURE</p>
+          <!-- p displays the future label. -->
           <h2>Growing With Our Customers</h2>
+          <!-- h2 creates the future heading. -->
           <p>As the business develops, we want to improve the way customers discover the menu, ask questions and place orders. Our website makes important information available in one convenient place.</p>
+          <!-- p explains future website improvements. -->
           <p>Customers can explore the menu, send an enquiry or contact the business directly for more information.</p>
+          <!-- p explains how customers can use the website. -->
         </div>
+        <!-- Closing div ends the future box. -->
       </div>
+      <!-- Closing div ends the highlights layout. -->
     </section>
+    <!-- Closing section ends the About page content. -->
 
-    <!-- Call-to-action section. -->
     <section class="cta">
+    <!-- section creates the call-to-action area. -->
       <div class="container">
+      <!-- div uses container to control the CTA width and spacing. -->
         <h2>READY TO TRY OUR MENU?</h2>
+        <!-- h2 displays the CTA heading. -->
         <p>Explore our meals and combo deals, then send an enquiry when you are ready to order.</p>
+        <!-- p gives visitors instructions before the links. -->
         <div class="button-group">
+        <!-- div groups the CTA buttons. -->
           <a href="services.html" class="btn btn-red">VIEW MENU</a>
+          <!-- a creates a styled link to the menu page. -->
           <a href="enquiry.html" class="btn">PLACE AN ORDER</a>
+          <!-- a creates a styled link to the order page. -->
         </div>
+        <!-- Closing div ends the CTA button group. -->
       </div>
+      <!-- Closing div ends the CTA container. -->
     </section>
+    <!-- Closing section ends the CTA area. -->
   </main>
+  <!-- Closing main ends the primary page content. -->
 
-  <!-- Footer information. -->
   <footer>
+  <!-- footer contains information shown at the bottom of the page. -->
     <p>&copy; 2026 Amina's Fast Food. All Rights Reserved.</p>
+    <!-- p displays copyright text; &copy; creates the copyright symbol. -->
     <p>KwaZakele, Port Elizabeth, Eastern Cape | 072 784 8640</p>
+    <!-- p displays the business location and phone number. -->
   </footer>
+  <!-- Closing footer ends the footer section. -->
 </body>
+<!-- Closing body ends the visible webpage content. -->
 </html>
+<!-- Closing html ends the complete HTML document. -->
