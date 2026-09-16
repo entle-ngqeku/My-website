@@ -1,117 +1,188 @@
 <!DOCTYPE html>
-<!-- Declares that this document uses HTML5. -->
+<!-- <!DOCTYPE html> tells the browser that this page uses HTML5. -->
 <html lang="en">
-<!-- The lang attribute tells the browser the page language is English. -->
+<!-- <html> is the root element; lang="en" says the page is written in English. -->
 <head>
-    <!-- Character encoding supports normal text and symbols. -->
+<!-- <head> contains page information that is not displayed as main page content. -->
     <meta charset="UTF-8">
-    <!-- Makes the layout responsive on phones, tablets and computers. -->
+    <!-- <meta charset> sets UTF-8 character encoding so text and symbols display correctly. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Gives search engines a short description of the page. -->
+    <!-- The viewport meta tag makes the layout fit phones, tablets and computers. -->
     <meta name="description" content="Amina's Fast Food - fresh, fast and affordable meals in KwaZakele, Port Elizabeth.">
-    <!-- Sets the text shown on the browser tab. -->
+    <!-- The description meta tag gives search engines a short description of the page. -->
     <title>Amina's Fast Food | Home</title>
-    <!-- Links this HTML page to the shared external CSS stylesheet. -->
+    <!-- <title> sets the name shown on the browser tab. -->
     <link rel="stylesheet" href="Assets/css/style.css">
+    <!-- <link> connects this HTML file to the external CSS stylesheet. -->
 </head>
+<!-- </head> ends the page information section. -->
 <body>
+<!-- <body> contains all content visible to website visitors. -->
 
-<!-- Header contains the business name and tagline. -->
 <header class="site-header">
+<!-- <header> creates the top section; class="site-header" connects it to CSS styling. -->
     <div class="logo">🔥 AMINA'S FAST FOOD</div>
+    <!-- <div> groups the business name; class="logo" identifies it for CSS. -->
     <p class="tagline">Fresh. Fast. Affordable.</p>
+    <!-- <p> creates a paragraph; class="tagline" gives the slogan its CSS style. -->
 </header>
+<!-- </header> closes the website header. -->
 
-<!-- Navigation contains links to all main website pages. -->
 <nav class="navbar">
+<!-- <nav> contains navigation links; class="navbar" styles the navigation with CSS. -->
     <a href="index.html" class="active">Home</a>
+    <!-- <a> creates a link; href gives its destination and active marks the current page. -->
     <a href="Pages/about.html">About</a>
+    <!-- This <a> link opens the About page. -->
     <a href="Pages/services.html">Services &amp; Menu</a>
+    <!-- This <a> link opens the Services and Menu page; &amp; displays an ampersand. -->
     <a href="Pages/enquiry.html">Enquiry / Order</a>
+    <!-- This <a> link opens the enquiry and order page. -->
     <a href="Pages/contact.html">Contact</a>
+    <!-- This <a> link opens the Contact page. -->
 </nav>
+<!-- </nav> closes the navigation menu. -->
 
-<!-- Main contains the main content of the homepage. -->
 <main>
-    <!-- Hero section is the first large section visitors see. -->
+<!-- <main> identifies the main content of the webpage. -->
     <section class="hero">
+    <!-- <section> creates a content section; class="hero" gives it the large hero design. -->
         <div class="hero-content">
+        <!-- <div> groups the hero content; hero-content controls its width with CSS. -->
             <p class="tagline">FRESH • FAST • AFFORDABLE</p>
+            <!-- <p> displays the short hero slogan. -->
             <h1>GOOD FOOD,<br>GOOD MOOD!</h1>
+            <!-- <h1> is the main heading; <br> forces the second words onto a new line. -->
             <p>Welcome to Amina's Fast Food, your local takeaway for delicious, affordable and flavourful meals. We make it easy to enjoy a satisfying meal when you are at home, at work or on the go.</p>
-            <!-- Button links use CSS classes to create styled calls to action. -->
+            <!-- <p> displays the introductory hero paragraph. -->
             <div class="button-group">
+            <!-- This <div> groups the call-to-action buttons for CSS layout. -->
                 <a href="Pages/services.html" class="btn">VIEW OUR MENU</a>
+                <!-- This <a> acts as a styled button and opens the menu page. -->
                 <a href="Pages/enquiry.html" class="btn btn-red">ORDER / ENQUIRE</a>
+                <!-- This <a> opens the order page and uses two CSS classes for button styling. -->
             </div>
+            <!-- </div> closes the button group. -->
         </div>
+        <!-- </div> closes the hero content container. -->
     </section>
+    <!-- </section> closes the hero area. -->
 
-    <!-- Intro section gives visitors background information about the business. -->
     <section class="container intro">
+    <!-- This <section> contains the welcome information and uses container and intro CSS classes. -->
         <p class="eyebrow">WELCOME</p>
+        <!-- This <p> is a small section label styled by the eyebrow class. -->
         <h2>A LOCAL TAKEAWAY WITH A BIG HEART</h2>
+        <!-- <h2> creates a second-level section heading. -->
         <p>Amina's Fast Food was founded in 2021 in Port Elizabeth. It started as a small family takeaway stall and has grown while continuing to provide affordable meals and friendly service to the local community.</p>
+        <!-- This <p> gives background information about the business. -->
         <p>Our aim is to make everyday meals convenient and enjoyable. From burgers and crispy chips to kota and fat cakes, our menu includes familiar favourites for different tastes and appetites.</p>
+        <!-- This <p> explains the food choices offered by the business. -->
     </section>
+    <!-- </section> closes the introduction section. -->
 
-    <!-- Cards present the main features of the business. -->
     <section class="container">
+    <!-- This <section> contains the main features of the business. -->
         <div class="section-heading">
+        <!-- This <div> groups the section heading text. -->
             <p class="eyebrow">WHY CHOOSE US?</p>
+            <!-- The eyebrow paragraph provides a small heading label. -->
             <h2>WHAT WE OFFER</h2>
+            <!-- <h2> displays the section title. -->
         </div>
+        <!-- </div> closes the section heading group. -->
 
         <div class="cards">
+        <!-- This <div> creates a grid container for the feature cards. -->
             <article class="card">
+            <!-- <article> contains one independent feature; class="card" applies card styling. -->
                 <div class="card-icon">🍔</div>
+                <!-- This <div> displays the burger icon used for the card. -->
                 <h3>DELICIOUS FOOD</h3>
+                <!-- <h3> creates the card heading. -->
                 <p>Enjoy flavourful takeaway meals prepared with customers in mind. Our menu includes burgers, chips, kota, fat cakes and combo meals.</p>
+                <!-- <p> describes the food offered. -->
             </article>
+            <!-- </article> closes the first feature card. -->
 
             <article class="card">
+            <!-- This <article> creates the second feature card. -->
                 <div class="card-icon">⚡</div>
+                <!-- This <div> displays the fast-service icon. -->
                 <h3>FAST SERVICE</h3>
+                <!-- <h3> creates the fast-service heading. -->
                 <p>We focus on making ordering and collection simple and convenient, helping customers get their meals without unnecessary delays.</p>
+                <!-- <p> explains the service benefit. -->
             </article>
+            <!-- </article> closes the second feature card. -->
 
             <article class="card">
+            <!-- This <article> creates the third feature card. -->
                 <div class="card-icon">🤝</div>
+                <!-- This <div> displays the community icon. -->
                 <h3>LOCAL COMMUNITY</h3>
+                <!-- <h3> creates the community heading. -->
                 <p>Amina's Fast Food aims to support local families by creating employment opportunities and contributing to the surrounding community.</p>
+                <!-- <p> explains the business community focus. -->
             </article>
+            <!-- </article> closes the third feature card. -->
         </div>
+        <!-- </div> closes the cards grid. -->
     </section>
+    <!-- </section> closes the features section. -->
 
-    <!-- Highlights section uses two columns on larger screens. -->
     <section class="container highlights">
+    <!-- This <section> contains the business promise and uses the highlights grid. -->
         <div>
+        <!-- <div> groups the promise heading and paragraph. -->
             <p class="eyebrow">OUR PROMISE</p>
+            <!-- This <p> is the small section label. -->
             <h2>A MEAL FOR EVERY OCCASION</h2>
+            <!-- <h2> creates the section heading. -->
             <p>Whether you need a quick lunch, a filling meal after a busy day or something to share, our menu gives you affordable choices. Customers can view the menu, send an enquiry or contact us directly for more information.</p>
+            <!-- This <p> explains the available meal choices. -->
         </div>
+        <!-- </div> closes the promise content. -->
         <div class="info-list">
+        <!-- This <div> groups the list-style highlights and applies info-list CSS. -->
             <p>✓ Affordable menu options</p>
+            <!-- <p> displays the first highlighted point. -->
             <p>✓ Burgers, chips, kota and fat cakes</p>
+            <!-- <p> displays the second highlighted point. -->
             <p>✓ Convenient ordering enquiries</p>
+            <!-- <p> displays the third highlighted point. -->
             <p>✓ Friendly local service</p>
+            <!-- <p> displays the fourth highlighted point. -->
         </div>
+        <!-- </div> closes the highlights list. -->
     </section>
+    <!-- </section> closes the highlights section. -->
 
-    <!-- CTA means Call To Action and encourages the visitor to order. -->
     <section class="cta">
+    <!-- <section> creates the final call-to-action area; cta is its CSS class. -->
         <p class="eyebrow">READY TO EAT?</p>
+        <!-- This <p> displays the CTA label. -->
         <h2>ORDER YOUR NEXT MEAL TODAY</h2>
+        <!-- <h2> displays the CTA heading. -->
         <p>View our menu or send us an enquiry and let Amina's Fast Food take care of your meal.</p>
+        <!-- <p> gives visitors instructions before the button. -->
         <a href="Pages/enquiry.html" class="btn">MAKE AN ENQUIRY</a>
+        <!-- <a> creates a styled button that opens the enquiry page. -->
     </section>
+    <!-- </section> closes the CTA section. -->
 </main>
+<!-- </main> closes the main webpage content. -->
 
-<!-- Footer contains copyright and location information. -->
 <footer>
+<!-- <footer> contains information shown at the bottom of the page. -->
     <p>&copy; 2026 Amina's Fast Food. All Rights Reserved.</p>
+    <!-- <p> displays copyright text; &copy; creates the copyright symbol. -->
     <p>KwaZakele, Port Elizabeth, Eastern Cape</p>
+    <!-- <p> displays the business location. -->
 </footer>
+<!-- </footer> closes the footer. -->
 
 </body>
+<!-- </body> closes all visible webpage content. -->
 </html>
+<!-- </html> closes the HTML document. -->
