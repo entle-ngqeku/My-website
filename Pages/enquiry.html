@@ -1,2 +1,126 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Enquiry & Order | Amina's Fast Food</title><link rel="stylesheet" href="../Assets/css/style.css"></head><body><header><div class="logo">🔥 AMINA'S FAST FOOD</div><p>Fresh. Fast. Affordable.</p></header><nav><a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services & Menu</a><a class="active" href="enquiry.html">Enquiry / Order</a><a href="contact.html">Contact</a></nav><main><section class="page-header"><h1>PLACE AN ENQUIRY / ORDER</h1><p>Complete the form below and we will get back to you.</p></section><section class="container"><form onsubmit="event.preventDefault();document.getElementById('result').textContent='Thank you! Your enquiry has been recorded on this page. Please contact us on WhatsApp to confirm your order.';"><label for="name">Full Name</label><input id="name" name="name" type="text" placeholder="Enter your name" required><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required><label for="order">Select Meal</label><select id="order" name="order" required><option value="">-- Select a meal --</option><option>Classic Burger</option><option>Cheese Burger</option><option>Double Burger</option><option>Small Chips</option><option>Medium Chips</option><option>Large Chips</option><option>Basic Kota</option><option>Special Kota</option><option>Plain Fat Cake</option><option>Filled Fat Cake</option><option>Burger Combo</option><option>Kota Combo</option></select><label for="quantity">Quantity</label><input id="quantity" name="quantity" type="number" min="1" value="1" required><label for="delivery">Collection or Delivery</label><select id="delivery" name="delivery" required><option value="">-- Select option --</option><option>Collection</option><option>Delivery</option></select><label for="message">Additional Information</label><textarea id="message" name="message" placeholder="Enter any additional information"></textarea><button class="btn" type="submit">SUBMIT ENQUIRY</button><p id="result" aria-live="polite"></p></form></section></main><footer><p>&copy; 2026 Amina's Fast Food. All Rights Reserved.</p></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send an enquiry or order request to Amina's Fast Food.">
+  <title>Enquiry &amp; Order | Amina's Fast Food</title>
+  <link rel="stylesheet" href="../Assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">🔥 AMINA'S FAST FOOD</div>
+    <p class="tagline">Fresh. Fast. Affordable.</p>
+  </header>
+
+  <nav class="navbar">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services &amp; Menu</a>
+    <a class="active" href="enquiry.html">Enquiry / Order</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-banner page-header">
+      <p class="eyebrow">ORDER WITH US</p>
+      <h1>PLACE AN ENQUIRY / ORDER</h1>
+      <p>Complete the form below with your meal and contact details.</p>
+    </section>
+
+    <section class="container order-section">
+      <div class="box intro">
+        <p class="eyebrow">BEFORE YOU SUBMIT</p>
+        <h2>Tell Us What You Need</h2>
+        <p>Use this form to send an enquiry or provide the details of the meal you would like. Make sure your name and phone number are correct so that the business can contact you about your request.</p>
+        <p>After submitting the form, contact Amina's Fast Food on WhatsApp to confirm your order and discuss the final details.</p>
+      </div>
+
+      <div class="two-column">
+        <div class="box">
+          <p class="eyebrow">ORDER PROCESS</p>
+          <h2>Simple Steps</h2>
+          <ol class="info-list">
+            <li>Choose a meal from the menu.</li>
+            <li>Enter your full name and phone number.</li>
+            <li>Select the meal and quantity.</li>
+            <li>Choose collection or delivery.</li>
+            <li>Add any useful information in the message box.</li>
+            <li>Submit the enquiry and confirm the order on WhatsApp.</li>
+          </ol>
+        </div>
+        <div class="box">
+          <p class="eyebrow">CONTACT</p>
+          <h2>Need Help First?</h2>
+          <p>If you have questions about the menu or your order, you can contact us before submitting the form.</p>
+          <p><strong>Phone:</strong> 072 784 8640</p>
+          <p><strong>Hours:</strong> Monday - Sunday, 10:00 - 20:00</p>
+          <a href="https://wa.me/27727848640" class="btn" target="_blank" rel="noopener">OPEN WHATSAPP</a>
+        </div>
+      </div>
+
+      <form class="order-form" onsubmit="event.preventDefault(); document.getElementById('result').textContent='Thank you! Your enquiry has been recorded on this page. Please contact us on WhatsApp to confirm your order.';">
+        <h2>Order / Enquiry Form</h2>
+        <p class="form-note">Fields marked as required must be completed.</p>
+
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel" required>
+        </div>
+
+        <div class="form-group">
+          <label for="order">Select Meal *</label>
+          <select id="order" name="order" required>
+            <option value="">-- Select a meal --</option>
+            <option>Classic Burger</option>
+            <option>Cheese Burger</option>
+            <option>Double Burger</option>
+            <option>Small Chips</option>
+            <option>Medium Chips</option>
+            <option>Large Chips</option>
+            <option>Basic Kota</option>
+            <option>Cheese Kota</option>
+            <option>Special Kota</option>
+            <option>Plain Fat Cake</option>
+            <option>Filled Fat Cake</option>
+            <option>Burger Combo</option>
+            <option>Kota Combo</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity *</label>
+          <input id="quantity" name="quantity" type="number" min="1" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="delivery">Collection or Delivery *</label>
+          <select id="delivery" name="delivery" required>
+            <option value="">-- Select option --</option>
+            <option>Collection</option>
+            <option>Delivery</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Additional Information</label>
+          <textarea id="message" name="message" placeholder="Add any additional information about your enquiry or order"></textarea>
+        </div>
+
+        <button class="btn btn-red" type="submit">SUBMIT ENQUIRY</button>
+        <p id="result" class="form-result" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Amina's Fast Food. All Rights Reserved.</p>
+    <p>KwaZakele, Port Elizabeth, Eastern Cape | 072 784 8640</p>
+  </footer>
+</body>
+</html>
