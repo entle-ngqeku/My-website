@@ -1,1 +1,396 @@
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;background:#fff8f0;color:#222;line-height:1.7}.site-header,header{background:linear-gradient(135deg,#8b0000,#e85d04);color:white;text-align:center;padding:28px 20px}.logo{font-size:2rem;font-weight:700}.navbar,nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;background:#222;padding:12px}.navbar a,nav a{color:white;text-decoration:none;padding:10px 15px;border-radius:5px}.navbar a:hover,.navbar a.active,nav a:hover{background:#e85d04}.hero{background:linear-gradient(#0008,#0008),url('../junk-food-concept-unhealthy-food-background-fast-food-sugar-burger-sweets-chips-chocolate-donuts-soda-junk-food-concept-137097176.webp') center/cover;min-height:440px;display:flex;align-items:center;justify-content:center;color:white;text-align:center;padding:40px 20px}.hero-content{max-width:800px}.hero h1{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1.1;margin:15px 0}.tagline,.eyebrow{font-weight:bold;letter-spacing:2px;color:#e85d04}.hero .tagline{color:#ffd166}.container{max-width:1100px;margin:auto;padding:55px 20px}.container h2,.cta h2{color:#8b0000;margin-bottom:18px;font-size:2rem}.button-group{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;background:#e85d04;color:white;text-decoration:none;border:0;border-radius:6px;padding:12px 22px;font-weight:bold;cursor:pointer}.btn:hover{background:#8b0000}.btn-red{background:#8b0000}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:25px}.card,.box,.contact-box,.menu-section,form{background:white;padding:25px;border-radius:10px;box-shadow:0 3px 12px #0001;margin-bottom:22px}.card-icon{font-size:2.4rem}.card h3{color:#8b0000;margin:10px 0}.section-heading{text-align:center}.highlights{display:grid;grid-template-columns:1fr 1fr;gap:35px}.info-list p{padding:8px 0}.cta{text-align:center;background:#ffe0b2;padding:55px 20px}.page-header{text-align:center;padding:45px 20px;background:#ffe0b2}.menu-section h2{color:#8b0000}.menu-row{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #ddd;padding:15px 0}.menu-row:last-child{border:0}.menu-row strong{color:#e85d04;white-space:nowrap}.special{border:3px solid #e85d04}form{max-width:700px;margin:30px auto}label{display:block;font-weight:bold;margin-top:15px}input,select,textarea{width:100%;padding:12px;border:1px solid #bbb;border-radius:5px;font:inherit}textarea{min-height:120px}form button{margin-top:20px}footer{background:#222;color:white;text-align:center;padding:25px 15px}@media(max-width:650px){.highlights{grid-template-columns:1fr}.logo{font-size:1.5rem}.menu-row{align-items:flex-start}}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff8f0;
+  color: #222;
+  line-height: 1.7;
+}
+
+.site-header {
+  background: linear-gradient(135deg, #8b0000, #e85d04);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.logo {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  margin-top: 5px;
+  font-weight: bold;
+  color: #ffe0b2;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: #222;
+  padding: 12px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background: #e85d04;
+}
+
+.hero {
+  background: linear-gradient(#0009, #0009), url('../images/junk-food-concept-unhealthy-food-background-fast-food-sugar-burger-sweets-chips-chocolate-donuts-soda-junk-food-concept-137097176.webp') center/cover;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 6vw, 4.8rem);
+  line-height: 1.1;
+  margin: 15px 0;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+.eyebrow {
+  color: #e85d04;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: #ffd166;
+}
+
+.page-banner {
+  padding: 65px 20px;
+  background: #ffe0b2;
+  text-align: center;
+}
+
+.page-banner h1 {
+  color: #8b0000;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.2;
+  margin: 8px 0 12px;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 55px 20px;
+}
+
+.content-section,
+.menu-intro,
+.order-section,
+.contact-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.intro {
+  margin-bottom: 25px;
+}
+
+.container h2,
+.cta h2 {
+  color: #8b0000;
+  margin-bottom: 15px;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.25;
+}
+
+.container h3 {
+  color: #8b0000;
+}
+
+.box,
+.card,
+.contact-box,
+.menu-section,
+.order-form {
+  background: white;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 3px 14px #0001;
+  margin-bottom: 24px;
+}
+
+.two-column,
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.cards,
+.contact-grid,
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.card,
+.contact-box {
+  margin-bottom: 0;
+}
+
+.card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 5px;
+}
+
+.card h3 {
+  margin: 8px 0;
+}
+
+.info-list {
+  padding-left: 22px;
+}
+
+.info-list li,
+.info-list p {
+  margin-bottom: 8px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: #e85d04;
+  color: white;
+  text-decoration: none;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: #8b0000;
+  transform: translateY(-1px);
+}
+
+.btn-red {
+  background: #8b0000;
+}
+
+.cta {
+  text-align: center;
+  background: #ffe0b2;
+  padding: 20px 0;
+}
+
+.cta .container {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.menu-grid {
+  margin-top: 25px;
+}
+
+.menu-section {
+  margin-bottom: 0;
+}
+
+.menu-section h2 {
+  margin-bottom: 12px;
+}
+
+.section-note,
+.form-note {
+  margin-bottom: 12px;
+}
+
+.menu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 14px 0;
+}
+
+.menu-row:last-child {
+  border-bottom: 0;
+}
+
+.menu-row strong:last-child {
+  color: #e85d04;
+  white-space: nowrap;
+}
+
+.menu-row small {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.special {
+  border: 3px solid #e85d04;
+}
+
+.service-details {
+  margin-top: 28px;
+}
+
+.contact-grid {
+  margin: 25px 0;
+}
+
+.contact-box h2 {
+  font-size: 1.5rem;
+}
+
+.contact-box .btn {
+  margin-top: 12px;
+}
+
+.order-form {
+  max-width: 760px;
+  margin: 30px auto 0;
+}
+
+.order-form h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-top: 17px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: white;
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #e85d04;
+  border-color: #e85d04;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.order-form button {
+  margin-top: 22px;
+}
+
+.form-result {
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+}
+
+footer p + p {
+  margin-top: 5px;
+  color: #ddd;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    position: static;
+  }
+
+  .two-column,
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 420px;
+  }
+
+  .box,
+  .card,
+  .contact-box,
+  .menu-section,
+  .order-form {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .menu-row {
+    gap: 10px;
+  }
+}
