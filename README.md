@@ -1,372 +1,336 @@
-# My-website
-# 🍔 Amina Fast Food Website
+# 🍔 Amina's Fast Food Website
 
-A responsive website project for **Amina Fast Food**, a local fast-food business based in Kwazakhele, Port Elizabeth.
+## 📌 Project Overview
 
-The website is designed to provide customers with an easy way to learn about the business, view the menu, place enquiries/orders, and find contact and location information.
+Amina's Fast Food is a responsive website for a local fast-food business based in KwaZakele, Port Elizabeth, Eastern Cape.
 
----
+The website gives customers a simple way to:
 
-## 📌 Project Description
-
-Amina Fast Food was founded in 2021 as a small family takeaway stall. The business provides quick, affordable and flavourful meals and has grown within the local community.
-
-The website project aims to create a central online presence for Amina Fast Food where customers can access important business information and interact with the business online.
+- Learn about the business
+- View the food menu and prices
+- Submit an enquiry or order request
+- Contact the business
+- Open WhatsApp for order confirmation
+- Find the business location
+- View trading hours
 
 ---
 
 ## 🎯 Project Objectives
 
-The main objectives of the website are:
+### Increase Sales
 
-### 1. Increase Sales
+- Display the menu and prices online
+- Provide an enquiry/order page
+- Provide WhatsApp ordering support
+- Promote combo deals
 
-* Allow customers to view the menu and prices online.
-* Provide an online ordering option.
-* Provide a WhatsApp ordering option.
-* Display daily specials.
-* Promote combo deals.
+### Improve Customer Convenience
 
-### 2. Improve Customer Convenience
+- Display contact details
+- Display trading hours
+- Provide location information
+- Provide a mobile-friendly website
 
-* Display opening hours.
-* Provide location information.
-* Display contact details.
-* Provide a mobile-friendly website.
-* Allow customers to submit feedback.
+### Build Community Connection
 
-### 3. Build Brand & Community Connection
-
-* Share the story of Amina Fast Food.
-* Highlight the business's support for the local community.
-* Show how the business creates employment opportunities.
-* Share food, staff and business information.
-
-### 4. Create Opportunities
-
-The website can support future opportunities by providing information about:
-
-* Job openings
-* New branches
-* Career opportunities
-* Community applications
+- Share the history of Amina's Fast Food
+- Highlight the business's connection with the local community
+- Communicate the business mission and values
 
 ---
 
 ## 👥 Target Audience
 
-The website is designed for:
+The website is intended for:
 
-* 🎓 Students looking for affordable meals after school
-* 👨‍👩‍👧 Working families looking for quick meals
-* 🏘️ Local community members
-* ❤️ Customers who support local businesses
+- Students looking for affordable meals
+- Working families looking for convenient food
+- Local community members
+- Customers who support local businesses
 
 ---
 
 ## 🌐 Website Pages
 
-The project contains the following pages:
-
-| Page           | Description                                                 |
-| -------------- | ----------------------------------------------------------- |
-| `index.html`   | Homepage and introduction to Amina Fast Food                |
-| `about.html`   | Business history, mission, vision and community information |
-| `service.html` | Menu and food categories                                    |
-| `enquiry.html` | Customer enquiry and ordering form                          |
-| `contact.html` | Contact details, opening hours and location                 |
-
-The proposal identifies the homepage, About Us, Menu, Order, Gallery, Contact and Testimonials as planned website functionality. The current implementation combines the requested functionality into the pages listed above.
+| File | Purpose |
+|---|---|
+| `index.html` | Homepage and introduction |
+| `Pages/about.html` | Business story, mission, vision and values |
+| `Pages/services.html` | Menu, food categories and combo deals |
+| `Pages/enquiry.html` | Customer enquiry and order form |
+| `Pages/contact.html` | Contact details, hours and location |
+| `Assets/css/style.css` | Website styling and responsive design |
 
 ---
 
 ## 🍔 Menu
 
-The proposed menu includes categories such as:
+The website menu contains the following categories:
 
-* Burgers
-* Chips
-* Kota
-* Fat cakes
-* Combo deals
+### Burgers
 
-The menu is designed so that prices can be updated when required.
+- Classic Burger — R35
+- Cheese Burger — R40
+- Double Burger — R50
 
-> **Note:** Any prices currently displayed in the website are example values and should be replaced with the actual Amina Fast Food prices.
+### Chips
 
----
+- Small Chips — R20
+- Medium Chips — R30
+- Large Chips — R40
 
-## 📲 Ordering
+### Kota
 
-The website provides an enquiry/order page where customers can enter information such as:
+- Basic Kota — R30
+- Cheese Kota — R40
+- Special Kota — R50
 
-* Full name
-* Phone number
-* Food item
-* Quantity
-* Collection or delivery
-* Additional information
+### Fat Cakes
 
-A WhatsApp ordering button is also included.
+- Plain Fat Cake — R10
+- Filled Fat Cake — R15
 
-The actual WhatsApp number should be added before the website is published.
+### Combo Deals
 
----
+- Burger Combo — R60
+- Kota Combo — R70
 
-## 📞 Contact
-
-The Contact page is designed to provide:
-
-* Business location
-* Phone number
-* WhatsApp contact
-* Opening hours
-* Google Maps location
-* Contact form
-
-The proposal specifies that these details should be available to improve customer convenience.
-
-> **Note:** The proposal does not provide the final phone number, WhatsApp number, exact street address or confirmed trading hours. These should be added before deployment.
+> **Note:** Prices shown on the website should be checked and updated when the business changes its menu prices.
 
 ---
 
-## 🎨 Design
+## 📲 Ordering System
 
-The website uses a bold, energetic and community-focused design.
+The `enquiry.html` page provides a simple front-end order/enquiry form.
 
-### Colour Scheme
+Customers can enter:
 
-| Colour    | Purpose                                    |
-| --------- | ------------------------------------------ |
-| ⚫ Black   | Main background                            |
-| 🔴 Red    | Buttons, price tags and important sections |
-| 🟡 Yellow | Highlights and special offers              |
-| ⚪ White   | Main text                                  |
+- Full name
+- Phone number
+- Meal
+- Quantity
+- Collection or delivery
+- Additional information
 
-This follows the colour scheme specified in the proposal.
+After submitting the form, the page displays a confirmation message. Customers can then use WhatsApp to confirm the order details.
+
+**Important:** The current form is a front-end demonstration. It does not store orders in a database or send the form information to a server.
+
+---
+
+## 📞 Contact Information
+
+**Location:** KwaZakele, Port Elizabeth, Eastern Cape  
+**Phone:** 072 784 8640  
+**WhatsApp:** 072 784 8640  
+**Trading Hours:** Monday - Sunday, 10:00 - 20:00
+
+The Contact page also includes links for calling, WhatsApp and opening the map location.
+
+---
+
+## 🎨 Website Design
+
+The website uses a bold fast-food style with a simple layout that is easy to navigate.
+
+### Main Colours
+
+| Colour | Use |
+|---|---|
+| Black | Navigation and footer |
+| Dark red | Branding and headings |
+| Orange | Buttons and highlights |
+| Light orange | Page banners and CTA sections |
+| White | Content cards and backgrounds |
 
 ### Typography
 
-The proposed typography includes:
-
-* **Bebas Neue** — headings and strong branding
-* **Montserrat / Arial** — body text and menu information
-* **Brush Script** — accent/tagline text
+The website currently uses Arial, Helvetica and sans-serif fonts through CSS.
 
 ---
 
 ## 📱 Responsive Design
 
-The website follows a mobile-first approach.
+The website is designed to work on:
 
-It is designed to work across:
+- 📱 Mobile phones
+- 📲 Tablets
+- 💻 Laptops
+- 🖥️ Desktop computers
 
-* 📱 Mobile phones
-* 📲 Tablets
-* 💻 Laptops
-* 🖥️ Desktop computers
-
-The proposal specifically requires a mobile-friendly design with large, high-contrast buttons that are easy to use on mobile devices.
+CSS media queries are used to change the layout for smaller screens. Navigation links become easier to use on mobile devices and two-column sections change to a single-column layout.
 
 ---
 
 ## 🛠️ Technologies Used
 
-The project uses:
-
-* **HTML5** — website structure
-* **CSS3** — styling and responsive design
-* **JavaScript** — website interactivity
-* **Google Maps** — location display
-* **WhatsApp** — ordering/contact functionality
-
-The proposal also identifies Tailwind CSS as a possible framework for responsive, mobile-first design.
+- **HTML5** — Creates the structure of the website
+- **CSS3** — Controls styling and responsive layout
+- **JavaScript** — Provides the enquiry form confirmation message
+- **WhatsApp** — Provides direct customer communication
+- **Google Maps** — Provides the location link
+- **GitHub** — Stores and manages the project files
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-Amina-Fast-Food/
+My-website/
 │
 ├── index.html
-├── about.html
-├── service.html
-├── enquiry.html
-├── contact.html
-├── style.css
-├── script.js
+│
+├── Assets/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   └── images/
+│
+├── Pages/
+│   ├── about.html
+│   ├── services.html
+│   ├── enquiry.html
+│   └── contact.html
+│
 └── README.md
 ```
 
----
+### File Descriptions
 
-## ⚙️ Features
-
-The website includes:
-
-* ✅ Responsive navigation
-* ✅ Homepage
-* ✅ About Us page
-* ✅ Menu page
-* ✅ Order/enquiry form
-* ✅ Contact form
-* ✅ WhatsApp ordering button
-* ✅ Opening hours section
-* ✅ Google Maps section
-* ✅ Menu categories
-* ✅ Combo deals
-* ✅ Community information
-* ✅ Mobile-friendly layout
-* ✅ JavaScript form interaction
+- `index.html` — Main homepage
+- `about.html` — Information about the business
+- `services.html` — Food menu and services
+- `enquiry.html` — Order/enquiry form
+- `contact.html` — Contact and location information
+- `style.css` — Shared CSS stylesheet
+- `images/` — Folder for website images
+- `README.md` — Project documentation
 
 ---
 
-## 🚀 How to Run the Project
+## ⭐ Main Features
+
+- Responsive navigation bar
+- Homepage hero section
+- About Us page
+- Menu page
+- Burgers, chips, kota and fat cakes
+- Combo deals
+- Enquiry/order form
+- Form confirmation message
+- Clickable phone number
+- WhatsApp ordering link
+- Google Maps location link
+- Trading hours
+- Responsive mobile layout
+- Student-friendly HTML and CSS comments
+
+---
+
+## 🚀 How to Run the Website
 
 ### 1. Clone the Repository
 
-Open your terminal and run:
+Open a terminal and run:
 
 ```bash
-git clone YOUR-GITHUB-REPOSITORY-LINK
+git clone https://github.com/entle-ngqeku/My-website.git
 ```
 
 ### 2. Open the Project
 
-Open the project folder in **Visual Studio Code**.
+Open the cloned `My-website` folder in Visual Studio Code.
 
-### 3. Check the Files
+### 3. Check the Project Structure
 
-Make sure the following files are available:
-
-```text
-index.html
-about.html
-service.html
-enquiry.html
-contact.html
-style.css
-script.js
-README.md
-```
+Make sure the HTML, CSS and image folders are in the correct locations.
 
 ### 4. Run the Website
 
 Open `index.html` in a web browser.
 
-For easier development, you can use the **Live Server** extension in Visual Studio Code.
+For easier development, use the **Live Server** extension in Visual Studio Code.
 
 ---
 
-## 🧪 Testing
+## 🧪 Testing Checklist
 
-Before publishing the website, check the following:
+Before submitting or publishing the website, check:
 
-* [ ] Homepage loads correctly
-* [ ] Navigation links work
-* [ ] About page works
-* [ ] Menu page works
-* [ ] Order form works
-* [ ] Contact form works
-* [ ] WhatsApp button contains the correct number
-* [ ] Phone number is correct
-* [ ] Address is correct
-* [ ] Opening hours are correct
-* [ ] Google Maps location is correct
-* [ ] Website works on mobile
-* [ ] Website works on desktop
-* [ ] Menu prices are correct
-* [ ] Images load correctly
-* [ ] No broken links exist
-
----
-
-## 📊 Measuring Website Success
-
-The proposal identifies several KPIs that can be used to measure the success of the website.
-
-These include:
-
-* Number of online orders
-* Number of WhatsApp orders
-* Website visitors
-* Performance of specials and combo deals
-* Website bounce rate
-* Mobile traffic
-* Feedback form submissions
-* About Us page visits
-* Social media engagement
-* Time spent on the website
-* Job applications
-* Careers page visits
-
----
-
-## 📅 Development Timeline
-
-The proposed project timeline is eight weeks:
-
-| Week     | Milestone           |
-| -------- | ------------------- |
-| Week 1–2 | Research & Planning |
-| Week 3–4 | Design Phase        |
-| Week 5–6 | Development Phase   |
-| Week 7   | Testing & Review    |
-| Week 8   | Launch & Handover   |
-
-The timeline includes research, design, development, testing and final launch.
-
----
-
-## 💰 Proposed Budget
-
-The proposal includes the following estimated costs:
-
-| Item                  | Estimated Cost |
-| --------------------- | -------------: |
-| Domain Name           |      R150/year |
-| Web Hosting           |    R1,200/year |
-| Maintenance & Updates |      R600/year |
-| **Total Year 1 Cost** |     **R5,450** |
-
-The proposal describes shared hosting with SSL as part of the hosting requirement.
+- [ ] Homepage loads correctly
+- [ ] Navigation links work
+- [ ] About page opens correctly
+- [ ] Services/Menu page opens correctly
+- [ ] Enquiry page opens correctly
+- [ ] Contact page opens correctly
+- [ ] CSS loads on every page
+- [ ] Order form displays the confirmation message
+- [ ] Phone link works
+- [ ] WhatsApp link works
+- [ ] Map link works
+- [ ] Trading hours are correct
+- [ ] Menu prices are correct
+- [ ] Images load correctly
+- [ ] Website works on mobile
+- [ ] Website works on desktop
+- [ ] No broken links are present
 
 ---
 
 ## 🔮 Future Improvements
 
-Future versions of the website could include:
+Possible future improvements include:
 
-* Online payment
-* Customer reviews
-* Customer feedback management
-* Careers page
-* Job application system
-* Daily specials management
-* Online menu management
-* Social media integration
-* Website analytics
-* Additional branches
+- Online payment
+- Database for storing orders
+- Automatic order notifications
+- Customer reviews
+- Feedback management
+- Daily specials management
+- Online menu management
+- Social media integration
+- Website analytics
+- Careers page
+- Job application system
+- Additional business branches
 
 ---
 
-## 🤝 Community Focus
+## 📊 Possible Website KPIs
 
-Amina Fast Food is focused on supporting the local community by creating employment opportunities and employing people from surrounding areas.
+The website can be evaluated using measures such as:
 
-The website helps communicate this community-focused mission and connects customers with the business.
+- Number of website visitors
+- Number of online enquiries
+- Number of WhatsApp enquiries
+- Number of completed orders
+- Menu page visits
+- Enquiry page visits
+- Contact page visits
+- Feedback submissions
+- Mobile traffic
+- Time spent on the website
+
+---
+
+## 📅 Development Timeline
+
+| Stage | Timeline |
+|---|---|
+| Research and Planning | Week 1–2 |
+| Design | Week 3–4 |
+| Development | Week 5–6 |
+| Testing and Review | Week 7 |
+| Launch and Handover | Week 8 |
 
 ---
 
 ## 👤 Project Information
 
-**Project:** Amina Fast Food Website
-
-**Student:** Entle Ngqeku
-
-**Module:** WEDE5020
-
+**Project:** Amina's Fast Food Website  
+**Student:** Entle Ngqeku  
+**Module:** WEDE5020  
 **Year:** 2026
 
 ---
@@ -380,8 +344,8 @@ The website helps communicate this community-focused mission and connects custom
 
 ---
 
-## ❤️ Amina Fast Food
+## ❤️ Amina's Fast Food
 
-**Fresh. Made. Made For You!**
+**Fresh. Fast. Affordable.**
 
-A local fast-food website focused on affordable meals, friendly service and community connection.
+A local fast-food website focused on affordable meals, convenient ordering, friendly service and community connection.
