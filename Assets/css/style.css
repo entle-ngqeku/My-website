@@ -4,34 +4,24 @@
 
 /* The universal selector applies these settings to every HTML element. */
 * {
-  box-sizing: border-box; /* Includes padding and borders in an element's total size. */
-  margin: 0; /* Removes default browser margins. */
-  padding: 0; /* Removes default browser padding. */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Enables smooth scrolling when users move between page sections. */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-/* Main styling for the whole webpage. */
 body {
-  font-family: Arial, Helvetica, sans-serif; /* Sets a simple readable font. */
-  background: #fff8f0; /* Sets the page background colour. */
-  color: #222; /* Sets the default text colour. */
-  line-height: 1.7; /* Adds comfortable spacing between lines. */
-  font-size: 16px; /* Sets a clear base text size. */
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff8f0;
+  color: #222;
+  line-height: 1.7;
+  font-size: 16px;
 }
 
-/* Keeps paragraphs easy to read on large screens. */
-p {
-  max-width: 850px;
-}
+p { max-width: 850px; }
 
-/* Gives headings a consistent visual style. */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-weight: 700;
   letter-spacing: 0.2px;
 }
@@ -86,16 +76,13 @@ h3 {
 }
 
 .navbar a:hover,
-.navbar a.active {
-  background: #e85d04;
-}
+.navbar a.active { background: #e85d04; }
 
 /* ==============================
    HOMEPAGE HERO
    ============================== */
 
 .hero {
-  /* The image is stored directly inside the Assets folder. */
   background: linear-gradient(#0009, #0009), url('../junk-food-concept-unhealthy-food-background-fast-food-sugar-burger-sweets-chips-chocolate-donuts-soda-junk-food-concept-137097176.webp') center/cover;
   min-height: 500px;
   display: flex;
@@ -106,9 +93,7 @@ h3 {
   padding: 50px 20px;
 }
 
-.hero-content {
-  max-width: 850px;
-}
+.hero-content { max-width: 850px; }
 
 .hero h1 {
   font-size: clamp(2.3rem, 6vw, 4.8rem);
@@ -134,9 +119,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.hero .eyebrow {
-  color: #ffd166;
-}
+.hero .eyebrow { color: #ffd166; }
 
 .page-banner {
   padding: 65px 20px;
@@ -170,9 +153,7 @@ h3 {
   padding-bottom: 50px;
 }
 
-.intro {
-  margin-bottom: 25px;
-}
+.intro { margin-bottom: 25px; }
 
 .container h2,
 .cta h2 {
@@ -182,9 +163,7 @@ h3 {
   line-height: 1.25;
 }
 
-.container h3 {
-  color: #8b0000;
-}
+.container h3 { color: #8b0000; }
 
 /* ==============================
    CARDS AND CONTENT BOXES
@@ -219,27 +198,18 @@ h3 {
 
 .card,
 .contact-box,
-.menu-section {
-  margin-bottom: 0;
-}
+.menu-section { margin-bottom: 0; }
 
 .card-icon {
   font-size: 2.4rem;
   margin-bottom: 5px;
 }
 
-.card h3 {
-  margin: 8px 0;
-}
+.card h3 { margin: 8px 0; }
 
-.info-list {
-  padding-left: 22px;
-}
-
+.info-list { padding-left: 22px; }
 .info-list li,
-.info-list p {
-  margin-bottom: 8px;
-}
+.info-list p { margin-bottom: 8px; }
 
 /* ==============================
    BUTTONS
@@ -271,9 +241,7 @@ h3 {
   transform: translateY(-1px);
 }
 
-.btn-red {
-  background: #8b0000;
-}
+.btn-red { background: #8b0000; }
 
 /* ==============================
    CALL TO ACTION
@@ -299,18 +267,10 @@ h3 {
    MENU
    ============================== */
 
-.menu-grid {
-  margin-top: 25px;
-}
-
-.menu-section h2 {
-  margin-bottom: 12px;
-}
-
+.menu-grid { margin-top: 25px; }
+.menu-section h2 { margin-bottom: 12px; }
 .section-note,
-.form-note {
-  margin-bottom: 12px;
-}
+.form-note { margin-bottom: 12px; }
 
 .menu-row {
   display: flex;
@@ -321,9 +281,7 @@ h3 {
   padding: 14px 0;
 }
 
-.menu-row:last-child {
-  border-bottom: 0;
-}
+.menu-row:last-child { border-bottom: 0; }
 
 .menu-row strong:last-child {
   color: #e85d04;
@@ -336,33 +294,17 @@ h3 {
   font-size: 0.9rem;
 }
 
-.special {
-  border: 3px solid #e85d04;
-}
-
-.service-details {
-  margin-top: 28px;
-}
+.special { border: 3px solid #e85d04; }
+.service-details { margin-top: 28px; }
 
 /* ==============================
    CONTACT PAGE
    ============================== */
 
-.contact-grid {
-  margin: 25px 0;
-}
-
-.contact-box h2 {
-  font-size: 1.5rem;
-}
-
-.contact-box .btn {
-  margin-top: 12px;
-}
-
-.contact-address {
-  font-style: normal;
-}
+.contact-grid { margin: 25px 0; }
+.contact-box h2 { font-size: 1.5rem; }
+.contact-box .btn { margin-top: 12px; }
+.contact-address { font-style: normal; }
 
 /* ==============================
    ORDER FORM
@@ -373,13 +315,8 @@ h3 {
   margin: 30px auto 0;
 }
 
-.order-form h2 {
-  text-align: center;
-}
-
-.form-group {
-  margin-top: 17px;
-}
+.order-form h2 { text-align: center; }
+.form-group { margin-top: 17px; }
 
 .order-form fieldset {
   border: 0;
@@ -423,10 +360,7 @@ textarea {
   resize: vertical;
 }
 
-.order-form button {
-  margin-top: 22px;
-}
-
+.order-form button { margin-top: 22px; }
 .form-result {
   margin-top: 18px;
   font-weight: bold;
@@ -443,6 +377,14 @@ footer {
   padding: 28px 15px;
 }
 
+/* Centres every line of text in the footer. */
+footer p {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 footer p + p {
   margin-top: 5px;
   color: #ddd;
@@ -453,26 +395,18 @@ footer p + p {
    ============================== */
 
 @media (max-width: 700px) {
-  .navbar {
-    position: static;
-  }
+  .navbar { position: static; }
 
   .two-column,
-  .highlights {
-    grid-template-columns: 1fr;
-  }
+  .highlights { grid-template-columns: 1fr; }
 
-  .hero {
-    min-height: 420px;
-  }
+  .hero { min-height: 420px; }
 
   .box,
   .card,
   .contact-box,
   .menu-section,
-  .order-form {
-    padding: 22px;
-  }
+  .order-form { padding: 22px; }
 }
 
 @media (max-width: 480px) {
@@ -486,7 +420,5 @@ footer p + p {
     padding-right: 15px;
   }
 
-  .menu-row {
-    gap: 10px;
-  }
+  .menu-row { gap: 10px; }
 }
