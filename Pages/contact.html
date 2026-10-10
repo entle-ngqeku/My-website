@@ -126,7 +126,88 @@
       </div>
       <!-- Closing div ends the contact grid. -->
 
-      <div class="two-column">
+      <!-- NEW CONTACT FORM REQUIRED BY ASSIGNMENT -->
+      <div class="box" style="margin-top:30px;">
+      <!-- div creates contact form box with top margin. -->
+        <p class="eyebrow">CONTACT FORM</p>
+        <!-- p displays small label for form. -->
+        <h2>Send Us A General Message</h2>
+        <!-- h2 creates heading for contact form. -->
+        <p>Fill in your basic contact information, message type, and full message below.</p>
+        <!-- p explains form purpose. -->
+
+        <form id="contactForm" class="order-form" onsubmit="return handleContact(event)">
+        <!-- form collects contact info; onsubmit runs validation and email compilation. -->
+          
+          <div class="form-group">
+          <!-- div groups name field for styling. -->
+            <label for="cName">Full Name *</label>
+            <!-- label describes full name input. -->
+            <input type="text" id="cName" name="cName" placeholder="Enter your full name" autocomplete="name" required>
+            <!-- input type text collects name; required prevents empty submission. -->
+          </div>
+          <!-- Closing div ends name group. -->
+
+          <div class="form-group">
+          <!-- div groups email field. -->
+            <label for="cEmail">Email Address *</label>
+            <!-- label describes email field. -->
+            <input type="email" id="cEmail" name="cEmail" placeholder="Enter your email address" autocomplete="email" required>
+            <!-- input type email validates email format; required makes mandatory. -->
+          </div>
+          <!-- Closing div ends email group. -->
+
+          <div class="form-group">
+          <!-- div groups phone field. -->
+            <label for="cPhone">Phone Number</label>
+            <!-- label describes phone field. -->
+            <input type="tel" id="cPhone" name="cPhone" placeholder="Enter your phone number" autocomplete="tel">
+            <!-- input type tel collects phone number. -->
+          </div>
+          <!-- Closing div ends phone group. -->
+
+          <div class="form-group">
+          <!-- div groups message type field. -->
+            <label for="msgType">Type of Message *</label>
+            <!-- label describes type of message. -->
+            <select id="msgType" name="msgType" required>
+            <!-- select creates dropdown for message type; required makes mandatory. -->
+              <option value="">-- Select Message Type --</option>
+              <!-- option default placeholder. -->
+              <option value="General Enquiry">General Enquiry</option>
+              <!-- option for general enquiry. -->
+              <option value="Feedback">Feedback</option>
+              <!-- option for feedback. -->
+              <option value="Complaint">Complaint</option>
+              <!-- option for complaint. -->
+              <option value="Support">Support / Help</option>
+              <!-- option for support. -->
+              <option value="Compliment">Compliment</option>
+              <!-- option for compliment. -->
+            </select>
+            <!-- Closing select ends dropdown. -->
+          </div>
+          <!-- Closing div ends message type group. -->
+
+          <div class="form-group">
+          <!-- div groups full message field. -->
+            <label for="fullMessage">Full Message *</label>
+            <!-- label describes full message textarea. -->
+            <textarea id="fullMessage" name="fullMessage" rows="6" placeholder="Type your full message here - include as much detail as possible" required></textarea>
+            <!-- textarea creates multi-line text box for full message; required makes mandatory. -->
+          </div>
+          <!-- Closing div ends full message group. -->
+
+          <button type="submit" class="btn btn-red">SEND EMAIL</button>
+          <!-- button submits form and triggers email compilation; btn btn-red applies styling. -->
+          <p id="contactResult" class="form-result" aria-live="polite" style="margin-top:15px;"></p>
+          <!-- p displays result after submission; aria-live helps assistive tech announce changes. -->
+        </form>
+        <!-- Closing form ends contact form. -->
+      </div>
+      <!-- Closing div ends contact form box. -->
+
+      <div class="two-column" style="margin-top:30px;">
       <!-- div creates two responsive columns for additional information. -->
         <div class="box">
         <!-- div creates the order-information box. -->
@@ -198,6 +279,74 @@
     <!-- p displays the location and phone number. -->
   </footer>
   <!-- Closing footer ends the footer. -->
+
+<script>
+<!-- script contains JavaScript for validation and email compilation. -->
+function handleContact(event){
+  // Function validates input and compiles email to recipient stated in code.
+  event.preventDefault();
+  // preventDefault stops page from refreshing.
+
+  let name = document.getElementById('cName').value.trim();
+  // Gets and trims name value.
+  let email = document.getElementById('cEmail').value.trim();
+  // Gets and trims email value.
+  let phone = document.getElementById('cPhone').value.trim();
+  // Gets and trims phone value.
+  let msgType = document.getElementById('msgType').value;
+  // Gets message type value.
+  let fullMessage = document.getElementById('fullMessage').value.trim();
+  // Gets and trims full message value.
+
+  // Validation - basic contact info, type, full message
+  if(name.length < 3){ alert("Please enter valid full name (min 3 characters)"); return false; }
+  // Validates name length.
+  if(msgType === ""){ alert("Please select type of message"); return false; }
+  // Validates message type selected.
+  if(fullMessage.length < 15){ alert("Please type a longer full message (min 15 characters)"); return false; }
+  // Validates full message length.
+
+  // Compile and include into an email - recipient stated in code
+  let recipient = "aminafastfood@gmail.com";
+  // Recipient email stated in code as required by assignment - CHANGE TO YOUR REAL BUSINESS EMAIL.
+  let recipient2 = "info@aminafastfood.co.za";
+  // Second recipient copy.
+
+  let subject = msgType + " from " + name + " - Amina's Fast Food Website";
+  // Creates email subject line with message type and name.
+
+  let body = "CUSTOMER CONTACT FORM SUBMISSION\n" +
+             "--------------------------------\n" +
+             "Basic Contact Information:\n" +
+             "Full Name: " + name + "\n" +
+             "Email: " + email + "\n" +
+             "Phone: " + phone + "\n\n" +
+             "Type of Message: " + msgType + "\n\n" +
+             "Full Message:\n" +
+             fullMessage + "\n\n" +
+             "----------------------------\n" +
+             "Sent from Amina's Fast Food Contact Page\n" +
+             "Location: KwaZakele, Port Elizabeth\n" +
+             "Phone: 072 784 8640";
+  // Compiles all validated basic contact info, type of message, and full message into email body.
+
+  // Customer/client able to send email to recipient
+  let mailtoLink = "mailto:" + recipient + "?cc=" + recipient2 + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  // Creates mailto link with recipient, cc, subject and body encoded.
+
+  window.location.href = mailtoLink;
+  // Opens user's default email client with compiled email.
+
+  let result = document.getElementById('contactResult');
+  // Gets result paragraph element.
+  result.textContent = "Thank you " + name + "! Your " + msgType + " has been compiled. Your email app will open - please click SEND to send your message to " + recipient + ". If email does not open, please email us directly or WhatsApp 072 784 8640.";
+  // Displays confirmation message to user.
+
+  return false;
+  // Returns false to prevent default form submission.
+}
+</script>
+<!-- Closing script ends JavaScript. -->
 </body>
 <!-- Closing body ends the visible webpage. -->
 </html>

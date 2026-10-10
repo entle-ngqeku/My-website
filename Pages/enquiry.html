@@ -61,60 +61,15 @@
         <!-- p displays the section label. -->
         <h2>Tell Us What You Need</h2>
         <!-- h2 creates the introduction heading. -->
-        <p>Use this form to send an enquiry or provide the details of the meal you would like. Make sure your name and phone number are correct so that the business can contact you about your request.</p>
+        <p>Use this form to enquire about our services, products, catering, or sponsorship opportunities.</p>
         <!-- p explains how the form should be used. -->
-        <p>After submitting the form, contact Amina's Fast Food on WhatsApp to confirm your order and discuss the final details.</p>
-        <!-- p explains the next step after submission. -->
+        <p>After submitting, you will receive cost and availability details based on your selection.</p>
+        <!-- p explains that cost and availability will be shown. -->
       </div>
       <!-- Closing div ends the introduction box. -->
 
-      <div class="two-column">
-      <!-- div creates two responsive information columns. -->
-        <div class="box">
-        <!-- div creates the order-process box. -->
-          <p class="eyebrow">ORDER PROCESS</p>
-          <!-- p displays the process label. -->
-          <h2>Simple Steps</h2>
-          <!-- h2 creates the process heading. -->
-          <ol class="info-list">
-          <!-- ol creates an ordered list; info-list applies CSS spacing. -->
-            <li>Choose a meal from the menu.</li>
-            <!-- li creates ordered list item 1. -->
-            <li>Enter your full name and phone number.</li>
-            <!-- li creates ordered list item 2. -->
-            <li>Select the meal and quantity.</li>
-            <!-- li creates ordered list item 3. -->
-            <li>Choose collection or delivery.</li>
-            <!-- li creates ordered list item 4. -->
-            <li>Add any useful information in the message box.</li>
-            <!-- li creates ordered list item 5. -->
-            <li>Submit the enquiry and confirm the order on WhatsApp.</li>
-            <!-- li creates ordered list item 6. -->
-          </ol>
-          <!-- Closing ol ends the ordered list. -->
-        </div>
-        <!-- Closing div ends the order-process box. -->
-        <div class="box">
-        <!-- div creates the contact-help box. -->
-          <p class="eyebrow">CONTACT</p>
-          <!-- p displays the contact label. -->
-          <h2>Need Help First?</h2>
-          <!-- h2 creates the contact-help heading. -->
-          <p>If you have questions about the menu or your order, you can contact us before submitting the form.</p>
-          <!-- p explains when to contact the business. -->
-          <p><strong>Phone:</strong> 072 784 8640</p>
-          <!-- strong makes Phone bold inside the paragraph. -->
-          <p><strong>Hours:</strong> Monday - Sunday, 10:00 - 20:00</p>
-          <!-- strong makes Hours bold inside the paragraph. -->
-          <a href="https://wa.me/27727848640" class="btn" target="_blank" rel="noopener">OPEN WHATSAPP</a>
-          <!-- a creates a WhatsApp button; target opens a new tab and rel improves security. -->
-        </div>
-        <!-- Closing div ends the contact-help box. -->
-      </div>
-      <!-- Closing div ends the two-column layout. -->
-
-      <form class="order-form" onsubmit="event.preventDefault(); document.getElementById('result').textContent='Thank you! Your enquiry has been recorded on this page. Please contact us on WhatsApp to confirm your order.';">
-      <!-- form collects customer information; onsubmit runs JavaScript and prevents the demo page from refreshing. -->
+      <form class="order-form" id="enquiryForm" onsubmit="return handleEnquiry(event)">
+      <!-- form collects customer information; onsubmit runs validation and processing. -->
         <h2>Order / Enquiry Form</h2>
         <!-- h2 creates the form heading. -->
         <p class="form-note">Fields marked as required must be completed.</p>
@@ -134,44 +89,70 @@
           <label for="phone">Phone Number *</label>
           <!-- label describes the phone input. -->
           <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel" required>
-          <!-- input type="tel" creates a phone-number field; autocomplete helps fill contact information. -->
+          <!-- input type="tel" creates a phone-number field. -->
         </div>
         <!-- Closing div ends the phone field group. -->
 
         <div class="form-group">
+        <!-- div groups the email label and input. -->
+          <label for="email">Email Address *</label>
+          <!-- label describes the email input. -->
+          <input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+          <!-- input type email validates email format. -->
+        </div>
+        <!-- Closing div ends the email field group. -->
+
+        <div class="form-group">
+        <!-- div groups the enquiry type label and select. -->
+          <label for="enquiryType">Enquiry Type *</label>
+          <!-- label describes enquiry type. -->
+          <select id="enquiryType" name="enquiryType" required>
+          <!-- select creates dropdown for enquiry purpose. -->
+            <option value="">-- Select enquiry type --</option>
+            <!-- option creates default choice. -->
+            <option value="product">Product Enquiry (Menu Items)</option>
+            <!-- option for product enquiry as per requirement. -->
+            <option value="service">Service Enquiry (Catering/Delivery)</option>
+            <!-- option for service enquiry as per requirement. -->
+            <option value="volunteer">Volunteer / Work With Us</option>
+            <!-- option for volunteer as per requirement. -->
+            <option value="sponsor">Sponsor / Community Support</option>
+            <!-- option for sponsor as per requirement. -->
+          </select>
+          <!-- Closing select ends enquiry type dropdown. -->
+        </div>
+        <!-- Closing div ends enquiry type field group. -->
+
+        <div class="form-group">
         <!-- div groups the meal label and select menu. -->
-          <label for="order">Select Meal *</label>
+          <label for="order">Select Meal / Product *</label>
           <!-- label describes the meal selection. -->
           <select id="order" name="order" required>
           <!-- select creates a dropdown menu; required means a meal must be selected. -->
             <option value="">-- Select a meal --</option>
             <!-- option creates the default dropdown choice. -->
-            <option>Classic Burger</option>
-            <!-- option creates a Classic Burger choice. -->
-            <option>Cheese Burger</option>
-            <!-- option creates a Cheese Burger choice. -->
-            <option>Double Burger</option>
-            <!-- option creates a Double Burger choice. -->
-            <option>Small Chips</option>
-            <!-- option creates a Small Chips choice. -->
-            <option>Medium Chips</option>
-            <!-- option creates a Medium Chips choice. -->
-            <option>Large Chips</option>
-            <!-- option creates a Large Chips choice. -->
-            <option>Basic Kota</option>
-            <!-- option creates a Basic Kota choice. -->
-            <option>Cheese Kota</option>
-            <!-- option creates a Cheese Kota choice. -->
-            <option>Special Kota</option>
-            <!-- option creates a Special Kota choice. -->
-            <option>Plain Fat Cake</option>
-            <!-- option creates a Plain Fat Cake choice. -->
-            <option>Filled Fat Cake</option>
-            <!-- option creates a Filled Fat Cake choice. -->
-            <option>Burger Combo</option>
-            <!-- option creates a Burger Combo choice. -->
-            <option>Kota Combo</option>
-            <!-- option creates a Kota Combo choice. -->
+            <option value="Classic Burger|35">Classic Burger - R35</option>
+            <!-- option value stores meal and price separated by |. -->
+            <option value="Cheese Burger|40">Cheese Burger - R40</option>
+            <!-- option stores Cheese Burger and price. -->
+            <option value="Double Burger|50">Double Burger - R50</option>
+            <!-- option stores Double Burger and price. -->
+            <option value="Small Chips|20">Small Chips - R20</option>
+            <!-- option stores Small Chips and price. -->
+            <option value="Medium Chips|30">Medium Chips - R30</option>
+            <!-- option stores Medium Chips and price. -->
+            <option value="Large Chips|40">Large Chips - R40</option>
+            <!-- option stores Large Chips and price. -->
+            <option value="Basic Kota|30">Basic Kota - R30</option>
+            <!-- option stores Basic Kota and price. -->
+            <option value="Cheese Kota|40">Cheese Kota - R40</option>
+            <!-- option stores Cheese Kota and price. -->
+            <option value="Special Kota|50">Special Kota - R50</option>
+            <!-- option stores Special Kota and price. -->
+            <option value="Burger Combo|60">Burger Combo - R60</option>
+            <!-- option stores Burger Combo and price. -->
+            <option value="Kota Combo|70">Kota Combo - R70</option>
+            <!-- option stores Kota Combo and price. -->
           </select>
           <!-- Closing select ends the meal dropdown. -->
         </div>
@@ -194,9 +175,9 @@
           <!-- select creates the collection or delivery dropdown. -->
             <option value="">-- Select option --</option>
             <!-- option creates the default dropdown choice. -->
-            <option>Collection</option>
+            <option value="Collection">Collection</option>
             <!-- option creates the Collection choice. -->
-            <option>Delivery</option>
+            <option value="Delivery">Delivery</option>
             <!-- option creates the Delivery choice. -->
           </select>
           <!-- Closing select ends the delivery dropdown. -->
@@ -214,8 +195,9 @@
 
         <button class="btn btn-red" type="submit">SUBMIT ENQUIRY</button>
         <!-- button creates the form submission button; type="submit" submits the form. -->
-        <p id="result" class="form-result" aria-live="polite"></p>
-        <!-- p displays the JavaScript result; aria-live helps assistive technology announce changes. -->
+
+        <div id="result" class="box" style="display:none; margin-top:20px; background:#e7f3ff;"></div>
+        <!-- div displays processed response with cost and availability; hidden until submission. -->
       </form>
       <!-- Closing form ends the order/enquiry form. -->
     </section>
@@ -231,6 +213,100 @@
     <!-- p displays the location and phone number. -->
   </footer>
   <!-- Closing footer ends the footer. -->
+
+<script>
+<!-- script contains JavaScript for validation and processing. -->
+function handleEnquiry(event){
+  // Function validates input and processes enquiry with cost and availability.
+  event.preventDefault();
+  // preventDefault stops form from refreshing page.
+
+  let name = document.getElementById('name').value.trim();
+  // Gets and trims full name value.
+  let phone = document.getElementById('phone').value.trim();
+  // Gets and trims phone value.
+  let email = document.getElementById('email').value.trim();
+  // Gets and trims email value.
+  let enquiryType = document.getElementById('enquiryType').value;
+  // Gets enquiry type value.
+  let orderValue = document.getElementById('order').value;
+  // Gets selected meal value with price.
+  let quantity = parseInt(document.getElementById('quantity').value);
+  // Gets quantity and converts to number.
+  let delivery = document.getElementById('delivery').value;
+  // Gets delivery method.
+  let message = document.getElementById('message').value;
+  // Gets additional information.
+
+  // Validation
+  if(name.length < 3){ alert("Please enter valid full name (min 3 characters)"); return false; }
+  // Validates name length.
+  if(phone.length < 10){ alert("Please enter valid phone number (min 10 digits)"); return false; }
+  // Validates phone length.
+  if(isNaN(quantity) || quantity < 1){ alert("Please enter valid quantity"); return false; }
+  // Validates quantity is a number and at least 1.
+  if(!orderValue){ alert("Please select a meal"); return false; }
+  // Validates meal selection.
+
+  // Process: split meal and price
+  let parts = orderValue.split('|');
+  // Splits value into name and price using | separator.
+  let mealName = parts[0];
+  // Gets meal name from first part.
+  let unitPrice = parseInt(parts[1]);
+  // Gets unit price from second part and converts to number.
+  let totalCost = unitPrice * quantity;
+  // Calculates total cost by multiplying price and quantity.
+  let deliveryFee = (delivery === "Delivery")? 20 : 0;
+  // Sets delivery fee R20 if delivery, else 0.
+  let finalTotal = totalCost + deliveryFee;
+  // Calculates final total including delivery fee.
+
+  // Prepare response related to cost, availability, etc.
+  let resultDiv = document.getElementById('result');
+  // Gets result div element.
+  resultDiv.style.display = "block";
+  // Makes result div visible.
+
+  let costInfo = "";
+  // Variable to store cost information.
+  let availabilityInfo = "";
+  // Variable to store availability information.
+  let extraInfo = "";
+  // Variable to store extra information based on enquiry type.
+
+  if(enquiryType === "product"){
+    costInfo = "<strong>Cost:</strong> " + mealName + " @ R" + unitPrice + " x " + quantity + " = R" + totalCost + ". Delivery: R" + deliveryFee + ". <strong>Final Total: R" + finalTotal + "</strong>";
+    availabilityInfo = "<strong>Availability:</strong> In stock, ready in 15-20 minutes.";
+    extraInfo = "Collection available now. Delivery available Mon-Sun 10:00-20:00 within 5km radius.";
+  } else if(enquiryType === "service"){
+    costInfo = "<strong>Cost:</strong> Catering service from R500. Your selection (" + mealName + ") estimated R" + finalTotal + " for " + quantity + " people. Delivery fee R" + deliveryFee;
+    availabilityInfo = "<strong>Availability:</strong> Catering requires 24-hour advance booking.";
+    extraInfo = "We provide catering for parties, funerals, and community events.";
+  } else if(enquiryType === "volunteer"){
+    costInfo = "<strong>Cost:</strong> No cost - volunteer training is free. Stipend provided for transport.";
+    availabilityInfo = "<strong>Availability:</strong> Volunteer intake every Monday 09:00 at KwaZakele store.";
+    extraInfo = "Thank you for interest in volunteering with Amina's Fast Food!";
+  } else if(enquiryType === "sponsor"){
+    costInfo = "<strong>Cost:</strong> Sponsorship packages from R1000/month. Includes logo on community event banners.";
+    availabilityInfo = "<strong>Availability:</strong> Sponsorship slots open for upcoming school sports event.";
+    extraInfo = "We will email our sponsorship brochure to " + email;
+  }
+
+  resultDiv.innerHTML = "<h3>Thank you " + name + "!</h3>" +
+                        "<p>Your <strong>" + enquiryType + "</strong> enquiry for <strong>" + mealName + "</strong> has been processed.</p>" +
+                        "<p>" + costInfo + "</p>" +
+                        "<p>" + availabilityInfo + "</p>" +
+                        "<p>" + extraInfo + "</p>" +
+                        "<p><strong>Contact:</strong> " + phone + " | " + email + " | " + delivery + "</p>" +
+                        "<p>Please confirm on WhatsApp: 072 784 8640</p>";
+  // Displays compiled response with cost, availability, and contact details.
+
+  return false;
+  // Returns false to prevent default submission.
+}
+</script>
+<!-- Closing script ends JavaScript. -->
 </body>
 <!-- Closing body ends visible webpage content. -->
 </html>
