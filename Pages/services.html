@@ -9,11 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- viewport makes the page responsive on phones, tablets and computers. -->
   <meta name="description" content="Explore the Amina's Fast Food menu, meals, snacks and affordable combo deals.">
+  <meta property="og:title" content="Services &amp; Menu | Amina's Fast Food">
+  <meta property="og:description" content="Explore the Amina's Fast Food menu, meals, snacks and affordable combo deals.">
   <!-- description gives search engines information about the page. -->
   <title>Services &amp; Menu | Amina's Fast Food</title>
   <!-- title sets the browser tab title. -->
   <link rel="stylesheet" href="../Assets/css/style.css">
   <!-- link connects this page to the shared CSS stylesheet. -->
+  <script src="../Assets/js/script.js" defer></script>
 </head>
 <!-- Closing head ends the metadata section. -->
 <body>
@@ -68,9 +71,14 @@
       </div>
       <!-- Closing div ends the introduction box. -->
 
-      <div class="menu-grid">
+      <div class="menu-tools" aria-label="Menu search and filter">
+<div class="form-group"><label for="menuSearch">Search menu items</label><input id="menuSearch" type="search" placeholder="Search burgers, kota, chips..." autocomplete="off"></div>
+<div class="form-group"><label for="menuCategory">Filter by category</label><select id="menuCategory">
+<option value="all">All categories</option><option value="burgers">Burgers</option><option value="chips">Chips</option><option value="kota">Kota</option><option value="snacks">Fat cakes</option><option value="combos">Combo deals</option></select></div>
+<p id="menuResult" class="form-result" aria-live="polite">Showing all menu categories.</p></div>
+<div class="menu-grid">
       <!-- div creates the responsive grid containing menu categories. -->
-        <div class="menu-section">
+        <div class="menu-section menu-filter-item" data-category="burgers"">
         <!-- div creates the burger category. -->
           <p class="eyebrow">BURGERS</p>
           <!-- p displays the category label. -->
@@ -85,7 +93,7 @@
         </div>
         <!-- Closing div ends the burger category. -->
 
-        <div class="menu-section">
+        <div class="menu-section menu-filter-item" data-category="chips"">
         <!-- div creates the chips category. -->
           <p class="eyebrow">SIDES</p>
           <!-- p displays the category label. -->
@@ -100,7 +108,7 @@
         </div>
         <!-- Closing div ends the chips category. -->
 
-        <div class="menu-section">
+        <div class="menu-section menu-filter-item" data-category="kota"">
         <!-- div creates the Kota category. -->
           <p class="eyebrow">KOTA MEALS</p>
           <!-- p displays the category label. -->
@@ -115,7 +123,7 @@
         </div>
         <!-- Closing div ends the Kota category. -->
 
-        <div class="menu-section">
+        <div class="menu-section menu-filter-item" data-category="snacks"">
         <!-- div creates the Fat Cakes category. -->
           <p class="eyebrow">SNACKS</p>
           <!-- p displays the category label. -->
@@ -128,7 +136,7 @@
         </div>
         <!-- Closing div ends the Fat Cakes category. -->
 
-        <div class="menu-section special">
+        <div class="menu-section menu-filter-item" data-category="combos" special">
         <!-- div creates the combo category; special adds highlighted CSS styling. -->
           <p class="eyebrow">VALUE MEALS</p>
           <!-- p displays the category label. -->

@@ -9,11 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- viewport makes the page responsive. -->
   <meta name="description" content="Contact Amina's Fast Food in KwaZakele, Port Elizabeth, Eastern Cape.">
+  <meta property="og:title" content="Contact | Amina's Fast Food">
+  <meta property="og:description" content="Contact Amina's Fast Food in KwaZakele, Port Elizabeth, Eastern Cape.">
   <!-- description gives search engines a short description of this page. -->
   <title>Contact | Amina's Fast Food</title>
   <!-- title sets the browser tab title. -->
   <link rel="stylesheet" href="../Assets/css/style.css">
   <!-- link connects the page to the shared CSS stylesheet. -->
+  <script src="../Assets/js/script.js" defer></script>
 </head>
 <!-- Closing head ends the metadata section. -->
 <body>
@@ -136,14 +139,14 @@
         <p>Fill in your basic contact information, message type, and full message below.</p>
         <!-- p explains form purpose. -->
 
-        <form id="contactForm" class="order-form" onsubmit="return handleContact(event)">
+        <form id="contactForm" class="order-form" action="mailto:aminafastfood@gmail.com" method="get">
         <!-- form collects contact info; onsubmit runs validation and email compilation. -->
           
           <div class="form-group">
           <!-- div groups name field for styling. -->
             <label for="cName">Full Name *</label>
             <!-- label describes full name input. -->
-            <input type="text" id="cName" name="cName" placeholder="Enter your full name" autocomplete="name" required>
+            <input type="text" id="cName" name="cName" placeholder="Enter your full name" autocomplete="name" minlength="3" maxlength="80" required>
             <!-- input type text collects name; required prevents empty submission. -->
           </div>
           <!-- Closing div ends name group. -->
@@ -161,7 +164,7 @@
           <!-- div groups phone field. -->
             <label for="cPhone">Phone Number</label>
             <!-- label describes phone field. -->
-            <input type="tel" id="cPhone" name="cPhone" placeholder="Enter your phone number" autocomplete="tel">
+            <input type="tel" id="cPhone" name="cPhone" placeholder="e.g. 072 784 8640" autocomplete="tel" pattern="(0[6-8][0-9]{8}|\\+27[6-8][0-9]{8})" maxlength="12">
             <!-- input type tel collects phone number. -->
           </div>
           <!-- Closing div ends phone group. -->
@@ -193,7 +196,7 @@
           <!-- div groups full message field. -->
             <label for="fullMessage">Full Message *</label>
             <!-- label describes full message textarea. -->
-            <textarea id="fullMessage" name="fullMessage" rows="6" placeholder="Type your full message here - include as much detail as possible" required></textarea>
+            <textarea id="fullMessage" name="fullMessage" rows="6" minlength="15" maxlength="1000" placeholder="Type your full message here - include as much detail as possible" required></textarea>
             <!-- textarea creates multi-line text box for full message; required makes mandatory. -->
           </div>
           <!-- Closing div ends full message group. -->
@@ -207,7 +210,8 @@
       </div>
       <!-- Closing div ends contact form box. -->
 
-      <div class="two-column" style="margin-top:30px;">
+<div class="map-panel box"><p class="eyebrow">OUR AREA</p><h2>Find KwaZakele</h2><p>The map searches for KwaZakele, Port Elizabeth. Confirm the exact business pin before travelling.</p><iframe title="Map showing KwaZakele, Port Elizabeth" src="https://www.google.com/maps?q=KwaZakele%2C%20Gqeberha%2C%20South%20Africa&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+<div class="two-column" style="margin-top:30px;">
       <!-- div creates two responsive columns for additional information. -->
         <div class="box">
         <!-- div creates the order-information box. -->
@@ -280,73 +284,7 @@
   </footer>
   <!-- Closing footer ends the footer. -->
 
-<script>
-<!-- script contains JavaScript for validation and email compilation. -->
-function handleContact(event){
-  // Function validates input and compiles email to recipient stated in code.
-  event.preventDefault();
-  // preventDefault stops page from refreshing.
 
-  let name = document.getElementById('cName').value.trim();
-  // Gets and trims name value.
-  let email = document.getElementById('cEmail').value.trim();
-  // Gets and trims email value.
-  let phone = document.getElementById('cPhone').value.trim();
-  // Gets and trims phone value.
-  let msgType = document.getElementById('msgType').value;
-  // Gets message type value.
-  let fullMessage = document.getElementById('fullMessage').value.trim();
-  // Gets and trims full message value.
-
-  // Validation - basic contact info, type, full message
-  if(name.length < 3){ alert("Please enter valid full name (min 3 characters)"); return false; }
-  // Validates name length.
-  if(msgType === ""){ alert("Please select type of message"); return false; }
-  // Validates message type selected.
-  if(fullMessage.length < 15){ alert("Please type a longer full message (min 15 characters)"); return false; }
-  // Validates full message length.
-
-  // Compile and include into an email - recipient stated in code
-  let recipient = "aminafastfood@gmail.com";
-  // Recipient email stated in code as required by assignment - CHANGE TO YOUR REAL BUSINESS EMAIL.
-  let recipient2 = "info@aminafastfood.co.za";
-  // Second recipient copy.
-
-  let subject = msgType + " from " + name + " - Amina's Fast Food Website";
-  // Creates email subject line with message type and name.
-
-  let body = "CUSTOMER CONTACT FORM SUBMISSION\n" +
-             "--------------------------------\n" +
-             "Basic Contact Information:\n" +
-             "Full Name: " + name + "\n" +
-             "Email: " + email + "\n" +
-             "Phone: " + phone + "\n\n" +
-             "Type of Message: " + msgType + "\n\n" +
-             "Full Message:\n" +
-             fullMessage + "\n\n" +
-             "----------------------------\n" +
-             "Sent from Amina's Fast Food Contact Page\n" +
-             "Location: KwaZakele, Port Elizabeth\n" +
-             "Phone: 072 784 8640";
-  // Compiles all validated basic contact info, type of message, and full message into email body.
-
-  // Customer/client able to send email to recipient
-  let mailtoLink = "mailto:" + recipient + "?cc=" + recipient2 + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-  // Creates mailto link with recipient, cc, subject and body encoded.
-
-  window.location.href = mailtoLink;
-  // Opens user's default email client with compiled email.
-
-  let result = document.getElementById('contactResult');
-  // Gets result paragraph element.
-  result.textContent = "Thank you " + name + "! Your " + msgType + " has been compiled. Your email app will open - please click SEND to send your message to " + recipient + ". If email does not open, please email us directly or WhatsApp 072 784 8640.";
-  // Displays confirmation message to user.
-
-  return false;
-  // Returns false to prevent default form submission.
-}
-</script>
-<!-- Closing script ends JavaScript. -->
 </body>
 <!-- Closing body ends the visible webpage. -->
 </html>

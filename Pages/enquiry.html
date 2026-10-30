@@ -9,11 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- viewport makes the page responsive. -->
   <meta name="description" content="Send an enquiry or order request to Amina's Fast Food.">
+  <meta property="og:title" content="Enquiry &amp; Order | Amina's Fast Food">
+  <meta property="og:description" content="Send an enquiry or order request to Amina's Fast Food.">
   <!-- description provides a short search-engine description. -->
   <title>Enquiry &amp; Order | Amina's Fast Food</title>
   <!-- title sets the browser tab title. -->
   <link rel="stylesheet" href="../Assets/css/style.css">
   <!-- link connects this page to the shared external CSS file. -->
+  <script src="../Assets/js/script.js" defer></script>
 </head>
 <!-- Closing head ends the metadata area. -->
 <body>
@@ -68,7 +71,7 @@
       </div>
       <!-- Closing div ends the introduction box. -->
 
-      <form class="order-form" id="enquiryForm" onsubmit="return handleEnquiry(event)">
+      <form class="order-form" id="enquiryForm" action="https://wa.me/27727848640" method="get" target="_blank">
       <!-- form collects customer information; onsubmit runs validation and processing. -->
         <h2>Order / Enquiry Form</h2>
         <!-- h2 creates the form heading. -->
@@ -79,7 +82,7 @@
         <!-- div groups the name label and input for CSS styling. -->
           <label for="name">Full Name *</label>
           <!-- label describes the name input; for connects it to id="name". -->
-          <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name" required>
+          <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name" minlength="3" maxlength="80" required>
           <!-- input creates a text field; required prevents empty submission. -->
         </div>
         <!-- Closing div ends the name field group. -->
@@ -88,7 +91,7 @@
         <!-- div groups the phone label and input. -->
           <label for="phone">Phone Number *</label>
           <!-- label describes the phone input. -->
-          <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel" required>
+          <input id="phone" name="phone" type="tel" placeholder="e.g. 072 784 8640" autocomplete="tel" pattern="(0[6-8][0-9]{8}|\\+27[6-8][0-9]{8})" minlength="10" maxlength="12" required>
           <!-- input type="tel" creates a phone-number field. -->
         </div>
         <!-- Closing div ends the phone field group. -->
@@ -127,7 +130,7 @@
         <!-- div groups the meal label and select menu. -->
           <label for="order">Select Meal / Product *</label>
           <!-- label describes the meal selection. -->
-          <select id="order" name="order" required>
+          <select id="order" name="order">
           <!-- select creates a dropdown menu; required means a meal must be selected. -->
             <option value="">-- Select a meal --</option>
             <!-- option creates the default dropdown choice. -->
@@ -188,7 +191,7 @@
         <!-- div groups the additional-information label and textarea. -->
           <label for="message">Additional Information</label>
           <!-- label describes the message area. -->
-          <textarea id="message" name="message" placeholder="Add any additional information about your enquiry or order"></textarea>
+          <textarea id="message" name="message" maxlength="500" placeholder="Add any additional information about your enquiry or order"></textarea>
           <!-- textarea creates a multi-line text box for extra information. -->
         </div>
         <!-- Closing div ends the message field group. -->
@@ -196,7 +199,7 @@
         <button class="btn btn-red" type="submit">SUBMIT ENQUIRY</button>
         <!-- button creates the form submission button; type="submit" submits the form. -->
 
-        <div id="result" class="box" style="display:none; margin-top:20px; background:#e7f3ff;"></div>
+        <div id="result" class="form-result" aria-live="polite" role="status"></div>
         <!-- div displays processed response with cost and availability; hidden until submission. -->
       </form>
       <!-- Closing form ends the order/enquiry form. -->
@@ -214,99 +217,7 @@
   </footer>
   <!-- Closing footer ends the footer. -->
 
-<script>
-<!-- script contains JavaScript for validation and processing. -->
-function handleEnquiry(event){
-  // Function validates input and processes enquiry with cost and availability.
-  event.preventDefault();
-  // preventDefault stops form from refreshing page.
 
-  let name = document.getElementById('name').value.trim();
-  // Gets and trims full name value.
-  let phone = document.getElementById('phone').value.trim();
-  // Gets and trims phone value.
-  let email = document.getElementById('email').value.trim();
-  // Gets and trims email value.
-  let enquiryType = document.getElementById('enquiryType').value;
-  // Gets enquiry type value.
-  let orderValue = document.getElementById('order').value;
-  // Gets selected meal value with price.
-  let quantity = parseInt(document.getElementById('quantity').value);
-  // Gets quantity and converts to number.
-  let delivery = document.getElementById('delivery').value;
-  // Gets delivery method.
-  let message = document.getElementById('message').value;
-  // Gets additional information.
-
-  // Validation
-  if(name.length < 3){ alert("Please enter valid full name (min 3 characters)"); return false; }
-  // Validates name length.
-  if(phone.length < 10){ alert("Please enter valid phone number (min 10 digits)"); return false; }
-  // Validates phone length.
-  if(isNaN(quantity) || quantity < 1){ alert("Please enter valid quantity"); return false; }
-  // Validates quantity is a number and at least 1.
-  if(!orderValue){ alert("Please select a meal"); return false; }
-  // Validates meal selection.
-
-  // Process: split meal and price
-  let parts = orderValue.split('|');
-  // Splits value into name and price using | separator.
-  let mealName = parts[0];
-  // Gets meal name from first part.
-  let unitPrice = parseInt(parts[1]);
-  // Gets unit price from second part and converts to number.
-  let totalCost = unitPrice * quantity;
-  // Calculates total cost by multiplying price and quantity.
-  let deliveryFee = (delivery === "Delivery")? 20 : 0;
-  // Sets delivery fee R20 if delivery, else 0.
-  let finalTotal = totalCost + deliveryFee;
-  // Calculates final total including delivery fee.
-
-  // Prepare response related to cost, availability, etc.
-  let resultDiv = document.getElementById('result');
-  // Gets result div element.
-  resultDiv.style.display = "block";
-  // Makes result div visible.
-
-  let costInfo = "";
-  // Variable to store cost information.
-  let availabilityInfo = "";
-  // Variable to store availability information.
-  let extraInfo = "";
-  // Variable to store extra information based on enquiry type.
-
-  if(enquiryType === "product"){
-    costInfo = "<strong>Cost:</strong> " + mealName + " @ R" + unitPrice + " x " + quantity + " = R" + totalCost + ". Delivery: R" + deliveryFee + ". <strong>Final Total: R" + finalTotal + "</strong>";
-    availabilityInfo = "<strong>Availability:</strong> In stock, ready in 15-20 minutes.";
-    extraInfo = "Collection available now. Delivery available Mon-Sun 10:00-20:00 within 5km radius.";
-  } else if(enquiryType === "service"){
-    costInfo = "<strong>Cost:</strong> Catering service from R500. Your selection (" + mealName + ") estimated R" + finalTotal + " for " + quantity + " people. Delivery fee R" + deliveryFee;
-    availabilityInfo = "<strong>Availability:</strong> Catering requires 24-hour advance booking.";
-    extraInfo = "We provide catering for parties, funerals, and community events.";
-  } else if(enquiryType === "volunteer"){
-    costInfo = "<strong>Cost:</strong> No cost - volunteer training is free. Stipend provided for transport.";
-    availabilityInfo = "<strong>Availability:</strong> Volunteer intake every Monday 09:00 at KwaZakele store.";
-    extraInfo = "Thank you for interest in volunteering with Amina's Fast Food!";
-  } else if(enquiryType === "sponsor"){
-    costInfo = "<strong>Cost:</strong> Sponsorship packages from R1000/month. Includes logo on community event banners.";
-    availabilityInfo = "<strong>Availability:</strong> Sponsorship slots open for upcoming school sports event.";
-    extraInfo = "We will email our sponsorship brochure to " + email;
-  }
-
-  resultDiv.innerHTML = "<h3>Thank you " + name + "!</h3>" +
-                        "<p>Your <strong>" + enquiryType + "</strong> enquiry for <strong>" + mealName + "</strong> has been processed.</p>" +
-                        "<p>" + costInfo + "</p>" +
-                        "<p>" + availabilityInfo + "</p>" +
-                        "<p>" + extraInfo + "</p>" +
-                        "<p><strong>Contact:</strong> " + phone + " | " + email + " | " + delivery + "</p>" +
-                        "<p>Please confirm on WhatsApp: 072 784 8640</p>";
-  // Displays compiled response with cost, availability, and contact details.
-
-  return false;
-  // Returns false to prevent default submission.
-}
-</script>
-<!-- Closing script ends JavaScript. -->
 </body>
 <!-- Closing body ends visible webpage content. -->
 </html>
