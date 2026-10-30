@@ -407,3 +407,31 @@ h1, h2, h3 {
   .menu-tools { grid-template-columns: 1fr; }
   .menu-item-photo { height: 170px; }
 }
+
+/* Menu page styling based on the approved visual reference. */
+.menu-hero{overflow:hidden;padding:26px 20px 24px;background:linear-gradient(110deg,#fff0dc,#fffaf3 48%,#ffe4c2)}
+.menu-hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3rem,7vw,5.4rem);font-style:italic;color:#8b0000;margin:0}
+.menu-hero h1 span{color:#e85d04}
+.menu-hero .eyebrow{color:#a53a17;letter-spacing:1px}
+.menu-hero p:last-child{font-size:1.05rem;color:#333}
+.menu-tools{grid-template-columns:minmax(0,2.2fr) minmax(210px,.8fr);align-items:center;gap:14px;padding:15px;margin-bottom:12px;background:#fff5e9;box-shadow:none}
+.menu-search-wrap,.menu-select-wrap{display:flex;align-items:center;min-width:0;height:54px;background:#fff;border:1px solid #f2a36c;border-radius:12px}
+.menu-search-icon{padding:0 14px;color:#b54d0a;font-size:1.8rem;line-height:1}
+.menu-search-wrap input{width:100%;min-width:0;height:100%;padding:0 8px;border:0;outline:0;background:transparent;color:#222;font:inherit}
+.menu-clear{border:0;background:transparent;padding:0 15px;color:#888;font-size:1.7rem;cursor:pointer}
+.menu-select-wrap select{width:100%;height:100%;padding:0 15px;border:0;outline:0;border-radius:12px;background:transparent;color:#333;font:inherit}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.menu-tools .form-result{grid-column:1/-1;padding:0;background:transparent;border:0;color:#6d5547}
+.menu-category-tabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:12px 0 20px}
+.menu-tab{min-height:58px;padding:10px;border:0;border-radius:12px;background:#fff1e4;color:#8b0000;font:inherit;font-weight:700;cursor:pointer;transition:.2s ease}
+.menu-tab:hover,.menu-tab.active{background:#f36b05;color:#fff}
+.menu-section[data-category="burgers"],.menu-section[data-category="chips"],.menu-section[data-category="kota"],.menu-section[data-category="snacks"],.menu-section[data-category="combos"]{background:#fff4e9}
+.menu-section{border:0}
+.menu-section h2{font-size:clamp(1.45rem,3vw,2rem)}
+.menu-item-card{padding:13px;background:#fff}
+.menu-item-photo{height:150px}
+.menu-order-btn{display:block;margin-top:3px;padding:9px 12px;border-radius:8px;background:#f36b05;color:#fff;text-align:center;text-decoration:none;font-weight:700;transition:background .2s ease}
+.menu-order-btn:hover{background:#8b0000}
+.menu-item-card[hidden],.menu-filter-item[hidden]{display:none!important}
+@media(max-width:800px){.menu-category-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.menu-tools{grid-template-columns:1fr}}
+@media(max-width:480px){.menu-category-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.menu-hero{padding:28px 15px}.menu-tab{min-height:50px}}
