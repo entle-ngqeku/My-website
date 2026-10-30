@@ -43,7 +43,6 @@ function showFieldError(field,message){
 
 function validateField(field){
  if(field.disabled||field.closest("[hidden]"))return true;
- field.setCustomValidity("");
  const value=field.value.trim();let message="";
  if(field.required&&!value)message="Please complete this field.";
  else if(value&&(field.id==="name"||field.id==="cName")&&value.length<3)message="Please enter at least 3 characters.";
@@ -53,8 +52,8 @@ function validateField(field){
  else if(value&&field.validity.typeMismatch)message="Enter a valid email address.";
  else if(value&&field.validity.patternMismatch)message="Please use the required format.";
  else if(value&&field.validity.tooShort)message="The value is too short.";
- field.setCustomValidity(message);showFieldError(field,message);
- return !message&&field.checkValidity();
+ showFieldError(field,message);
+ return !message;
 }
 
 function setupFormValidation(form){
@@ -77,7 +76,7 @@ function setupEnquiryForm(){
   productFields.forEach(group=>{
    group.hidden=!isProduct;
    const field=group.querySelector("input,select");
-   if(field){field.required=isProduct;if(!isProduct){field.setCustomValidity("");showFieldError(field,"");}}
+   if(field){field.required=isProduct;if(!isProduct){showFieldError(field,"");}}
   });
   if(!isProduct){meal.value="";quantity.value="1";delivery.value="";}
  }
