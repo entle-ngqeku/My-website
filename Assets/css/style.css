@@ -437,7 +437,63 @@ footer p {
 .form-result:empty{display:none}.form-result:not(:empty){padding:14px;border-left:4px solid #e85d04;background:#fff3e5;border-radius:5px}
 input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown),select:invalid{border-color:#b42318}
 .map-panel{margin:30px 0}.map-panel iframe{display:block;width:100%;min-height:350px;border:0;border-radius:8px;margin-top:18px}
-:focus-visible{outline:3px solid #e85d04;outline-offset:3px}
+/* Keyboard and pointer focus states make interactive controls easier to identify. */
+:focus {
+  outline: 3px solid #e85d04;
+  outline-offset: 3px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+:focus-visible {
+  outline: 3px solid #8b0000;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #ffd166;
+}
+
+/* Tablet breakpoint: medium screens from 701px to 1024px. */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 42px 28px;
+  }
+
+  .navbar {
+    gap: 3px;
+    padding: 10px 8px;
+  }
+
+  .navbar a {
+    padding: 9px 11px;
+    font-size: 0.95rem;
+  }
+
+  .two-column,
+  .highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .cards,
+  .contact-grid,
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .hero {
+    min-height: 440px;
+    padding: 42px 28px;
+  }
+
+  .menu-photo {
+    height: 180px;
+  }
+
+  .map-panel iframe {
+    min-height: 320px;
+  }
+}
 @media(max-width:700px){.menu-tools{grid-template-columns:1fr}.menu-tools .form-result{grid-column:auto}.map-panel iframe{min-height:280px}}
 
 
