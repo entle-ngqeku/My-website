@@ -71,11 +71,11 @@
       </div>
       <!-- Closing div ends the introduction box. -->
 
-      <form class="order-form" id="enquiryForm" action="https://wa.me/27727848640" method="get" target="_blank">
+      <form class="order-form" id="enquiryForm" action="https://wa.me/27727848640" method="get" target="_blank" novalidate>
       <!-- form collects customer information; onsubmit runs validation and processing. -->
         <h2>Order / Enquiry Form</h2>
         <!-- h2 creates the form heading. -->
-        <p class="form-note">Fields marked as required must be completed.</p>
+        <p class="form-note">Choose an enquiry type first. Meal, quantity and collection/delivery details are required for product orders. Fields marked * must be completed.</p>
         <!-- p gives the user information about required fields. -->
 
         <div class="form-group">
@@ -126,11 +126,11 @@
         </div>
         <!-- Closing div ends enquiry type field group. -->
 
-        <div class="form-group">
+        <div class="form-group product-order-field" data-product-fields>
         <!-- div groups the meal label and select menu. -->
           <label for="order">Select Meal / Product *</label>
           <!-- label describes the meal selection. -->
-          <select id="order" name="order" required>
+          <select id="order" name="order">
           <!-- select creates a dropdown menu; required means a meal must be selected. -->
             <option value="">-- Select a meal --</option>
             <!-- option creates the default dropdown choice. -->
@@ -163,16 +163,16 @@
         </div>
         <!-- Closing div ends the meal field group. -->
 
-        <div class="form-group">
+        <div class="form-group product-order-field" data-product-fields>
         <!-- div groups the quantity label and input. -->
           <label for="quantity">Quantity *</label>
           <!-- label describes the quantity input. -->
-          <input id="quantity" name="quantity" type="number" min="1" value="1" required>
+          <input id="quantity" name="quantity" type="number" min="1" max="20" step="1" value="1" required>
           <!-- number input accepts a quantity; min prevents values below 1. -->
         </div>
         <!-- Closing div ends the quantity field group. -->
 
-        <div class="form-group">
+        <div class="form-group product-order-field" data-product-fields>
         <!-- div groups the collection/delivery label and select. -->
           <label for="delivery">Collection or Delivery *</label>
           <!-- label describes the delivery choice. -->
