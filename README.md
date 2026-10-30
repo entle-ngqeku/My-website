@@ -24,6 +24,7 @@ Amina's Fast Food is a website for a local fast-food business in KwaZakele, Port
 | `Assets/js/script.js` | Menu filtering and form workflows |
 | `CHANGELOG.md` | Part 3 change history |
 | `TESTING.md` | Testing matrix and evidence record |
+| `IMAGE_CREDITS.md` | Credits and notes for the menu stock photographs |
 | `WIREFRAMES.md` | Original page wireframes |
 
 ## Part 3 functionality
@@ -39,6 +40,9 @@ The enquiry form opens WhatsApp with a prepared message. The customer must revie
 The contact form opens the visitor's email application addressed to `aminafastfood@gmail.com`. The visitor must review and press Send. Confirm that this is the correct business email before submission. No server-side email service is connected.
 
 The delivery fee in the estimate is R20, as used in the existing project. Confirm this amount with the business before accepting orders. The map searches for KwaZakele, Port Elizabeth; it is not a verified street-level business pin.
+
+## Menu photographs
+The Services & Menu page now includes a photograph for each category: burgers, chips, kota meals, fat cakes and combo deals. These are illustrative stock photographs, not photos of the actual food prepared by the business. Their source credits and license notes are listed in [IMAGE_CREDITS.md](IMAGE_CREDITS.md). Replace them with the business's own product photos when available.
 
 ## SEO and accessibility
 - Each page has a descriptive title and meta description.
