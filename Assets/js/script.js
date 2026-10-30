@@ -6,56 +6,50 @@ function setupMenuFilter(){
  const category=document.getElementById("menuCategory");
  const result=document.getElementById("menuResult");
  const sections=document.querySelectorAll(".menu-filter-item");
-
+ const tabs=document.querySelectorAll(".menu-tab");
+ const clearButton=document.getElementById("clearMenuSearch");
  if(!search||!category||!result||!sections.length)return;
-
- function filterMenu(){
+ function filterMenu(selectedOverride){
+  if(selectedOverride!==undefined)category.value=selectedOverride;
   const term=search.value.trim().toLowerCase();
   const selected=category.value;
-  let visibleMeals=0;
-  let visibleCategories=0;
-
+  let visibleMeals=0,visibleCategories=0;
   sections.forEach(section=>{
    const categoryMatches=selected==="all"||section.dataset.category===selected;
-   const mealCards=section.querySelectorAll(".menu-item-card");
+   const cards=section.querySelectorAll(".menu-item-card");
    let categoryMealCount=0;
-
-   mealCards.forEach(card=>{
-    const mealMatches=card.textContent.toLowerCase().includes(term);
-    const show=categoryMatches&&mealMatches;
+   cards.forEach(card=>{
+    const show=categoryMatches&&card.textContent.toLowerCase().includes(term);
     card.hidden=!show;
-
-    if(show){
-     visibleMeals++;
-     categoryMealCount++;
-    }
+    if(show){visibleMeals++;categoryMealCount++;}
    });
-
-   /* Keep a category visible only when it contains matching meal cards. */
    const showSection=categoryMatches&&categoryMealCount>0;
    section.hidden=!showSection;
-
    if(showSection)visibleCategories++;
   });
-
-  if(term===""&&selected==="all"){
-   result.textContent="Showing all "+visibleMeals+" menu items across "+visibleCategories+" categories.";
-  }else if(visibleMeals===0){
-   result.textContent="No matching meals found. Try another search or category.";
-  }else{
-   result.textContent=visibleMeals+(visibleMeals===1?" meal found":" meals found")+
-    " in "+visibleCategories+(visibleCategories===1?" category.":" categories.");
-  }
+  tabs.forEach(tab=>{
+   const active=tab.dataset.menuFilter===selected;
+   tab.classList.toggle("active",active);
+   tab.setAttribute("aria-pressed",String(active));
+  });
+  if(term===""&&selected==="all")result.textContent="Showing all "+visibleMeals+" menu items across "+visibleCategories+" categories.";
+  else if(visibleMeals===0)result.textContent="No matching meals found. Try another search or category.";
+  else result.textContent=visibleMeals+(visibleMeals===1?" meal found":" meals found")+" in "+visibleCategories+(visibleCategories===1?" category.":" categories.");
  }
-
- search.addEventListener("input",filterMenu);
- category.addEventListener("change",filterMenu);
-
- /* Apply the selected category when the page first loads. */
+ search.addEventListener("input",()=>filterMenu());
+ category.addEventListener("change",()=>filterMenu());
+ tabs.forEach(tab=>tab.addEventListener("click",()=>filterMenu(tab.dataset.menuFilter)));
+ if(clearButton)clearButton.addEventListener("click",()=>{search.value="";filterMenu();search.focus();});
  filterMenu();
 }
 function setupEnquiryForm(){
  const form=document.getElementById("enquiryForm");if(!form)return;
+ const requestedMeal=new URLSearchParams(window.location.search).get("meal");
+ const mealSelect=document.getElementById("order");
+ if(requestedMeal&&mealSelect){
+  const option=Array.from(mealSelect.options).find(item=>item.value===requestedMeal);
+  if(option){mealSelect.value=requestedMeal;document.getElementById("enquiryType").value="product";}
+ }
  form.addEventListener("submit",function(event){event.preventDefault();if(!form.checkValidity()){form.reportValidity();return;}
  const name=document.getElementById("name").value.trim(),phone=document.getElementById("phone").value.trim(),email=document.getElementById("email").value.trim(),type=document.getElementById("enquiryType").value,meal=document.getElementById("order").value,quantity=Number(document.getElementById("quantity").value),delivery=document.getElementById("delivery").value,message=document.getElementById("message").value.trim(),result=document.getElementById("result");
  if(type==="product"&&!meal){const field=document.getElementById("order");field.setCustomValidity("Please select a meal for a product enquiry.");field.reportValidity();field.setCustomValidity("");return;}
