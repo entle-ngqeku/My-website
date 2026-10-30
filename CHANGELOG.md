@@ -1,6 +1,6 @@
 # Changelog — Amina's Fast Food
 
-## [3.0.0] — 2026-10-30
+## [3.1.0] — 2026-10-30\n\n### Marking feedback corrections\n- Added an explicit `:focus` state and a stronger `:focus-visible` keyboard indicator for links, buttons and form controls.\n- Added a tablet media query for viewport widths from 701px to 1024px, adjusting navigation spacing, content grids, containers, hero sizing and map height.\n- Expanded README documentation with a dedicated Part 1 feedback record, screenshot evidence instructions and relevant technical references.\n- Added a screenshot evidence folder guide with required desktop, tablet and mobile captures.\n- Added a Part 1 feedback/improvement record template. Actual lecturer comments and real screenshots still need to be supplied/recorded; they have not been fabricated.\n\n## [3.0.0] — 2026-10-30
 
 ### Added
 - Shared JavaScript for menu search and category filtering.
