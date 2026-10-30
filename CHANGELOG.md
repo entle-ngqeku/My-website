@@ -11,6 +11,7 @@
 - Responsive Google Maps area search for KwaZakele.
 - Accessible live status messages and visible keyboard focus styles.
 - Part 3 testing record and updated README.
+- GitHub Actions workflow to publish the static website through GitHub Pages after pushes to main.
 
 ### Changed
 - Added action and method attributes to both forms.
