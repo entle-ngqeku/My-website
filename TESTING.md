@@ -3,7 +3,7 @@
 | Area | Test | Expected result | Status |
 |---|---|---|---|
 | Navigation | Open all links on every page | Correct page opens | Pending browser verification |
-| Responsive layout | Test desktop, tablet and mobile widths | No horizontal overflow; controls usable | Pending browser verification |
+| Responsive layout | Test desktop (1280px), tablet (768px) and mobile (375px) widths | No horizontal overflow; controls usable | Pending browser verification |\n| Keyboard focus | Press Tab and Shift+Tab through links, buttons and form fields | Clear visible focus outline appears | CSS rule added; keyboard retest pending |
 | Menu search | Search for "burger" | Matching category remains visible | Pending browser verification |
 | Category filter | Select each category and All | Correct category shown | Pending browser verification |
 | Enquiry invalid | Submit missing or invalid fields | Browser validation blocks submission | Pending browser verification |
