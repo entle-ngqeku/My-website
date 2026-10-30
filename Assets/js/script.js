@@ -87,7 +87,7 @@ function setupEnquiryForm(){
  form.addEventListener("submit",event=>{
   event.preventDefault();
   const invalid=Array.from(form.querySelectorAll("input,select,textarea")).filter(field=>!validateField(field));
-  if(invalid.length){invalid[0].focus();invalid[0].reportValidity();return;}
+  if(invalid.length){invalid[0].focus();return;}
   const name=document.getElementById("name").value.trim(),phone=document.getElementById("phone").value.trim();
   const email=document.getElementById("email").value.trim(),kind=type.value,message=document.getElementById("message").value.trim();
   let mealName="Not selected",estimate="A team member will discuss your enquiry and confirm the details.";
