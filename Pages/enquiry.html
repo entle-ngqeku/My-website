@@ -82,7 +82,7 @@
         <!-- div groups the name label and input for CSS styling. -->
           <label for="name">Full Name *</label>
           <!-- label describes the name input; for connects it to id="name". -->
-          <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name" maxlength="80" required>
+          <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name" maxlength="80" data-required="true">
           <!-- input creates a text field; required prevents empty submission. -->
         </div>
         <!-- Closing div ends the name field group. -->
@@ -91,7 +91,7 @@
         <!-- div groups the phone label and input. -->
           <label for="phone">Phone Number *</label>
           <!-- label describes the phone input. -->
-          <input id="phone" name="phone" type="tel" placeholder="e.g. 072 784 8640" autocomplete="tel" maxlength="14" required>
+          <input id="phone" name="phone" type="tel" placeholder="e.g. 072 784 8640" autocomplete="tel" maxlength="14" data-required="true">
           <!-- input type="tel" creates a phone-number field. -->
         </div>
         <!-- Closing div ends the phone field group. -->
@@ -100,7 +100,7 @@
         <!-- div groups the email label and input. -->
           <label for="email">Email Address *</label>
           <!-- label describes the email input. -->
-          <input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+          <input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" data-required="true">
           <!-- input type email validates email format. -->
         </div>
         <!-- Closing div ends the email field group. -->
@@ -109,7 +109,7 @@
         <!-- div groups the enquiry type label and select. -->
           <label for="enquiryType">Enquiry Type *</label>
           <!-- label describes enquiry type. -->
-          <select id="enquiryType" name="enquiryType" required>
+          <select id="enquiryType" name="enquiryType" data-required="true">
           <!-- select creates dropdown for enquiry purpose. -->
             <option value="">-- Select enquiry type --</option>
             <!-- option creates default choice. -->
@@ -167,7 +167,7 @@
         <!-- div groups the quantity label and input. -->
           <label for="quantity">Quantity *</label>
           <!-- label describes the quantity input. -->
-          <input id="quantity" name="quantity" type="number" min="1" max="20" step="1" value="1" required>
+          <input id="quantity" name="quantity" type="number" min="1" max="20" step="1" value="1" data-required="true">
           <!-- number input accepts a quantity; min prevents values below 1. -->
         </div>
         <!-- Closing div ends the quantity field group. -->
@@ -176,7 +176,7 @@
         <!-- div groups the collection/delivery label and select. -->
           <label for="delivery">Collection or Delivery *</label>
           <!-- label describes the delivery choice. -->
-          <select id="delivery" name="delivery" required>
+          <select id="delivery" name="delivery" data-required="true">
           <!-- select creates the collection or delivery dropdown. -->
             <option value="">-- Select option --</option>
             <!-- option creates the default dropdown choice. -->
