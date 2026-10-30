@@ -2,12 +2,57 @@
 "use strict";
 document.addEventListener("DOMContentLoaded",function(){setupMenuFilter();setupEnquiryForm();setupContactForm();});
 function setupMenuFilter(){
- const search=document.getElementById("menuSearch"),category=document.getElementById("menuCategory"),result=document.getElementById("menuResult"),sections=document.querySelectorAll(".menu-filter-item");
+ const search=document.getElementById("menuSearch");
+ const category=document.getElementById("menuCategory");
+ const result=document.getElementById("menuResult");
+ const sections=document.querySelectorAll(".menu-filter-item");
+
  if(!search||!category||!result||!sections.length)return;
- function filterMenu(){const term=search.value.trim().toLowerCase(),selected=category.value;let count=0;
- sections.forEach(section=>{const show=section.textContent.toLowerCase().includes(term)&&(selected==="all"||section.dataset.category===selected);section.hidden=!show;if(show)count++;});
- result.textContent=count+(count===1?" menu category found.":" menu categories found.");}
- search.addEventListener("input",filterMenu);category.addEventListener("change",filterMenu);
+
+ function filterMenu(){
+  const term=search.value.trim().toLowerCase();
+  const selected=category.value;
+  let visibleMeals=0;
+  let visibleCategories=0;
+
+  sections.forEach(section=>{
+   const categoryMatches=selected==="all"||section.dataset.category===selected;
+   const mealCards=section.querySelectorAll(".menu-item-card");
+   let categoryMealCount=0;
+
+   mealCards.forEach(card=>{
+    const mealMatches=card.textContent.toLowerCase().includes(term);
+    const show=categoryMatches&&mealMatches;
+    card.hidden=!show;
+
+    if(show){
+     visibleMeals++;
+     categoryMealCount++;
+    }
+   });
+
+   /* Keep a category visible only when it contains matching meal cards. */
+   const showSection=categoryMatches&&categoryMealCount>0;
+   section.hidden=!showSection;
+
+   if(showSection)visibleCategories++;
+  });
+
+  if(term===""&&selected==="all"){
+   result.textContent="Showing all "+visibleMeals+" menu items across "+visibleCategories+" categories.";
+  }else if(visibleMeals===0){
+   result.textContent="No matching meals found. Try another search or category.";
+  }else{
+   result.textContent=visibleMeals+(visibleMeals===1?" meal found":" meals found")+
+    " in "+visibleCategories+(visibleCategories===1?" category.":" categories.");
+  }
+ }
+
+ search.addEventListener("input",filterMenu);
+ category.addEventListener("change",filterMenu);
+
+ /* Apply the selected category when the page first loads. */
+ filterMenu();
 }
 function setupEnquiryForm(){
  const form=document.getElementById("enquiryForm");if(!form)return;
