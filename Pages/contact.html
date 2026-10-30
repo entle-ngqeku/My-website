@@ -146,7 +146,7 @@
           <!-- div groups name field for styling. -->
             <label for="cName">Full Name *</label>
             <!-- label describes full name input. -->
-            <input type="text" id="cName" name="cName" placeholder="Enter your full name" autocomplete="name" maxlength="80" required>
+            <input type="text" id="cName" name="cName" placeholder="Enter your full name" autocomplete="name" maxlength="80" data-required="true">
             <!-- input type text collects name; required prevents empty submission. -->
           </div>
           <!-- Closing div ends name group. -->
@@ -155,7 +155,7 @@
           <!-- div groups email field. -->
             <label for="cEmail">Email Address *</label>
             <!-- label describes email field. -->
-            <input type="email" id="cEmail" name="cEmail" placeholder="Enter your email address" autocomplete="email" required>
+            <input type="email" id="cEmail" name="cEmail" placeholder="Enter your email address" autocomplete="email" data-required="true">
             <!-- input type email validates email format; required makes mandatory. -->
           </div>
           <!-- Closing div ends email group. -->
@@ -173,7 +173,7 @@
           <!-- div groups message type field. -->
             <label for="msgType">Type of Message *</label>
             <!-- label describes type of message. -->
-            <select id="msgType" name="msgType" required>
+            <select id="msgType" name="msgType" data-required="true">
             <!-- select creates dropdown for message type; required makes mandatory. -->
               <option value="">-- Select Message Type --</option>
               <!-- option default placeholder. -->
@@ -196,7 +196,7 @@
           <!-- div groups full message field. -->
             <label for="fullMessage">Full Message *</label>
             <!-- label describes full message textarea. -->
-            <textarea id="fullMessage" name="fullMessage" rows="6" maxlength="1000" placeholder="Type your full message here - include as much detail as possible" required></textarea>
+            <textarea id="fullMessage" name="fullMessage" rows="6" maxlength="1000" placeholder="Type your full message here - include as much detail as possible" data-required="true"></textarea>
             <!-- textarea creates multi-line text box for full message; required makes mandatory. -->
           </div>
           <!-- Closing div ends full message group. -->
