@@ -106,7 +106,7 @@ function setupContactForm(){
  form.addEventListener("submit",event=>{
   event.preventDefault();
   const invalid=Array.from(form.querySelectorAll("input,select,textarea")).filter(field=>!validateField(field));
-  if(invalid.length){invalid[0].focus();invalid[0].reportValidity();return;}
+  if(invalid.length){invalid[0].focus();return;}
   const name=document.getElementById("cName").value.trim(),email=document.getElementById("cEmail").value.trim();
   const phone=document.getElementById("cPhone").value.trim(),type=document.getElementById("msgType").value;
   const message=document.getElementById("fullMessage").value.trim(),recipient="aminafastfood@gmail.com";
