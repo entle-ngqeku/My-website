@@ -298,16 +298,61 @@ h1, h2, h3 {
 .section-note,
 .form-note { margin-bottom: 12px; }
 
-.menu-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  border-bottom: 1px solid #ddd;
-  padding: 14px 0;
+/* Each meal is displayed in its own card inside its category section. */
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
 }
 
-.menu-row:last-child { border-bottom: 0; }
+.menu-item-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px;
+  background: #fffaf5;
+  border: 1px solid #f0d9c5;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0000000d;
+}
+
+.menu-item-card > strong {
+  align-self: flex-end;
+  color: #e85d04;
+  font-size: 1.1rem;
+}
+
+.menu-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.menu-item-info > div { min-width: 0; }
+
+.menu-item-photo {
+  width: 100%;
+  height: 125px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.menu-item-info small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+}
+
+@media (max-width: 480px) {
+  .menu-items-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .menu-item-card { padding: 10px; }
+  .menu-item-photo { height: 105px; }
+}
 
 .menu-item-info {
   display: flex;
