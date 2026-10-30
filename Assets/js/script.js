@@ -68,6 +68,7 @@ function setupFormValidation(form){
 
 function setupEnquiryForm(){
  const form=document.getElementById("enquiryForm");if(!form)return;
+ form.noValidate=true;
  const type=document.getElementById("enquiryType"),meal=document.getElementById("order");
  const quantity=document.getElementById("quantity"),delivery=document.getElementById("delivery");
  const result=document.getElementById("result"),productFields=form.querySelectorAll("[data-product-fields]");
@@ -102,6 +103,7 @@ function setupEnquiryForm(){
 
 function setupContactForm(){
  const form=document.getElementById("contactForm");if(!form)return;
+ form.noValidate=true;
  setupFormValidation(form);
  form.addEventListener("submit",event=>{
   event.preventDefault();
