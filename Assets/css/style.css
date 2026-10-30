@@ -442,9 +442,6 @@ input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown),s
   outline: 3px solid #e85d04;
   outline-offset: 3px;
 }
-:focus:not(:focus-visible) {
-  outline: none;
-}
 :focus-visible {
   outline: 3px solid #8b0000;
   outline-offset: 3px;
