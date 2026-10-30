@@ -44,7 +44,7 @@ function showFieldError(field,message){
 function validateField(field){
  if(field.disabled||field.closest("[hidden]"))return true;
  const value=field.value.trim();let message="";
- if(field.required&&!value)message="Please complete this field.";
+ if(field.dataset.required==="true"&&!value)message="Please complete this field.";
  else if(value&&(field.id==="name"||field.id==="cName")&&value.length<3)message="Please enter at least 3 characters.";
  else if(value&&(field.id==="phone"||field.id==="cPhone")&&!/^(?:0[6-8]\d{8}|\+27[6-8]\d{8}|0[6-8]\d ?\d{3} ?\d{4})$/.test(value))message="Enter a valid South African mobile number, e.g. 072 784 8640.";
  else if(value&&field.id==="fullMessage"&&value.length<15)message="Please enter at least 15 characters so we can understand your message.";
@@ -77,7 +77,7 @@ function setupEnquiryForm(){
   productFields.forEach(group=>{
    group.hidden=!isProduct;
    const field=group.querySelector("input,select");
-   if(field){field.required=isProduct;if(!isProduct){showFieldError(field,"");}}
+   if(field){field.dataset.required=String(isProduct);field.required=false;if(!isProduct){showFieldError(field,"");}}
   });
   if(!isProduct){meal.value="";quantity.value="1";delivery.value="";}
  }
