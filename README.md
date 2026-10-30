@@ -87,7 +87,7 @@ The lecturer's Part 2 feedback was not supplied with the Part 3 guide used for t
 ## GitHub and deployment
 Repository: https://github.com/entle-ngqeku/My-website
 
-The repository and deployed website are separate deliverables. Publish the static site using GitHub Pages, Netlify or another suitable free host, then add the verified live URL here and submit both URLs on the LMS.
+The repository and deployed website are separate deliverables. A GitHub Actions workflow is included at `.github/workflows/pages.yml`; it attempts to publish the root static website to GitHub Pages whenever changes are pushed to `main`. Open the repository's **Actions** tab and confirm that the Pages deployment workflow completes successfully. If GitHub Pages has not been enabled for the repository, follow the Pages setup prompt in repository Settings. The live URL is only confirmed after a successful deployment; add that verified URL here and submit both URLs on the LMS.
 
 ## Existing menu prices
 - Classic Burger R35; Cheese Burger R40; Double Burger R50
