@@ -11,7 +11,8 @@
 | Other enquiry types | Select a non-product enquiry type | Product-only meal, quantity and delivery fields are hidden and are not required | Pending browser verification |
 | Contact invalid | Enter invalid email, invalid optional phone or short message | Inline JavaScript errors and HTML5 validation block submission | Pending browser verification |
 | Contact valid | Complete and submit general contact form | Email application opens with the selected message type and compiled message | Pending manual verification |
-| Lightbox | Click a menu photo, use next/previous, Escape and close | Large image opens; navigation and close work with keyboard and mouse | Pending browser verification |\n| FAQ | Open and close each question | Content expands and collapses | Pending browser verification |
+| Lightbox | Click a menu photo, use next/previous, Escape and close | Large image opens; navigation and close work with keyboard and mouse | Pending browser verification |
+| FAQ | Open and close each question | Content expands and collapses | Pending browser verification |
 | Map | Load Contact page | Map search loads and supports zoom/pan | Pending live-site verification |
 | SEO | Inspect title, description, H1 and links | Purposeful page metadata and headings | Source review completed; live crawl pending |
 | Security | Scan repository for credentials | No private credentials committed | Manual scan pending |
@@ -22,7 +23,8 @@
 - Menu search and category filter.
 - Valid and invalid enquiry form.
 - Prepared WhatsApp message.
-- Valid and invalid contact form, including inline error messages.\n- Menu lightbox open, next/previous and closed states on desktop and mobile.
+- Valid and invalid contact form, including inline error messages.
+- Menu lightbox open, next/previous and closed states on desktop and mobile.
 - FAQ open state.
 - Map on desktop and mobile.
 - Each page at mobile width.
