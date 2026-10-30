@@ -268,85 +268,75 @@ h1, h2, h3 {
    MENU
    ============================== */
 
-
-/* Keep every menu category in its own separate card. */
+/* Each meal category gets its own full-width landscape section. */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-  align-items: stretch;
-  gap: 22px;
-}
-
-.menu-section {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  height: 100%;
-  background: #fff;
-  border: 1px solid #f0dfcf;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 14px #00000012;
-}
-
-.menu-section .menu-row {
-  width: 100%;
-}
-
-.menu-grid { margin-top: 25px; }
-.menu-section h2 { margin-bottom: 12px; }
-.section-note,
-.form-note { margin-bottom: 12px; }
-
-
-/* Menu categories and individual meal cards */
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 24px;
   margin-top: 25px;
 }
 
 .menu-section {
+  display: block;
+  width: 100%;
   min-width: 0;
-  height: 100%;
-  padding: 22px;
-  background: #fff;
+  height: auto;
+  margin-bottom: 0;
+  padding: 26px;
   border: 1px solid #f0dfcf;
-  border-radius: 12px;
-  box-shadow: 0 3px 14px #00000012;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px #00000010;
 }
+
+/* Soft background colours make each category easy to identify. */
+.menu-section[data-category="burgers"] { background: #fff0e5; }
+.menu-section[data-category="chips"] { background: #fff8dc; }
+.menu-section[data-category="kota"] { background: #ffedf0; }
+.menu-section[data-category="snacks"] { background: #edf7ec; }
+.menu-section[data-category="combos"] { background: #fff2df; border: 2px solid #e85d04; }
 
 .menu-section h2 {
-  margin-bottom: 14px;
+  margin: 3px 0 8px;
+  color: #8b0000;
 }
 
+.menu-section > .eyebrow {
+  margin-bottom: 2px;
+}
+
+.section-note { margin-bottom: 12px; }
+
+/* Every meal is displayed in its own separate card. */
 .menu-items-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   align-items: stretch;
-  gap: 12px;
-  margin-top: 16px;
+  gap: 16px;
+  margin-top: 18px;
 }
 
 .menu-item-card {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  gap: 9px;
   min-width: 0;
-  padding: 11px;
-  background: #fffaf5;
-  border: 1px solid #f0d9c5;
-  border-radius: 10px;
-  box-shadow: 0 2px 7px #0000000c;
+  padding: 12px;
+  gap: 9px;
+  background: #fff;
+  border: 1px solid #f0dfcf;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px #0000000d;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 16px #00000016;
 }
 
 .menu-item-info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 9px;
   min-width: 0;
 }
 
@@ -355,42 +345,65 @@ h1, h2, h3 {
 .menu-item-photo {
   display: block;
   width: 100%;
-  height: 105px;
+  height: 145px;
   object-fit: cover;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 
 .menu-item-info strong {
   display: block;
-  line-height: 1.3;
+  color: #222;
+  line-height: 1.35;
+  font-size: 1rem;
 }
 
 .menu-item-info small {
   display: block;
   margin-top: 4px;
   color: #666;
-  line-height: 1.4;
+  line-height: 1.45;
+  font-size: 0.88rem;
 }
 
 .menu-item-card > strong {
-  align-self: flex-start;
+  display: block;
   margin-top: auto;
-  color: #e85d04;
-  font-size: 1.05rem;
+  color: #8b0000;
+  font-size: 1.08rem;
 }
 
-.menu-section.special {
-  border: 2px solid #e85d04;
+/* Search and category filters remain usable above the menu. */
+.menu-tools {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px #0000000d;
 }
 
-@media (max-width: 900px) {
-  .menu-grid { grid-template-columns: 1fr; }
+.menu-tools .form-result {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 12px 14px;
+  background: #fff2e3;
+  border-left: 4px solid #e85d04;
+  border-radius: 5px;
+}
+
+@media (min-width: 1200px) {
   .menu-items-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
-@media (max-width: 600px) {
-  .menu-section { padding: 17px; }
-  .menu-items-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .menu-item-card { padding: 9px; }
-  .menu-item-photo { height: 100px; }
+@media (max-width: 700px) {
+  .menu-section { padding: 18px; }
+  .menu-items-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .menu-item-photo { height: 115px; }
+}
+
+@media (max-width: 480px) {
+  .menu-items-grid,
+  .menu-tools { grid-template-columns: 1fr; }
+  .menu-item-photo { height: 170px; }
 }
