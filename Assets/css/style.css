@@ -284,6 +284,33 @@ h1, h2, h3 {
 
 .menu-row:last-child { border-bottom: 0; }
 
+.menu-item-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.menu-item-info > div { min-width: 0; }
+
+.menu-item-photo {
+  width: 76px;
+  height: 62px;
+  flex: 0 0 76px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+  .menu-row { gap: 10px; }
+  .menu-item-photo {
+    width: 62px;
+    height: 54px;
+    flex-basis: 62px;
+  }
+}
+
+
 .menu-row strong:last-child {
   color: #e85d04;
   white-space: nowrap;
