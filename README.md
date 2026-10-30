@@ -24,7 +24,7 @@ Amina's Fast Food is a website for a local fast-food business in KwaZakele, Port
 | `Assets/js/script.js` | Menu filtering and form workflows |
 | `CHANGELOG.md` | Part 3 change history |
 | `TESTING.md` | Testing matrix and evidence record |
-| `IMAGE_CREDITS.md` | Credits and notes for the menu stock photographs |
+| `IMAGE_CREDITS.md` | Credits and notes for the menu stock photographs |\n| `PART1_FEEDBACK_AND_IMPROVEMENTS.md` | Record of Part 1 feedback, improvements and evidence |\n| `screenshots/README.md` | Screenshot evidence checklist and required filenames |
 | `WIREFRAMES.md` | Original page wireframes |
 
 ## Part 3 functionality
