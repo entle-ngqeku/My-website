@@ -29,15 +29,16 @@ Amina's Fast Food is a website for a local fast-food business in KwaZakele, Port
 
 ## Part 3 functionality
 - Menu search filters menu categories as a visitor types.
+- Menu photographs open in an accessible lightbox with close, previous and next controls.
 - Category filter narrows the menu to burgers, chips, kota, fat cakes or combo deals.
 - Homepage FAQ questions expand and collapse.
-- Enquiry form validates details, calculates an estimate from menu prices and prepares a WhatsApp message.
-- Contact form validates details and prepares an email draft.
+- Enquiry form uses HTML5 and JavaScript validation, displays field-level errors, shows product-only fields for product orders, calculates an estimate and prepares a WhatsApp message.
+- Contact form handles general messages separately, validates the selected message type and prepares an email draft.
 
 ### Form and service limitations
 The enquiry form opens WhatsApp with a prepared message. The customer must review and send it. It does not save orders to a database.
 
-The contact form opens the visitor's email application addressed to `aminafastfood@gmail.com`. The visitor must review and press Send. Confirm that this is the correct business email before submission. No server-side email service is connected.
+The contact form opens the visitor's email application addressed to `aminafastfood@gmail.com`. The visitor must review and press Send. Confirm that this is the correct business email before submission. No server-side email service is connected. AJAX is not configured because this static project has no form-processing endpoint; the forms use the documented WhatsApp and email-app hand-off instead.
 
 The delivery fee in the estimate is R20, as used in the existing project. Confirm this amount with the business before accepting orders. The map searches for KwaZakele, Port Elizabeth; it is not a verified street-level business pin.
 
@@ -48,7 +49,7 @@ The Services & Menu page now includes a photograph for each category: burgers, c
 - Each page has a descriptive title and meta description.
 - Open Graph title and description metadata are included.
 - Semantic HTML landmarks and logical headings are used.
-- Forms use labels, suitable input types and HTML5 validation.
+- Forms use labels, suitable input types, HTML5 constraints, JavaScript validation, inline error messages and accessible status feedback.
 - Dynamic result messages use `aria-live`.
 - Interactive controls have visible keyboard focus styling.
 - Responsive CSS supports smaller screens and flexible content grids.
@@ -81,7 +82,7 @@ My-website/
 No build step or package installation is required.
 
 ## Testing and evidence
-Follow [TESTING.md](TESTING.md). Capture screenshots of menu search/filter, valid and invalid form states, the WhatsApp message preview, FAQ, map and responsive mobile layout. Test the deployed URL as well as local files.
+Follow [TESTING.md](TESTING.md). Capture screenshots of menu search/filter, the image lightbox, valid and invalid form states with inline errors, the WhatsApp message preview, FAQ, map and responsive mobile layout. Test the deployed URL as well as local files.
 
 **Testing status:** Source changes are committed. Browser/device testing and deployment verification remain pending. Do not mark pending checks as passed until completed.
 
