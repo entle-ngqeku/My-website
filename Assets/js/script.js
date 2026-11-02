@@ -187,9 +187,11 @@ function setupEnquiryForm(){
   // Stores a value or page element needed by the following code.
   const lines=["Hello Amina's Fast Food. I would like to submit an enquiry.","Name: "+name,"Phone: "+phone,"Email: "+email,"Enquiry type: "+kind,"Meal: "+mealName,kind==="product"?"Quantity: "+quantity.value:"",kind==="product"?"Collection or delivery: "+delivery.value:"","Additional information: "+(message||"None"),estimate].filter(Boolean);
   // Updates the message displayed to the visitor.
-  result.textContent="Your details are valid. Review the prepared WhatsApp message and press Send to submit your enquiry. "+estimate;
-  // Opens the prepared destination or message in the browser.
-  window.open(form.action+"?text="+encodeURIComponent(lines.join("\n")),"_blank","noopener,noreferrer");
+  const subject=(kind==="product"?"New Food Order":"New Enquiry")+" from "+name+" - Amina's Fast Food";
+  const body=lines.join("\n");
+  result.textContent="Your details are valid. Your email application will open with the order details prepared. Review the email and press Send to submit your order to aminafastfood@gmail.com. "+estimate;
+  // Opens a new email addressed to the business with the order details filled in.
+  window.location.href="mailto:aminafastfood@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
  });
 }
 
