@@ -5,28 +5,28 @@
 
 /* The universal selector applies these settings to every HTML element. */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* box-sizing controls this part of the element's appearance or layout. */
+  margin: 0; /* margin controls this part of the element's appearance or layout. */
+  padding: 0; /* padding controls this part of the element's appearance or layout. */
 }
 
 html { scroll-behavior: smooth; }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fff8f0;
-  color: #222;
-  line-height: 1.7;
-  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif; /* font-family controls this part of the element's appearance or layout. */
+  background: #fff8f0; /* background controls this part of the element's appearance or layout. */
+  color: #222; /* color controls this part of the element's appearance or layout. */
+  line-height: 1.7; /* line-height controls this part of the element's appearance or layout. */
+  font-size: 16px; /* font-size controls this part of the element's appearance or layout. */
 }
 
 p { max-width: 850px; }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 h1, h2, h3 {
-  font-weight: 700;
-  letter-spacing: 0.2px;
+  font-weight: 700; /* font-weight controls this part of the element's appearance or layout. */
+  letter-spacing: 0.2px; /* letter-spacing controls this part of the element's appearance or layout. */
 }
 
 /* ==============================
@@ -35,25 +35,25 @@ h1, h2, h3 {
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .site-header {
-  background: linear-gradient(135deg, #8b0000, #e85d04);
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
+  background: linear-gradient(135deg, #8b0000, #e85d04); /* background controls this part of the element's appearance or layout. */
+  color: white; /* color controls this part of the element's appearance or layout. */
+  text-align: center; /* text-align controls this part of the element's appearance or layout. */
+  padding: 30px 20px; /* padding controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .logo {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: clamp(1.6rem, 4vw, 2.4rem); /* font-size controls this part of the element's appearance or layout. */
+  font-weight: 700; /* font-weight controls this part of the element's appearance or layout. */
+  letter-spacing: 1px; /* letter-spacing controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .tagline {
-  margin-top: 5px;
-  font-weight: bold;
-  color: #ffe0b2;
-  text-align: center;
+  margin-top: 5px; /* margin-top controls this part of the element's appearance or layout. */
+  font-weight: bold; /* font-weight controls this part of the element's appearance or layout. */
+  color: #ffe0b2; /* color controls this part of the element's appearance or layout. */
+  text-align: center; /* text-align controls this part of the element's appearance or layout. */
 }
 
 /* ==============================
@@ -62,26 +62,26 @@ h1, h2, h3 {
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-  background: #222;
-  padding: 12px 15px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  display: flex; /* display controls this part of the element's appearance or layout. */
+  justify-content: center; /* justify-content controls this part of the element's appearance or layout. */
+  align-items: center; /* align-items controls this part of the element's appearance or layout. */
+  flex-wrap: wrap; /* flex-wrap controls this part of the element's appearance or layout. */
+  gap: 6px; /* gap controls this part of the element's appearance or layout. */
+  background: #222; /* background controls this part of the element's appearance or layout. */
+  padding: 12px 15px; /* padding controls this part of the element's appearance or layout. */
+  position: sticky; /* position controls this part of the element's appearance or layout. */
+  top: 0; /* top controls this part of the element's appearance or layout. */
+  z-index: 10; /* z-index controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.2s ease;
+  color: white; /* color controls this part of the element's appearance or layout. */
+  text-decoration: none; /* text-decoration controls this part of the element's appearance or layout. */
+  padding: 10px 16px; /* padding controls this part of the element's appearance or layout. */
+  border-radius: 6px; /* border-radius controls this part of the element's appearance or layout. */
+  font-weight: bold; /* font-weight controls this part of the element's appearance or layout. */
+  transition: 0.2s ease; /* transition controls this part of the element's appearance or layout. */
 }
 
 .navbar a:hover,
@@ -93,30 +93,30 @@ h1, h2, h3 {
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .hero {
-  background: linear-gradient(#0009, #0009), url('../junk-food-concept-unhealthy-food-background-fast-food-sugar-burger-sweets-chips-chocolate-donuts-soda-junk-food-concept-137097176.webp') center/cover;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
+  background: linear-gradient(#0009, #0009), url('../junk-food-concept-unhealthy-food-background-fast-food-sugar-burger-sweets-chips-chocolate-donuts-soda-junk-food-concept-137097176.webp') center/cover; /* background controls this part of the element's appearance or layout. */
+  min-height: 500px; /* min-height controls this part of the element's appearance or layout. */
+  display: flex; /* display controls this part of the element's appearance or layout. */
+  align-items: center; /* align-items controls this part of the element's appearance or layout. */
+  justify-content: center; /* justify-content controls this part of the element's appearance or layout. */
+  color: white; /* color controls this part of the element's appearance or layout. */
+  text-align: center; /* text-align controls this part of the element's appearance or layout. */
+  padding: 50px 20px; /* padding controls this part of the element's appearance or layout. */
 }
 
 .hero-content { max-width: 850px; }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .hero h1 {
-  font-size: clamp(2.3rem, 6vw, 4.8rem);
-  line-height: 1.1;
-  margin: 15px 0;
+  font-size: clamp(2.3rem, 6vw, 4.8rem); /* font-size controls this part of the element's appearance or layout. */
+  line-height: 1.1; /* line-height controls this part of the element's appearance or layout. */
+  margin: 15px 0; /* margin controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .hero p {
-  font-size: 1.1rem;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1.1rem; /* font-size controls this part of the element's appearance or layout. */
+  margin-left: auto; /* margin-left controls this part of the element's appearance or layout. */
+  margin-right: auto; /* margin-right controls this part of the element's appearance or layout. */
 }
 
 /* ==============================
@@ -125,41 +125,41 @@ h1, h2, h3 {
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .eyebrow {
-  color: #e85d04;
-  font-size: 0.85rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  color: #e85d04; /* color controls this part of the element's appearance or layout. */
+  font-size: 0.85rem; /* font-size controls this part of the element's appearance or layout. */
+  font-weight: bold; /* font-weight controls this part of the element's appearance or layout. */
+  letter-spacing: 2px; /* letter-spacing controls this part of the element's appearance or layout. */
+  text-transform: uppercase; /* text-transform controls this part of the element's appearance or layout. */
 }
 
 .hero .eyebrow { color: #ffd166; }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .page-banner {
-  padding: 65px 20px;
-  background: #ffe0b2;
-  text-align: center;
+  padding: 65px 20px; /* padding controls this part of the element's appearance or layout. */
+  background: #ffe0b2; /* background controls this part of the element's appearance or layout. */
+  text-align: center; /* text-align controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .page-banner p {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto; /* margin-left controls this part of the element's appearance or layout. */
+  margin-right: auto; /* margin-right controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .page-banner h1 {
-  color: #8b0000;
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  line-height: 1.2;
-  margin: 8px 0 12px;
+  color: #8b0000; /* color controls this part of the element's appearance or layout. */
+  font-size: clamp(2rem, 5vw, 3.4rem); /* font-size controls this part of the element's appearance or layout. */
+  line-height: 1.2; /* line-height controls this part of the element's appearance or layout. */
+  margin: 8px 0 12px; /* margin controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .container {
-  width: min(1100px, 100%);
-  margin: 0 auto;
-  padding: 55px 20px;
+  width: min(1100px, 100%); /* width controls this part of the element's appearance or layout. */
+  margin: 0 auto; /* margin controls this part of the element's appearance or layout. */
+  padding: 55px 20px; /* padding controls this part of the element's appearance or layout. */
 }
 
 .content-section,
@@ -167,8 +167,8 @@ h1, h2, h3 {
 .order-section,
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 50px; /* padding-top controls this part of the element's appearance or layout. */
+  padding-bottom: 50px; /* padding-bottom controls this part of the element's appearance or layout. */
 }
 
 .intro { margin-bottom: 25px; }
@@ -176,10 +176,10 @@ h1, h2, h3 {
 .container h2,
 /* Styles the selector below and explains its role in the shared page layout. */
 .cta h2 {
-  color: #8b0000;
-  margin-bottom: 15px;
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  line-height: 1.25;
+  color: #8b0000; /* color controls this part of the element's appearance or layout. */
+  margin-bottom: 15px; /* margin-bottom controls this part of the element's appearance or layout. */
+  font-size: clamp(1.5rem, 3vw, 2.1rem); /* font-size controls this part of the element's appearance or layout. */
+  line-height: 1.25; /* line-height controls this part of the element's appearance or layout. */
 }
 
 .container h3 { color: #8b0000; }
@@ -194,28 +194,28 @@ h1, h2, h3 {
 .menu-section,
 /* Styles the selector below and explains its role in the shared page layout. */
 .order-form {
-  background: white;
-  padding: 28px;
-  border-radius: 10px;
-  box-shadow: 0 3px 14px #0001;
-  margin-bottom: 24px;
+  background: white; /* background controls this part of the element's appearance or layout. */
+  padding: 28px; /* padding controls this part of the element's appearance or layout. */
+  border-radius: 10px; /* border-radius controls this part of the element's appearance or layout. */
+  box-shadow: 0 3px 14px #0001; /* box-shadow controls this part of the element's appearance or layout. */
+  margin-bottom: 24px; /* margin-bottom controls this part of the element's appearance or layout. */
 }
 
 .two-column,
 /* Styles the selector below and explains its role in the shared page layout. */
 .highlights {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 25px;
+  display: grid; /* display controls this part of the element's appearance or layout. */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* grid-template-columns controls this part of the element's appearance or layout. */
+  gap: 25px; /* gap controls this part of the element's appearance or layout. */
 }
 
 .cards,
 .contact-grid,
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 22px;
+  display: grid; /* display controls this part of the element's appearance or layout. */
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* grid-template-columns controls this part of the element's appearance or layout. */
+  gap: 22px; /* gap controls this part of the element's appearance or layout. */
 }
 
 .card,
@@ -224,8 +224,8 @@ h1, h2, h3 {
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .card-icon {
-  font-size: 2.4rem;
-  margin-bottom: 5px;
+  font-size: 2.4rem; /* font-size controls this part of the element's appearance or layout. */
+  margin-bottom: 5px; /* margin-bottom controls this part of the element's appearance or layout. */
 }
 
 .card h3 { margin: 8px 0; }
@@ -240,31 +240,31 @@ h1, h2, h3 {
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .button-group {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 25px;
+  display: flex; /* display controls this part of the element's appearance or layout. */
+  justify-content: center; /* justify-content controls this part of the element's appearance or layout. */
+  gap: 12px; /* gap controls this part of the element's appearance or layout. */
+  flex-wrap: wrap; /* flex-wrap controls this part of the element's appearance or layout. */
+  margin-top: 25px; /* margin-top controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .btn {
-  display: inline-block;
-  background: #e85d04;
-  color: white;
-  text-decoration: none;
-  border: 0;
-  border-radius: 6px;
-  padding: 12px 22px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.2s ease;
+  display: inline-block; /* display controls this part of the element's appearance or layout. */
+  background: #e85d04; /* background controls this part of the element's appearance or layout. */
+  color: white; /* color controls this part of the element's appearance or layout. */
+  text-decoration: none; /* text-decoration controls this part of the element's appearance or layout. */
+  border: 0; /* border controls this part of the element's appearance or layout. */
+  border-radius: 6px; /* border-radius controls this part of the element's appearance or layout. */
+  padding: 12px 22px; /* padding controls this part of the element's appearance or layout. */
+  font-weight: bold; /* font-weight controls this part of the element's appearance or layout. */
+  cursor: pointer; /* cursor controls this part of the element's appearance or layout. */
+  transition: 0.2s ease; /* transition controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .btn:hover {
-  background: #8b0000;
-  transform: translateY(-1px);
+  background: #8b0000; /* background controls this part of the element's appearance or layout. */
+  transform: translateY(-1px); /* transform controls this part of the element's appearance or layout. */
 }
 
 .btn-red { background: #8b0000; }
@@ -275,21 +275,21 @@ h1, h2, h3 {
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .cta {
-  text-align: center;
-  background: #ffe0b2;
-  padding: 20px 0;
+  text-align: center; /* text-align controls this part of the element's appearance or layout. */
+  background: #ffe0b2; /* background controls this part of the element's appearance or layout. */
+  padding: 20px 0; /* padding controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .cta .container {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 45px; /* padding-top controls this part of the element's appearance or layout. */
+  padding-bottom: 45px; /* padding-bottom controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .cta p {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto; /* margin-left controls this part of the element's appearance or layout. */
+  margin-right: auto; /* margin-right controls this part of the element's appearance or layout. */
 }
 
 /* ==============================
@@ -298,23 +298,23 @@ h1, h2, h3 {
 
 /* Each meal category gets its own full-width landscape section. */
 .menu-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 25px;
+  display: grid; /* display controls this part of the element's appearance or layout. */
+  grid-template-columns: 1fr; /* grid-template-columns controls this part of the element's appearance or layout. */
+  gap: 24px; /* gap controls this part of the element's appearance or layout. */
+  margin-top: 25px; /* margin-top controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-section {
-  display: block;
-  width: 100%;
-  min-width: 0;
-  height: auto;
-  margin-bottom: 0;
-  padding: 26px;
-  border: 1px solid #f0dfcf;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px #00000010;
+  display: block; /* display controls this part of the element's appearance or layout. */
+  width: 100%; /* width controls this part of the element's appearance or layout. */
+  min-width: 0; /* min-width controls this part of the element's appearance or layout. */
+  height: auto; /* height controls this part of the element's appearance or layout. */
+  margin-bottom: 0; /* margin-bottom controls this part of the element's appearance or layout. */
+  padding: 26px; /* padding controls this part of the element's appearance or layout. */
+  border: 1px solid #f0dfcf; /* border controls this part of the element's appearance or layout. */
+  border-radius: 16px; /* border-radius controls this part of the element's appearance or layout. */
+  box-shadow: 0 4px 16px #00000010; /* box-shadow controls this part of the element's appearance or layout. */
 }
 
 /* Soft background colours make each category easy to identify. */
@@ -326,109 +326,109 @@ h1, h2, h3 {
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-section h2 {
-  margin: 3px 0 8px;
-  color: #8b0000;
+  margin: 3px 0 8px; /* margin controls this part of the element's appearance or layout. */
+  color: #8b0000; /* color controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-section > .eyebrow {
-  margin-bottom: 2px;
+  margin-bottom: 2px; /* margin-bottom controls this part of the element's appearance or layout. */
 }
 
 .section-note { margin-bottom: 12px; }
 
 /* Every meal is displayed in its own separate card. */
 .menu-items-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  align-items: stretch;
-  gap: 16px;
-  margin-top: 18px;
+  display: grid; /* display controls this part of the element's appearance or layout. */
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); /* grid-template-columns controls this part of the element's appearance or layout. */
+  align-items: stretch; /* align-items controls this part of the element's appearance or layout. */
+  gap: 16px; /* gap controls this part of the element's appearance or layout. */
+  margin-top: 18px; /* margin-top controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-item-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  padding: 12px;
-  gap: 9px;
-  background: #fff;
-  border: 1px solid #f0dfcf;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px #0000000d;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex; /* display controls this part of the element's appearance or layout. */
+  flex-direction: column; /* flex-direction controls this part of the element's appearance or layout. */
+  min-width: 0; /* min-width controls this part of the element's appearance or layout. */
+  padding: 12px; /* padding controls this part of the element's appearance or layout. */
+  gap: 9px; /* gap controls this part of the element's appearance or layout. */
+  background: #fff; /* background controls this part of the element's appearance or layout. */
+  border: 1px solid #f0dfcf; /* border controls this part of the element's appearance or layout. */
+  border-radius: 12px; /* border-radius controls this part of the element's appearance or layout. */
+  box-shadow: 0 3px 10px #0000000d; /* box-shadow controls this part of the element's appearance or layout. */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* transition controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-item-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 16px #00000016;
+  transform: translateY(-3px); /* transform controls this part of the element's appearance or layout. */
+  box-shadow: 0 7px 16px #00000016; /* box-shadow controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-item-info {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  min-width: 0;
+  display: flex; /* display controls this part of the element's appearance or layout. */
+  flex-direction: column; /* flex-direction controls this part of the element's appearance or layout. */
+  gap: 9px; /* gap controls this part of the element's appearance or layout. */
+  min-width: 0; /* min-width controls this part of the element's appearance or layout. */
 }
 
 .menu-item-info > div { min-width: 0; }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-item-photo {
-  display: block;
-  width: 100%;
-  height: 145px;
-  object-fit: cover;
-  border-radius: 8px;
+  display: block; /* display controls this part of the element's appearance or layout. */
+  width: 100%; /* width controls this part of the element's appearance or layout. */
+  height: 145px; /* height controls this part of the element's appearance or layout. */
+  object-fit: cover; /* object-fit controls this part of the element's appearance or layout. */
+  border-radius: 8px; /* border-radius controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-item-info strong {
-  display: block;
-  color: #222;
-  line-height: 1.35;
-  font-size: 1rem;
+  display: block; /* display controls this part of the element's appearance or layout. */
+  color: #222; /* color controls this part of the element's appearance or layout. */
+  line-height: 1.35; /* line-height controls this part of the element's appearance or layout. */
+  font-size: 1rem; /* font-size controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-item-info small {
-  display: block;
-  margin-top: 4px;
-  color: #666;
-  line-height: 1.45;
-  font-size: 0.88rem;
+  display: block; /* display controls this part of the element's appearance or layout. */
+  margin-top: 4px; /* margin-top controls this part of the element's appearance or layout. */
+  color: #666; /* color controls this part of the element's appearance or layout. */
+  line-height: 1.45; /* line-height controls this part of the element's appearance or layout. */
+  font-size: 0.88rem; /* font-size controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-item-card > strong {
-  display: block;
-  margin-top: auto;
-  color: #8b0000;
-  font-size: 1.08rem;
+  display: block; /* display controls this part of the element's appearance or layout. */
+  margin-top: auto; /* margin-top controls this part of the element's appearance or layout. */
+  color: #8b0000; /* color controls this part of the element's appearance or layout. */
+  font-size: 1.08rem; /* font-size controls this part of the element's appearance or layout. */
 }
 
 /* Search and category filters remain usable above the menu. */
 .menu-tools {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 3px 14px #0000000d;
+  display: grid; /* display controls this part of the element's appearance or layout. */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* grid-template-columns controls this part of the element's appearance or layout. */
+  gap: 16px; /* gap controls this part of the element's appearance or layout. */
+  padding: 20px; /* padding controls this part of the element's appearance or layout. */
+  background: #fff; /* background controls this part of the element's appearance or layout. */
+  border-radius: 12px; /* border-radius controls this part of the element's appearance or layout. */
+  box-shadow: 0 3px 14px #0000000d; /* box-shadow controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .menu-tools .form-result {
-  grid-column: 1 / -1;
-  margin: 0;
-  padding: 12px 14px;
-  background: #fff2e3;
-  border-left: 4px solid #e85d04;
-  border-radius: 5px;
+  grid-column: 1 / -1; /* grid-column controls this part of the element's appearance or layout. */
+  margin: 0; /* margin controls this part of the element's appearance or layout. */
+  padding: 12px 14px; /* padding controls this part of the element's appearance or layout. */
+  background: #fff2e3; /* background controls this part of the element's appearance or layout. */
+  border-left: 4px solid #e85d04; /* border-left controls this part of the element's appearance or layout. */
+  border-radius: 5px; /* border-radius controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
@@ -487,14 +487,14 @@ h1, h2, h3 {
 .order-form,
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-section form.order-form {
-  width: 100%;
-  max-width: 820px;
-  margin: 26px auto;
-  padding: clamp(20px, 4vw, 36px);
-  background: #fff;
-  border: 1px solid #f1dfd0;
-  border-radius: 16px;
-  box-shadow: 0 8px 26px #5b2a1010;
+  width: 100%; /* width controls this part of the element's appearance or layout. */
+  max-width: 820px; /* max-width controls this part of the element's appearance or layout. */
+  margin: 26px auto; /* margin controls this part of the element's appearance or layout. */
+  padding: clamp(20px, 4vw, 36px); /* padding controls this part of the element's appearance or layout. */
+  background: #fff; /* background controls this part of the element's appearance or layout. */
+  border: 1px solid #f1dfd0; /* border controls this part of the element's appearance or layout. */
+  border-radius: 16px; /* border-radius controls this part of the element's appearance or layout. */
+  box-shadow: 0 8px 26px #5b2a1010; /* box-shadow controls this part of the element's appearance or layout. */
 }
 
 .order-form h2 { margin-bottom: 8px; }
@@ -502,35 +502,35 @@ h1, h2, h3 {
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  margin-bottom: 18px;
+  display: flex; /* display controls this part of the element's appearance or layout. */
+  flex-direction: column; /* flex-direction controls this part of the element's appearance or layout. */
+  gap: 7px; /* gap controls this part of the element's appearance or layout. */
+  margin-bottom: 18px; /* margin-bottom controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .form-group label {
-  color: #4b2720;
-  font-weight: 700;
-  font-size: .96rem;
+  color: #4b2720; /* color controls this part of the element's appearance or layout. */
+  font-weight: 700; /* font-weight controls this part of the element's appearance or layout. */
+  font-size: .96rem; /* font-size controls this part of the element's appearance or layout. */
 }
 
 .form-group input,
 .form-group select,
 /* Styles the selector below and explains its role in the shared page layout. */
 .form-group textarea {
-  display: block;
-  width: 100%;
-  min-width: 0;
-  min-height: 48px;
-  padding: 12px 14px;
-  border: 1px solid #d8c9be;
-  border-radius: 9px;
-  background: #fffdfa;
-  color: #25211f;
-  font: inherit;
-  line-height: 1.4;
-  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  display: block; /* display controls this part of the element's appearance or layout. */
+  width: 100%; /* width controls this part of the element's appearance or layout. */
+  min-width: 0; /* min-width controls this part of the element's appearance or layout. */
+  min-height: 48px; /* min-height controls this part of the element's appearance or layout. */
+  padding: 12px 14px; /* padding controls this part of the element's appearance or layout. */
+  border: 1px solid #d8c9be; /* border controls this part of the element's appearance or layout. */
+  border-radius: 9px; /* border-radius controls this part of the element's appearance or layout. */
+  background: #fffdfa; /* background controls this part of the element's appearance or layout. */
+  color: #25211f; /* color controls this part of the element's appearance or layout. */
+  font: inherit; /* font controls this part of the element's appearance or layout. */
+  line-height: 1.4; /* line-height controls this part of the element's appearance or layout. */
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease; /* transition controls this part of the element's appearance or layout. */
 }
 
 .form-group textarea { min-height: 140px; resize: vertical; }
@@ -542,52 +542,52 @@ h1, h2, h3 {
 .form-group select:focus,
 /* Styles the selector below and explains its role in the shared page layout. */
 .form-group textarea:focus {
-  outline: none;
-  border-color: #e85d04;
-  background: #fff;
-  box-shadow: 0 0 0 3px #e85d0420;
+  outline: none; /* outline controls this part of the element's appearance or layout. */
+  border-color: #e85d04; /* border-color controls this part of the element's appearance or layout. */
+  background: #fff; /* background controls this part of the element's appearance or layout. */
+  box-shadow: 0 0 0 3px #e85d0420; /* box-shadow controls this part of the element's appearance or layout. */
 }
 
 .form-group input:invalid:not(:placeholder-shown),
 .form-group select:invalid,
 /* Styles the selector below and explains its role in the shared page layout. */
 .form-group textarea:invalid:not(:placeholder-shown) {
-  border-color: #b42318;
+  border-color: #b42318; /* border-color controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .order-form button[type="submit"] {
-  min-height: 48px;
-  padding: 12px 24px;
-  font: inherit;
-  font-weight: 700;
+  min-height: 48px; /* min-height controls this part of the element's appearance or layout. */
+  padding: 12px 24px; /* padding controls this part of the element's appearance or layout. */
+  font: inherit; /* font controls this part of the element's appearance or layout. */
+  font-weight: 700; /* font-weight controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .form-result {
-  margin-top: 16px;
-  padding: 12px 15px;
-  border-radius: 8px;
-  background: #fff2e3;
-  border-left: 4px solid #e85d04;
-  color: #4b2720;
-  overflow-wrap: anywhere;
+  margin-top: 16px; /* margin-top controls this part of the element's appearance or layout. */
+  padding: 12px 15px; /* padding controls this part of the element's appearance or layout. */
+  border-radius: 8px; /* border-radius controls this part of the element's appearance or layout. */
+  background: #fff2e3; /* background controls this part of the element's appearance or layout. */
+  border-left: 4px solid #e85d04; /* border-left controls this part of the element's appearance or layout. */
+  color: #4b2720; /* color controls this part of the element's appearance or layout. */
+  overflow-wrap: anywhere; /* overflow-wrap controls this part of the element's appearance or layout. */
 }
 
 .contact-section .box[style] { margin-top: 30px !important; }
 
 /* Styles the selector below and explains its role in the shared page layout. */
 .map-panel {
-  display: grid;
-  grid-template-columns: minmax(260px, .85fr) minmax(0, 1.4fr);
-  align-items: stretch;
-  gap: 24px;
-  margin: 30px 0;
-  padding: clamp(20px, 3vw, 30px);
-  background: #fff;
-  border: 1px solid #f0dfcf;
-  border-radius: 16px;
-  box-shadow: 0 5px 20px #0000000d;
+  display: grid; /* display controls this part of the element's appearance or layout. */
+  grid-template-columns: minmax(260px, .85fr) minmax(0, 1.4fr); /* grid-template-columns controls this part of the element's appearance or layout. */
+  align-items: stretch; /* align-items controls this part of the element's appearance or layout. */
+  gap: 24px; /* gap controls this part of the element's appearance or layout. */
+  margin: 30px 0; /* margin controls this part of the element's appearance or layout. */
+  padding: clamp(20px, 3vw, 30px); /* padding controls this part of the element's appearance or layout. */
+  background: #fff; /* background controls this part of the element's appearance or layout. */
+  border: 1px solid #f0dfcf; /* border controls this part of the element's appearance or layout. */
+  border-radius: 16px; /* border-radius controls this part of the element's appearance or layout. */
+  box-shadow: 0 5px 20px #0000000d; /* box-shadow controls this part of the element's appearance or layout. */
 }
 
 .map-copy { align-self: center; min-width: 0; }
@@ -596,28 +596,28 @@ h1, h2, h3 {
 .map-address { color: #5a3328; }
 /* Styles the selector below and explains its role in the shared page layout. */
 .map-details {
-  margin: 16px 0;
-  padding: 13px 15px;
-  background: #fff5eb;
-  border-radius: 9px;
+  margin: 16px 0; /* margin controls this part of the element's appearance or layout. */
+  padding: 13px 15px; /* padding controls this part of the element's appearance or layout. */
+  background: #fff5eb; /* background controls this part of the element's appearance or layout. */
+  border-radius: 9px; /* border-radius controls this part of the element's appearance or layout. */
 }
 .map-details p { margin: 3px 0; }
 .map-details a { color: #8b0000; font-weight: 700; }
 /* Styles the selector below and explains its role in the shared page layout. */
 .map-frame-wrap {
-  min-width: 0;
-  min-height: 340px;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #f3e9df;
+  min-width: 0; /* min-width controls this part of the element's appearance or layout. */
+  min-height: 340px; /* min-height controls this part of the element's appearance or layout. */
+  overflow: hidden; /* overflow controls this part of the element's appearance or layout. */
+  border-radius: 12px; /* border-radius controls this part of the element's appearance or layout. */
+  background: #f3e9df; /* background controls this part of the element's appearance or layout. */
 }
 /* Styles the selector below and explains its role in the shared page layout. */
 .map-frame-wrap iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 340px;
-  border: 0;
+  display: block; /* display controls this part of the element's appearance or layout. */
+  width: 100%; /* width controls this part of the element's appearance or layout. */
+  height: 100%; /* height controls this part of the element's appearance or layout. */
+  min-height: 340px; /* min-height controls this part of the element's appearance or layout. */
+  border: 0; /* border controls this part of the element's appearance or layout. */
 }
 
 /* Styles the selector below and explains its role in the shared page layout. */
@@ -638,113 +638,113 @@ h1, h2, h3 {
    ============================== */
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-section .intro {
-  padding: clamp(20px, 3vw, 30px);
-  border: 1px solid #f1e2d5;
-  border-radius: 16px;
-  background: #fff;
+  padding: clamp(20px, 3vw, 30px); /* padding controls this part of the element's appearance or layout. */
+  border: 1px solid #f1e2d5; /* border controls this part of the element's appearance or layout. */
+  border-radius: 16px; /* border-radius controls this part of the element's appearance or layout. */
+  background: #fff; /* background controls this part of the element's appearance or layout. */
 }
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  margin: 24px 0 30px;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* grid-template-columns controls this part of the element's appearance or layout. */
+  gap: 18px; /* gap controls this part of the element's appearance or layout. */
+  margin: 24px 0 30px; /* margin controls this part of the element's appearance or layout. */
 }
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-box {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-width: 0;
-  padding: 22px;
-  border: 1px solid #f0e2d7;
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 5px 18px #542b1510;
+  display: flex; /* display controls this part of the element's appearance or layout. */
+  flex-direction: column; /* flex-direction controls this part of the element's appearance or layout. */
+  align-items: flex-start; /* align-items controls this part of the element's appearance or layout. */
+  min-width: 0; /* min-width controls this part of the element's appearance or layout. */
+  padding: 22px; /* padding controls this part of the element's appearance or layout. */
+  border: 1px solid #f0e2d7; /* border controls this part of the element's appearance or layout. */
+  border-radius: 14px; /* border-radius controls this part of the element's appearance or layout. */
+  background: #fff; /* background controls this part of the element's appearance or layout. */
+  box-shadow: 0 5px 18px #542b1510; /* box-shadow controls this part of the element's appearance or layout. */
 }
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-box h2 {
-  margin: 7px 0 9px;
-  font-size: 1.2rem;
+  margin: 7px 0 9px; /* margin controls this part of the element's appearance or layout. */
+  font-size: 1.2rem; /* font-size controls this part of the element's appearance or layout. */
 }
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-box p {
-  overflow-wrap: anywhere;
-  color: #5f5650;
+  overflow-wrap: anywhere; /* overflow-wrap controls this part of the element's appearance or layout. */
+  color: #5f5650; /* color controls this part of the element's appearance or layout. */
 }
 .contact-box .btn { margin-top: auto; }
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-form-panel {
-  margin: 30px 0;
-  padding: clamp(20px, 4vw, 38px);
-  border: 1px solid #f0dfcf;
-  border-radius: 18px;
-  background: linear-gradient(135deg,#fff8f0,#fff 65%);
-  box-shadow: 0 8px 28px #542b1510;
+  margin: 30px 0; /* margin controls this part of the element's appearance or layout. */
+  padding: clamp(20px, 4vw, 38px); /* padding controls this part of the element's appearance or layout. */
+  border: 1px solid #f0dfcf; /* border controls this part of the element's appearance or layout. */
+  border-radius: 18px; /* border-radius controls this part of the element's appearance or layout. */
+  background: linear-gradient(135deg,#fff8f0,#fff 65%); /* background controls this part of the element's appearance or layout. */
+  box-shadow: 0 8px 28px #542b1510; /* box-shadow controls this part of the element's appearance or layout. */
 }
 .contact-form-panel > h2 { margin-bottom: 8px; }
 .contact-form-panel > p { max-width: 680px; color: #665b54; }
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-form-panel .order-form {
-  max-width: 100%;
-  margin: 22px 0 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  max-width: 100%; /* max-width controls this part of the element's appearance or layout. */
+  margin: 22px 0 0; /* margin controls this part of the element's appearance or layout. */
+  padding: 0; /* padding controls this part of the element's appearance or layout. */
+  border: 0; /* border controls this part of the element's appearance or layout. */
+  border-radius: 0; /* border-radius controls this part of the element's appearance or layout. */
+  background: transparent; /* background controls this part of the element's appearance or layout. */
+  box-shadow: none; /* box-shadow controls this part of the element's appearance or layout. */
 }
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-form-panel .order-form button[type="submit"] {
-  width: auto;
-  min-width: 180px;
+  width: auto; /* width controls this part of the element's appearance or layout. */
+  min-width: 180px; /* min-width controls this part of the element's appearance or layout. */
 }
 .contact-form-panel .form-result:empty { display: none; }
 .contact-form-panel .form-result:not(:empty) { margin-top: 18px; }
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-section .map-panel {
-  grid-template-columns: minmax(250px,.85fr) minmax(0,1.35fr);
-  gap: clamp(18px,3vw,32px);
-  align-items: stretch;
-  padding: clamp(18px,3vw,30px);
-  margin: 32px 0;
-  border: 1px solid #ead8c8;
-  border-radius: 18px;
-  background: linear-gradient(145deg,#fffaf5,#fff 65%);
+  grid-template-columns: minmax(250px,.85fr) minmax(0,1.35fr); /* grid-template-columns controls this part of the element's appearance or layout. */
+  gap: clamp(18px,3vw,32px); /* gap controls this part of the element's appearance or layout. */
+  align-items: stretch; /* align-items controls this part of the element's appearance or layout. */
+  padding: clamp(18px,3vw,30px); /* padding controls this part of the element's appearance or layout. */
+  margin: 32px 0; /* margin controls this part of the element's appearance or layout. */
+  border: 1px solid #ead8c8; /* border controls this part of the element's appearance or layout. */
+  border-radius: 18px; /* border-radius controls this part of the element's appearance or layout. */
+  background: linear-gradient(145deg,#fffaf5,#fff 65%); /* background controls this part of the element's appearance or layout. */
 }
 /* Styles the selector below and explains its role in the shared page layout. */
 .map-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  display: flex; /* display controls this part of the element's appearance or layout. */
+  flex-direction: column; /* flex-direction controls this part of the element's appearance or layout. */
+  align-items: flex-start; /* align-items controls this part of the element's appearance or layout. */
+  justify-content: center; /* justify-content controls this part of the element's appearance or layout. */
 }
 .map-copy h2 { font-size: clamp(1.5rem,2.5vw,2rem); }
 .map-copy .btn { margin-top: 5px; }
 /* Styles the selector below and explains its role in the shared page layout. */
 .map-frame-wrap {
-  position: relative;
-  width: 100%;
-  min-height: 360px;
-  height: 100%;
-  overflow: hidden;
-  border: 1px solid #ead8c8;
-  border-radius: 14px;
-  box-shadow: 0 5px 18px #542b1515;
+  position: relative; /* position controls this part of the element's appearance or layout. */
+  width: 100%; /* width controls this part of the element's appearance or layout. */
+  min-height: 360px; /* min-height controls this part of the element's appearance or layout. */
+  height: 100%; /* height controls this part of the element's appearance or layout. */
+  overflow: hidden; /* overflow controls this part of the element's appearance or layout. */
+  border: 1px solid #ead8c8; /* border controls this part of the element's appearance or layout. */
+  border-radius: 14px; /* border-radius controls this part of the element's appearance or layout. */
+  box-shadow: 0 5px 18px #542b1515; /* box-shadow controls this part of the element's appearance or layout. */
 }
 /* Styles the selector below and explains its role in the shared page layout. */
 .map-frame-wrap iframe {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  border: 0;
+  position: absolute; /* position controls this part of the element's appearance or layout. */
+  inset: 0; /* inset controls this part of the element's appearance or layout. */
+  display: block; /* display controls this part of the element's appearance or layout. */
+  width: 100%; /* width controls this part of the element's appearance or layout. */
+  height: 100%; /* height controls this part of the element's appearance or layout. */
+  min-height: 0; /* min-height controls this part of the element's appearance or layout. */
+  border: 0; /* border controls this part of the element's appearance or layout. */
 }
 /* Styles the selector below and explains its role in the shared page layout. */
 .contact-extra {
-  grid-template-columns: minmax(0,1fr);
-  margin-top: 28px;
+  grid-template-columns: minmax(0,1fr); /* grid-template-columns controls this part of the element's appearance or layout. */
+  margin-top: 28px; /* margin-top controls this part of the element's appearance or layout. */
 }
 .contact-extra .box { margin: 0; }
 .contact-extra .info-list { line-height: 1.7; }
