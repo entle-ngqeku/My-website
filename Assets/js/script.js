@@ -1,5 +1,6 @@
 /* Amina's Fast Food - shared JavaScript for Part 3 */
 "use strict";
+/* Wait until the HTML has loaded before connecting JavaScript to page elements. */
 document.addEventListener("DOMContentLoaded",function(){
  setupMenuFilter();
  setupEnquiryForm();
@@ -7,11 +8,13 @@ document.addEventListener("DOMContentLoaded",function(){
  setupMenuLightbox();
 });
 
+/* Search and filter menu cards using the visitor's keyword and selected category. */
 function setupMenuFilter(){
  const search=document.getElementById("menuSearch"),category=document.getElementById("menuCategory");
  const result=document.getElementById("menuResult"),sections=document.querySelectorAll(".menu-filter-item");
  const tabs=document.querySelectorAll(".menu-tab"),clearButton=document.getElementById("clearMenuSearch");
  if(!search||!category||!result||!sections.length)return;
+ /* Apply the selected category and keyword, then hide cards that do not match. */
  function filterMenu(selectedOverride){
   if(selectedOverride!==undefined)category.value=selectedOverride;
   const term=search.value.trim().toLowerCase(),selected=category.value;
@@ -31,6 +34,7 @@ function setupMenuFilter(){
  filterMenu();
 }
 
+/* Create or update an accessible error message beside a form field. */
 function showFieldError(field,message){
  let error=document.getElementById(field.id+"-error");
  if(!error){error=document.createElement("small");error.id=field.id+"-error";error.className="field-error";error.setAttribute("aria-live","polite");field.insertAdjacentElement("afterend",error);}
@@ -41,6 +45,7 @@ function showFieldError(field,message){
  field.setAttribute("aria-invalid",String(Boolean(message)));
 }
 
+/* Check one field and return true only when its value follows the form rules. */
 function validateField(field){
  if(field.disabled||field.closest("[hidden]"))return true;
  const value=field.value.trim();let message="";
@@ -56,6 +61,7 @@ function validateField(field){
  return !message;
 }
 
+/* Recheck fields while the visitor types, changes a value or leaves a field. */
 function setupFormValidation(form){
  if(!form)return;
  const fields=Array.from(form.querySelectorAll("input,select,textarea"));
@@ -66,12 +72,14 @@ function setupFormValidation(form){
  });
 }
 
+/* Handle product enquiries and order requests on the Enquiry page. */
 function setupEnquiryForm(){
  const form=document.getElementById("enquiryForm");if(!form)return;
  form.noValidate=true;
  const type=document.getElementById("enquiryType"),meal=document.getElementById("order");
  const quantity=document.getElementById("quantity"),delivery=document.getElementById("delivery");
  const result=document.getElementById("result"),productFields=form.querySelectorAll("[data-product-fields]");
+ /* Show product-specific fields only when the visitor selects a product enquiry. */
  function updateProductFields(){
   const isProduct=type.value==="product";
   productFields.forEach(group=>{
@@ -84,6 +92,7 @@ function setupEnquiryForm(){
  const requestedMeal=new URLSearchParams(window.location.search).get("meal");
  if(requestedMeal){const option=Array.from(meal.options).find(item=>item.value===requestedMeal);if(option){meal.value=requestedMeal;type.value="product";}}
  type.addEventListener("change",updateProductFields);updateProductFields();setupFormValidation(form);
+ /* Stop the default submission, validate the form and prepare the WhatsApp message. */
  form.addEventListener("submit",event=>{
   event.preventDefault();
   const invalid=Array.from(form.querySelectorAll("input,select,textarea")).filter(field=>!validateField(field));
@@ -101,6 +110,7 @@ function setupEnquiryForm(){
  });
 }
 
+/* Handle general messages separately from product and order enquiries. */
 function setupContactForm(){
  const form=document.getElementById("contactForm");if(!form)return;
  form.noValidate=true;
@@ -119,12 +129,14 @@ function setupContactForm(){
  });
 }
 
+/* Open menu photographs in a larger dialog with previous, next and close controls. */
 function setupMenuLightbox(){
  const dialog=document.getElementById("menuLightbox");if(!dialog)return;
  const triggers=Array.from(document.querySelectorAll(".lightbox-trigger"));
  const image=document.getElementById("lightboxImage"),caption=document.getElementById("lightboxCaption");
  const close=dialog.querySelector("[data-lightbox-close]"),previous=dialog.querySelector("[data-lightbox-prev]"),next=dialog.querySelector("[data-lightbox-next]");
  let activeIndex=0,lastTrigger=null;
+ /* Display the selected menu photo and update its accessible caption. */
  function showImage(index){
   activeIndex=(index+triggers.length)%triggers.length;
   const trigger=triggers[activeIndex],thumb=trigger.querySelector("img");
